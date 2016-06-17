@@ -1,11 +1,11 @@
-# groveld-html [![Build Status](https://travis-ci.org/groveld/groveld-html.svg?branch=master)](https://travis-ci.org/groveld/groveld-html)
-> The personal website of Martin Groeneveld
+# groveld.github.io [![Build Status](https://travis-ci.org/groveld/groveld.github.io.svg)](https://travis-ci.org/groveld/groveld.github.io)
+> This is the personal website of Martin Groeneveld
 
 ## Getting Started
 
 ```shell
-git clone https://github.com/groveld/groveld-html.git
-cd groveld-html
+git clone https://github.com/groveld/groveld.github.io.git
+cd groveld.github.io
 gem install bundler
 bundle install # Ensures you have all RubyGems needed
 bundle exec rake # Build and run all tests

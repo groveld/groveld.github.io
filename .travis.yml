@@ -26,4 +26,3 @@ after_success:
   - git config user.email "postmaster@groveld.com"
   - git add -A .
   - git commit -am "Generated site by Travis CI (commit:$TRAVIS_COMMIT)"
-  - git push -q origin master > /dev/null 2>&1
