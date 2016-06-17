@@ -7,7 +7,7 @@ rvm:
 env:
   global:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-    - secure: r5PvgMY8dF26qUiqUozdD/poTD74qCj7muNbqEvBqsaajXlUna2OdTDMAkpt5zjh4IMO0a1xrHdDRl+xi3raGwvt3tFlbG/crAxdsQRuZ6ScDypYLNoPCCkDd4lWpPy288D0kQ0iStqTC+4f2kDB+AfurrqIJM7i9lGv8B4Yu2r2fF/6AIn2n1FQanhQ0w7z6FMixmyw0POh9NyZ0emRNYcTAsvOhgoWbgHxGHL0fP7xuirzuRxPYez2bMR/3q95nl7Pwb1TlQf+bmzKq/qEp6pu58adPWCUIAcpD+D/HUVOxG4nH3vYYIIzPjeHuu1zRwMoAX1BnCZREOh4UWXy2AnRIQI8t82syG03kls5Z1bWA7lGwjtgTsZo7LLj0GcLv8kuVzUZBrjxLPmF2dLPwVe6FgS3XPCELoB6v1GMe2COokbatVz0e6/OJDJOTECxtOC6WRNJCc7xvdVktn6iHYXjvdaqfsqJs/EdfGcEMP7oxAFoSmN2lUF7h/JOZEDRfXT64z9HiLlUw1F1qU1Y2hvTNNsImhsXxd3V/FzYHp/SgLuS37HDgIjlPj2cE02MILLHnPYlbG37IBPUzwZSHY9cidGJFGiTy+lqRQnnBGt/G9PWL0sXtnli+HTxYnXezWhJq0HgxQlEBwPWRtzqgd76xw+g3LC7iBLUXyEwylE=
+    - secure: "oocf6JDfumqO2Aka34hV9d+cMpSIiMOHERs3ny2IUw9vb4gwNjwimE0zG2AeZqVL2oNoZOt4fKyAZVgcPLdA1Gsvd1qaGYwjtw4cJJw/X8rNMoNbIHU7kdvBD4C/XrLfyLLDaqVY8tWDRaVJbLNFg5XyLFbr3ttMby6CGyo/q3qDnpVqgcG3vbyr6GH9lXQ7WK1TGWVMMZREEaUcBbz2z/MqmdpFAGhGT5JlCeF0ETWBgaQC4vZ3CytKyZEd0l7+DqZwc8VG/Ve6k0e2vsec/TBEGYOEidwx1Y2r7PKa6L1Ghc/BoWmbfKPdU+emynB8AEVf+BtQb59Fo+lWz6iA/+wahDTtZ/0svxUK+RBNM6101bj6V9B58FPUa2GgeoSgunYPciTMdLyVw86aBHInEXE33hMiAPPgSbNr9ErWS5jvTfGtbOrdzhc/ymd+IS2gUdW+gtPnryEKKciurDdC3UPGdiSeErQFVAfHm9f33laUhUJa3W6OttKPaoIHmkIVJD9QEBRMwdB2CsePNYsdLAjMjojUkHkJi9YlSEQwQqKFkHCbRa6CEYl6Wj5cH9g/YCSFjTzFualntOYyhWy8fgzwRVLd/ayyWHFZ8bAEy6NVON8GXDCY8WQbVLNPh+9JIG2i+BCrvhaJoU6yFMqIVAreRcdWFH754MX0wD60psQ="
 
 branches:
   only:
@@ -27,4 +27,4 @@ after_success:
   - git config user.email "postmaster@groveld.com"
   - git add -A .
   - git commit -am "Generated site by Travis CI (commit:$TRAVIS_COMMIT)"
-  - git push
+  - git push -u origin master
