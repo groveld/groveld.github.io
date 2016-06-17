@@ -1,0 +1,31 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{ site.baseurl }}/">
+        <img src="{{ site.baseurl }}/static/images/logo.svg" alt="logo">
+      </a>
+    </div>
+    {% assign location = page.url | downcase | remove_first:'/' | split: '/' | first %}
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li{% if location == nil %} class="active"{% endif %}><a href="{{ site.baseurl }}/">Home</a></li>
+        <li{% if location == 'articles' %} class="active"{% endif %}><a href="{{ site.baseurl }}/articles/">Articles</a></li>
+        <li{% if location == 'about' %} class="active"{% endif %}><a href="{{ site.baseurl }}/about/">About</a></li>
+        <li{% if location == 'contact' %} class="active"{% endif %}><a href="{{ site.baseurl }}/contact/">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+{% if page.title %}
+<header>
+  <div class="container">
+    <h1>{{ page.title }}</h1>
+  </div>
+</header>
+{% endif %}

@@ -1,0 +1,29 @@
+language: ruby
+cache: bundler
+sudo: false
+rvm:
+  - 2.1
+
+env:
+  global:
+    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+    - secure: r5PvgMY8dF26qUiqUozdD/poTD74qCj7muNbqEvBqsaajXlUna2OdTDMAkpt5zjh4IMO0a1xrHdDRl+xi3raGwvt3tFlbG/crAxdsQRuZ6ScDypYLNoPCCkDd4lWpPy288D0kQ0iStqTC+4f2kDB+AfurrqIJM7i9lGv8B4Yu2r2fF/6AIn2n1FQanhQ0w7z6FMixmyw0POh9NyZ0emRNYcTAsvOhgoWbgHxGHL0fP7xuirzuRxPYez2bMR/3q95nl7Pwb1TlQf+bmzKq/qEp6pu58adPWCUIAcpD+D/HUVOxG4nH3vYYIIzPjeHuu1zRwMoAX1BnCZREOh4UWXy2AnRIQI8t82syG03kls5Z1bWA7lGwjtgTsZo7LLj0GcLv8kuVzUZBrjxLPmF2dLPwVe6FgS3XPCELoB6v1GMe2COokbatVz0e6/OJDJOTECxtOC6WRNJCc7xvdVktn6iHYXjvdaqfsqJs/EdfGcEMP7oxAFoSmN2lUF7h/JOZEDRfXT64z9HiLlUw1F1qU1Y2hvTNNsImhsXxd3V/FzYHp/SgLuS37HDgIjlPj2cE02MILLHnPYlbG37IBPUzwZSHY9cidGJFGiTy+lqRQnnBGt/G9PWL0sXtnli+HTxYnXezWhJq0HgxQlEBwPWRtzqgd76xw+g3LC7iBLUXyEwylE=
+
+branches:
+  only:
+    - develop
+
+before_install:
+  - mv jekyll/static/css/stylesheet.css jekyll/static/css/$TRAVIS_COMMIT.css
+  - mv jekyll/static/js/javascript.js jekyll/static/js/$TRAVIS_COMMIT.js
+  - sed -i "s/stylesheet.css/$TRAVIS_COMMIT.css/" jekyll/_includes/head.html
+  - sed -i "s/javascript.js/$TRAVIS_COMMIT.js/" jekyll/_includes/footer.html
+
+after_success:
+  - cd html
+  - git init
+  - git config user.name "Travis CI"
+  - git config user.email "postmaster@groveld.com"
+  - git add -A .
+  - git commit -am "Generated site by Travis CI (commit:$TRAVIS_COMMIT)"
+  - git push -q origin master > /dev/null 2>&1

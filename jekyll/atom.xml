@@ -1,0 +1,32 @@
+---
+layout:
+---
+
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>{{ site.title }}</title>
+  <link href="{{ site.baseurl | prepend: site.url }}/atom.xml" rel="self"/>
+  <link href="{{ site.baseurl | prepend: site.url }}"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>{{ site.baseurl | prepend: site.url }}</id>
+  <author>
+    <name>{{ site.author }}</name>
+    <email>{{ site.email }}</email>
+  </author>
+  <rights>Copyright (c) {{ site.time | date: '%Y' }}, {{ site.title }}</rights>
+  {% for post in site.posts limit:50 %}
+  <entry>
+    <id>{{ site.baseurl | prepend: site.url }}{{ post.id }}</id>
+    <link href="{{ site.baseurl | prepend: site.url }}{{ post.url }}"/>
+    <title>{{ post.title | xml_escape }}</title>
+    <author>
+      <name>{% if post.author %}{{ post.author }}{% else %}{{ site.author }}{% endif %}</name>
+      <email>{% if post.email %}{{ post.email }}{% else %}{{ site.email }}{% endif %}</email>
+    </author>
+    <published>{{ post.date | date_to_xmlschema }}</published>
+    <updated>{% if post.update %}{{ post.update | date_to_xmlschema }}{% else %}{{ post.date | date_to_xmlschema }}{% endif %}</updated>
+    <content type="html">{{ post.excerpt | xml_escape }}</content>
+  </entry>
+  {% endfor %}
+</feed>

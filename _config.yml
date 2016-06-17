@@ -1,0 +1,32 @@
+source                : jekyll
+destination           : html
+baseurl               : ""
+
+url                   : https://www.groveld.com
+language              : en
+theme_color           : "#1e88e5"
+
+title                 : Groveld Technologies
+tagline               : Opensource security and development
+description           : The personal website of Martin Groeneveld
+author                : Martin Groeneveld
+email                 : groveld@gmail.com
+phone                 : "+31610106931"
+copyright             : <a href="/terms/">Terms</a> &bull; <a href="/privacy/">Privacy</a>
+
+google_analytics      : UA-47976921-1
+#disqus_shortname      : groveld
+googleplus            : +MartinGroeneveldGroveld
+facebook              : groveld
+twitter               : groveld
+linkedin              : groveld
+github                : groveld
+bitbucket             : groveld
+keybase               : groveld
+
+permalink             : /articles/:title/
+compress_html:
+  clippings           : all
+  comments            : ["<!-- ", " -->"]
+  endings             : all
+  blanklines          : false
