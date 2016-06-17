@@ -20,9 +20,11 @@ before_install:
   - sed -i "s/javascript.js/$TRAVIS_COMMIT.js/" jekyll/_includes/footer.html
 
 after_success:
-  - cd html
-  - git init
+  - git clone --quiet --depth=50 --branch=master https://${GH_TOKEN}@github.com/groveld/groveld.github.io.git master > /dev/null 2>&1
+  - rsync -vrth --delete --exclude '.git*' html/ master/
+  - cd master
   - git config user.name "Travis CI"
   - git config user.email "postmaster@groveld.com"
   - git add -A .
   - git commit -am "Generated site by Travis CI (commit:$TRAVIS_COMMIT)"
+  - git push
