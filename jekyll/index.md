@@ -6,7 +6,7 @@ layout: default
 	<div class="carousel slide" data-ride="carousel" data-interval="10000">
 	  <div class="carousel-inner">
 	    <div class="item active">
-	      <img src="{{ site.baseurl }}/static/images/hero2.jpg" alt="slider1">
+	      <img src="{{ site.baseurl }}/static/images/hero1.jpg" alt="slider1">
 	      <div class="carousel-caption">
 					<h1>{{ site.title }}</h1>
 					<h2>{{ site.tagline }}</h2>
