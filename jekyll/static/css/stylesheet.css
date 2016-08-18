@@ -22,7 +22,7 @@ body {
   color: #000;
   font-size: 17px;
   line-height: 25px;
-  background-color: #fff;
+  background-color: #fafafa;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto Slab', serif;
@@ -40,6 +40,9 @@ a {
 }
 a:hover, a:active {
   color: #1e88e5;
+}
+.content img {
+  width: 100%;
 }
 .highlight, pre, ul, p {
   margin-top: 0;
@@ -352,6 +355,11 @@ footer a:hover, footer a:active {
 
 /* SPECIFIC STYLING FOR MOBILE DEVICES */
 @media only screen and (max-width : 767px) {
+  .navbar-collapse {
+    -webkit-box-shadow: inset 0px 7px 8px -6px rgba(0,0,0,0.4);
+    -moz-box-shadow: inset 0px 7px 8px -6px rgba(0,0,0,0.4);
+    box-shadow: inset 0px 7px 8px -6px rgba(0,0,0,0.4);
+  }
   .navbar-default .navbar-nav>li>a {
     padding: 15px;
     font-size: 17px;

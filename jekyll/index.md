@@ -6,7 +6,7 @@ layout: default
 	<div class="carousel slide" data-ride="carousel" data-interval="10000">
 	  <div class="carousel-inner">
 	    <div class="item active">
-	      <img src="{{ site.baseurl }}/static/images/hero.jpg" alt="slider1">
+	      <img src="{{ site.baseurl }}/static/images/hero2.jpg" alt="slider1">
 	      <div class="carousel-caption">
 					<h1>{{ site.title }}</h1>
 					<h2>{{ site.tagline }}</h2>
@@ -18,7 +18,7 @@ layout: default
 
 <section class="info">
 	<div class="container">
-		<h2 class="text-center"><a href="https://discord.gg/0nlw6VZsI7fz22tx">Questions? Come join us on <img src="{{ site.baseurl }}/static/images/clients/discord-white.svg" alt="Discord"></a></h2>
+		<h2 class="text-center"><a href="https://discord.gg/0nlw6VZsI7fz22tx">Click here to join us on <img src="{{ site.baseurl }}/static/images/clients/discord-white.svg" alt="Discord"></a></h2>
 	</div>
 </section>
 
