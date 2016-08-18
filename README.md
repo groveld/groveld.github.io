@@ -1,5 +1,8 @@
-# groveld.github.io [![Build Status](https://travis-ci.org/groveld/groveld.github.io.svg?branch=develop)](https://travis-ci.org/groveld/groveld.github.io)
-> This is the personal website of Martin Groeneveld.
+# groveld.github.io
+
+[![Build Status](https://travis-ci.org/groveld/groveld.github.io.svg?branch=develop)](https://travis-ci.org/groveld/groveld.github.io)
+
+This is the personal website of Martin Groeneveld.
 
 ## Getting Started
 
