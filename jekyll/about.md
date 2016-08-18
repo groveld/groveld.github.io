@@ -6,8 +6,6 @@ description : About the author of this blog
 
 Hi! My name is Martin Groeneveld. I'm a hacker, a maker, a tinkerer and a learner. I've been working in and around web technologies and electronics design since 2006, and love every day of it.
 
-![ssh htop](/static/images/articles/ssh-htop.png)
-
 Apart from programming and hacking for fun, I’m a professional DevOps, a mix of a Software Developer and a System Administrator, experienced in development of high performance and high availability platforms.
 
 From time to time, when an interesting offer comes along, I do freelance jobs. If you have something I can help you with, please [contact me](/contact/).
