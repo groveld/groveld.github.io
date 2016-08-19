@@ -14,8 +14,8 @@ branches:
     - develop
 
 before_install:
-  - mv jekyll/static/stylesheet.css jekyll/static/$TRAVIS_COMMIT.css
-  - mv jekyll/static/javascript.js jekyll/static/$TRAVIS_COMMIT.js
+  - mv jekyll/static/css/stylesheet.css jekyll/static/css/$TRAVIS_COMMIT.css
+  - mv jekyll/static/js/javascript.js jekyll/static/js/$TRAVIS_COMMIT.js
   - sed -i "s/stylesheet.css/$TRAVIS_COMMIT.css/" jekyll/_includes/head.html
   - sed -i "s/javascript.js/$TRAVIS_COMMIT.js/" jekyll/_includes/footer.html
 
