@@ -90,7 +90,7 @@ $(document).ready(function() {
         .show();
 
       $.ajax({
-        url: '{{ site.baseurl }}/static/php/sendmail.php',
+        url: '{{ site.baseurl }}/static/mail.php',
         type: 'POST',
         data: $form.serialize(),
         dataType: 'json',
