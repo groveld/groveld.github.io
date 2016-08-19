@@ -47,7 +47,7 @@
 			"type": "image\/png"
 		}
 	],
-	"theme_color": "#f50057",
+	"theme_color": "#1e88e5",
 	"start_url": "https:\/\/www.groveld.com",
 	"display": "standalone"
 }
