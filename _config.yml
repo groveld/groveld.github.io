@@ -2,7 +2,7 @@ source                : jekyll
 destination           : html
 baseurl               : ""
 
-url                   : http://groveld.com
+url                   : https://www.groveld.com
 language              : en
 theme_color           : "#1e88e5"
 
