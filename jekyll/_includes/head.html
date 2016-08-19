@@ -5,29 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta name="format-detection" content="telephone=no">
 
-  <!-- favicon -->
-  <!-- <link rel="shortcut icon" href="{{ site.baseurl }}/static/images/favicon.png"> -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/static/default/apple-touch-icon.png">
-  <link rel="icon" type="image/png" href="/static/default/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="/static/default/favicon-194x194.png" sizes="194x194">
-  <link rel="icon" type="image/png" href="/static/default/android-chrome-192x192.png" sizes="192x192">
-  <link rel="icon" type="image/png" href="/static/default/favicon-16x16.png" sizes="16x16">
-  <link rel="manifest" href="/static/default/manifest.json">
-  <link rel="mask-icon" href="/static/default/safari-pinned-tab.svg" color="#f50057">
-  <link rel="shortcut icon" href="/static/default/favicon.ico">
-  <meta name="msapplication-TileColor" content="#f50057">
-  <meta name="msapplication-TileImage" content="/static/default/mstile-144x144.png">
-  <meta name="msapplication-config" content="/static/default/browserconfig.xml">
-  <meta name="theme-color" content="#f50057">
-
-  {% if site.theme_color %}
-  <!-- enable webapp behaviour -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="theme-color" content="{{ site.theme_color }}">
-  <meta name="msapplication-navbutton-color" content="{{ site.theme_color }}">
-  <meta name="apple-mobile-web-app-status-bar-style" content="{{ site.theme_color }}">
-  {% endif %}
+  <!-- favicon and webapp behaviour -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/static/icons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/static/icons/favicon-194x194.png" sizes="194x194">
+  <link rel="icon" type="image/png" href="/static/icons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/static/icons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/static/icons/manifest.json">
+  <link rel="mask-icon" href="/static/icons/safari-pinned-tab.svg" color="#f50057">
+  <link rel="shortcut icon" href="/static/icons/favicon.ico">
+  <meta name="apple-mobile-web-app-title" content="Groveld">
+  <meta name="application-name" content="Groveld">
+  <meta name="msapplication-config" content="/static/icons/browserconfig.xml">
+  <meta name="theme-color" content="#1e88e5">
 
   <!-- site info -->
   <meta name="description" content="{% if page.description %}{{ page.description | xml_escape }}{% else %}{{ site.description | xml_escape }}{% endif %}">
