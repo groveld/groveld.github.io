@@ -9,7 +9,7 @@ task :clean do
   sh 'rm -rf ./html'
 end
 
-desc 'Genarate site'
+desc 'Generate site'
 task :build => :clean do
   Jekyll::Site.new(Jekyll.configuration({
     'config' => './_config.yml'
