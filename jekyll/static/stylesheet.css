@@ -360,6 +360,9 @@ footer a:hover, footer a:active {
     -moz-box-shadow: inset 0px 7px 8px -6px rgba(0,0,0,0.4);
     box-shadow: inset 0px 7px 8px -6px rgba(0,0,0,0.4);
   }
+  .navbar-nav {
+    margin: 5px -15px 0px -15px;
+  }
   .navbar-default .navbar-nav>li>a {
     padding: 15px;
     font-size: 17px;

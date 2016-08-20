@@ -53,5 +53,6 @@ layout:
 	],
 	"theme_color": "#1e88e5",
 	"start_url": "https://www.groveld.com",
-	"display": "standalone"
+	"display": "standalone",
+  "orientation": "portrait"
 }
