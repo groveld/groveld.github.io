@@ -22,7 +22,6 @@ before_install:
 after_success:
   - git clone --quiet --depth=50 --branch=master https://${GH_TOKEN}@github.com/groveld/groveld.github.io.git master > /dev/null 2>&1
   - rsync -vrth --delete --exclude '.git*' html/ master/
-  - cp CNAME master/CNAME
   - cd master
   - git config user.name "TravisCI"
   - git config user.email "travis-ci@groveld.com"
