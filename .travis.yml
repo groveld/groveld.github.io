@@ -21,7 +21,7 @@ after_success:
   - git clone --quiet --depth=50 --branch=master https://${GITHUB_API_KEY}@github.com/groveld/groveld.github.io.git master > /dev/null 2>&1
   - rsync -vrth --delete --exclude '.git*' html/ master/
   - cd master
-  - git config user.name "TravisCI"
+  - git config user.name "Travis CI"
   - git config user.email "travis-ci@groveld.com"
   - git add -A .
   - git commit -am "Automated Build ($TRAVIS_COMMIT)"
