@@ -7,7 +7,6 @@ rvm:
 env:
   global:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-    - secure: "oocf6JDfumqO2Aka34hV9d+cMpSIiMOHERs3ny2IUw9vb4gwNjwimE0zG2AeZqVL2oNoZOt4fKyAZVgcPLdA1Gsvd1qaGYwjtw4cJJw/X8rNMoNbIHU7kdvBD4C/XrLfyLLDaqVY8tWDRaVJbLNFg5XyLFbr3ttMby6CGyo/q3qDnpVqgcG3vbyr6GH9lXQ7WK1TGWVMMZREEaUcBbz2z/MqmdpFAGhGT5JlCeF0ETWBgaQC4vZ3CytKyZEd0l7+DqZwc8VG/Ve6k0e2vsec/TBEGYOEidwx1Y2r7PKa6L1Ghc/BoWmbfKPdU+emynB8AEVf+BtQb59Fo+lWz6iA/+wahDTtZ/0svxUK+RBNM6101bj6V9B58FPUa2GgeoSgunYPciTMdLyVw86aBHInEXE33hMiAPPgSbNr9ErWS5jvTfGtbOrdzhc/ymd+IS2gUdW+gtPnryEKKciurDdC3UPGdiSeErQFVAfHm9f33laUhUJa3W6OttKPaoIHmkIVJD9QEBRMwdB2CsePNYsdLAjMjojUkHkJi9YlSEQwQqKFkHCbRa6CEYl6Wj5cH9g/YCSFjTzFualntOYyhWy8fgzwRVLd/ayyWHFZ8bAEy6NVON8GXDCY8WQbVLNPh+9JIG2i+BCrvhaJoU6yFMqIVAreRcdWFH754MX0wD60psQ="
 
 branches:
   only:
@@ -20,7 +19,7 @@ before_install:
   - sed -i "s/javascript.js/$TRAVIS_COMMIT.js/" jekyll/_includes/footer.html
 
 after_success:
-  - git clone --quiet --depth=50 --branch=master https://${GH_TOKEN}@github.com/groveld/groveld.github.io.git master > /dev/null 2>&1
+  - git clone --quiet --depth=50 --branch=master https://${GITHUB_API_KEY}@github.com/groveld/groveld.github.io.git master > /dev/null 2>&1
   - rsync -vrth --delete --exclude '.git*' html/ master/
   - cd master
   - git config user.name "TravisCI"
