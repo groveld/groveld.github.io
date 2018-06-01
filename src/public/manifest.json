@@ -59,6 +59,7 @@ permalink: /public/manifest.json
       "type": "image/png"
     }
   ],
+  "scope": "/",
   "start_url": "{{ "/index.html" | absolute_url }}",
   "display": "standalone",
   "orientation": "portrait",
