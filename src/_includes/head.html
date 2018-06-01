@@ -1,0 +1,25 @@
+<!-- meta info -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="format-detection" content="telephone=no">
+
+<!-- favicon and webapp behaviour -->
+<link rel="manifest" href="{{ "/manifest.json" | absolute_url }}">
+<meta name="msapplication-config" content="{{ "/msapplication.xml" | absolute_url }}">
+<meta name="theme-color" content="#343a40">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Groveld">
+<link rel="shortcut icon" href="{{ "/favicon.ico" | absolute_url }}">
+<link rel="mask-icon" href="{{ "/public/icons/safari-pinned-tab.svg" | absolute_url }}" color="#343a40">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ "/public/icons/apple/apple-touch-icon.png" | absolute_url }}">
+
+<!-- site info -->
+<meta name="description" content="{% if page.description %}{{ page.description | xml_escape }}{% else %}{{ site.description | xml_escape }}{% endif %}">
+<meta name="author" content="{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}">
+<link rel="alternate" type="application/atom+xml" title="{{ site.title | xml_escape }}" href="{{ "/atom.xml" | absolute_url }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<title>{% if page.title %}{{ page.title | xml_escape }} - {{ site.title | xml_escape }}{% else %}{{ site.title | xml_escape }}{% endif %}</title>
+
+<!-- Bootstrap CSS, Custom CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+<link rel="stylesheet" href="{{ "/public/css/main.css" | absolute_url }}">

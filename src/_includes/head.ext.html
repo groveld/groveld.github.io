@@ -1,0 +1,61 @@
+<!-- meta info -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+
+<!-- favicon and webapp behaviour -->
+<link rel="manifest" href="{{ "/manifest.webmanifest" | absolute_url }}">
+<meta name="msapplication-config" content="{{ "/msapplication.xml" | absolute_url }}">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Groveld">
+<link rel="shortcut icon" href="{{ "/favicon.ico" | absolute_url }}">
+<link rel="mask-icon" href="{{ "/safari-pinned-tab.svg" | absolute_url }}" color="#343a40">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ "/apple-touch-icon.png" | absolute_url }}">
+
+<!-- site info -->
+<meta name="description" content="{% if page.description %}{{ page.description | xml_escape }}{% else %}{{ site.description | xml_escape }}{% endif %}">
+<meta name="author" content="{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}">
+<link rel="alternate" type="application/atom+xml" title="{{ site.title | xml_escape }}" href="{{ "/atom.xml" | absolute_url }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<title>{% if page.title %}{{ page.title | xml_escape }} - {{ site.title | xml_escape }}{% else %}{{ site.title | xml_escape }}{% endif %}</title>
+
+{% if site.googleplus %}
+<!-- google info -->
+<link rel="author" href="https://plus.google.com/u/0/{{ site.googleplus }}">
+<link rel="publisher" href="https://plus.google.com/u/0/{{ site.googleplus }}">
+{% endif %}
+
+{% if site.facebook %}
+<!-- facebook info -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.title | xml_escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ "/public/img/share.png" | absolute_url }}{% endif %}">
+<meta property="og:title" content="{% if page.title %}{{ page.title | xml_escape }}{% else %}{{ site.title | xml_escape }} - {{ site.tagline }}{% endif %}">
+<meta property="og:description" content="{% if page.description %}{{ page.description | xml_escape }}{% else %}{{ site.description | xml_escape }}{% endif %}">
+{% endif %}
+
+{% if site.twitter %}
+<!-- twitter info -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@{{ site.twitter }}">
+<meta name="twitter:url" content="{{ page.url | absolute_url }}">
+<meta name="twitter:image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ "/public/img/share.png" | absolute_url }}{% endif %}">
+<meta name="twitter:title" content="{% if page.title %}{{ page.title | xml_escape }}{% else %}{{ site.title }} - {{ site.tagline }}{% endif %}">
+<meta name="twitter:description" content="{% if page.description %}{{ page.description | xml_escape }}{% else %}{{ site.description | xml_escape }}{% endif %}">
+{% endif %}
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+<link rel="stylesheet" href="{{ "/public/css/main.css" | absolute_url }}">
+<!-- Scrollbar Custom CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+<!-- <link rel="stylesheet" href="{{ "/public/css/syntax.css" | absolute_url }}"> -->
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="/Content/js/libs/bootstrap/html5shiv.min.js"></script>
+<script src="/Content/js/libs/bootstrap/respond.min.js"></script>
+<![endif]-->

@@ -1,0 +1,54 @@
+---
+layout: default
+---
+
+<!-- Modal TOC -->
+<div class="modal fade" id="modalTOC" tabindex="-1" role="dialog" aria-labelledby="modalTOC" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Contents</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <a href="#configure-ssh-keys-for-git-administration" data-toggle="modal" data-target="#modalTOC">go-n-close</a>
+        {% include toc.html h_min=2 id='toc' sanitize=true html=content %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col">
+      <div class="card my-3">
+        <div class="card-body">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalTOC">
+            Content
+          </button>
+
+          <h1 class="card-title">{{ page.title }}</h1>
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% if page.comments %}
+  <div class="row">
+    <div class="col">
+      <button type="button" class="btn btn-primary btn-lg btn-block mb-3" id="show-comments">Show Comments</button>
+      <div id="comments" class="card mb-3">
+        <div class="card-body">
+          <div id="disqus_thread"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+</div>

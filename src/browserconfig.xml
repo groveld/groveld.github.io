@@ -1,0 +1,16 @@
+---
+permalink: /browserconfig.xml
+---
+
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+  <msapplication>
+    <tile>
+      <square70x70logo src="{{ "/public/icons/tiles/small.png" | absolute_url }}"/>
+      <square150x150logo src="{{ "/public/icons/tiles/medium.png" | absolute_url }}"/>
+      <wide310x150logo src="{{ "/public/icons/tiles/wide.png" | absolute_url }}"/>
+      <square310x310logo src="{{ "/public/icons/tiles/large.png" | absolute_url }}"/>
+      <TileColor>#343a40</TileColor>
+    </tile>
+  </msapplication>
+</browserconfig>

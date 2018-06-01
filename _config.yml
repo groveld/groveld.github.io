@@ -1,0 +1,17 @@
+source                : src
+destination           : html
+url                   : https://www.groveld.com
+enforce_ssl           : www.groveld.com
+permalink             : /articles/:title
+include               : ["_pages"]
+
+title                 : Martin Groeneveld
+tagline               : Opensource, security and development
+description           : The personal website of Martin Groeneveld
+author                : groveld
+email                 : martin@groveld.com
+phone                 : "+31610106931"
+address               : De Kamp 8<br>8627SP Gauw<br>Netherlands
+legal                 : <a href="/terms">Terms</a> &bull; <a href="/privacy">Privacy</a> &bull; <a href="/cookies">Cookies</a>
+
+google_analytics      : UA-47976921-1
