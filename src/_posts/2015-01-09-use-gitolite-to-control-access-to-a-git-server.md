@@ -4,9 +4,8 @@ author      : groveld
 title       : Use Gitolite to Control Access to a Git Server
 description : How To Use Gitolite to Control Access to a Git Server on an Debian 7.0 VPS
 update      :
-show_title  : false
 comments    : true
-toc         : true
+tags        : [git, debian]
 ---
 
 Git is a great distributed version control system that can be used to keep track of changes and code for any kind of project. Sometimes, it is helpful to configure a git server to house your team's projects.
