@@ -1,8 +1,4 @@
----
-permalink: /sw.js
----
-
-const version = '{{site.time | date: '%Y%m%d%H%M%S'}}';
+const version = "7";
 const cacheName = `groveld-${version}`;
 const cacheFiles = [
   '/',
