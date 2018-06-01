@@ -1,10 +1,28 @@
-self.addEventListener('install', function(event) {
-  console.log('[ServiceWorker] Installed!');
+const version = "0.1.1";
+const cacheName = `groveld-${version}`;
+
+self.addEventListener('install', e => {
+  const timeStamp = Date.now();
+  e.waitUntil(
+    caches.open(cacheName).then(cache => {
+      return cache.addAll([
+        `/`
+      ])
+      .then(() => self.skipWaiting());
+    })
+  );
 });
 
-self.addEventListener('activate', function(event) {
+self.addEventListener('activate', event => {
+  event.waitUntil(self.clients.claim());
 });
 
-self.addEventListener('fetch', function(event) {
-  console.log("Resource requested is :", event.request.url);
+self.addEventListener('fetch', event => {
+  event.respondWith(
+    caches.open(cacheName)
+      .then(cache => cache.match(event.request, {ignoreSearch: true}))
+      .then(response => {
+      return response || fetch(event.request);
+    })
+  );
 });
