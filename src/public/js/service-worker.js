@@ -1,9 +1,12 @@
-const version = "2";
+const version = "3";
 const cacheName = `groveld-${version}`;
 const cacheFiles = [
   '/',
   '/index.html',
-  '/public/css/main.css'
+  '/about.html',
+  '/public/css/main.css',
+  '/public/images/logo.png',
+  '/public/js/main.js'
 ];
 
 self.addEventListener('install', event => {
