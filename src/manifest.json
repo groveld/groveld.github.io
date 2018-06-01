@@ -59,10 +59,10 @@ permalink: /manifest.json
       "type": "image/png"
     }
   ],
-  "scope": "/",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "orientation": "portrait",
   "theme_color": "#343a40",
-  "background_color": "#343a40"
+  "background_color": "#fafafa"
 }
