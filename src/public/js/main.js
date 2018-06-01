@@ -10,6 +10,7 @@ if ('serviceWorker' in navigator) {
   });
 }
 
+document.addEventListener('touchstart', onTouchStart, {passive: true});
 
 $(document).ready(function() {
 
