@@ -60,7 +60,7 @@ permalink: /public/manifest.json
     }
   ],
   "scope": "/",
-  "start_url": "{{ "/index.html" | absolute_url }}",
+  "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
   "theme_color": "#343a40",

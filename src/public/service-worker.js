@@ -1,4 +1,8 @@
-const version = "4";
+---
+permalink: /public/service-worker.js
+---
+
+const version = '{{site.time | date: '%Y%m%d%H%M%S'}}';
 const cacheName = `groveld-${version}`;
 const cacheFiles = [
   '/',
