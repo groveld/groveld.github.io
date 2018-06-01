@@ -1,5 +1,5 @@
 ---
-permalink: /public/service-worker.js
+permalink: /sw.js
 ---
 
 const version = '{{site.time | date: '%Y%m%d%H%M%S'}}';
@@ -11,7 +11,8 @@ const cacheFiles = [
   '/public/css/main.css',
   '/public/images/logo.png',
   '/public/js/main.js',
-  '/public/manifest.json'
+  '/public/manifest.json',
+  'https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css'
 ];
 
 self.addEventListener('install', event => {
