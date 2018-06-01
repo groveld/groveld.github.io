@@ -14,8 +14,8 @@ before_install:
   - echo "www.groveld.com" > ./src/CNAME
   - mv ./src/public/css/main.css ./src/public/css/$TRAVIS_COMMIT.css
   - mv ./src/public/js/main.js ./src/public/js/$TRAVIS_COMMIT.js
-  - sed -i "s/main.css/$TRAVIS_COMMIT.css/" ./src/_includes/meta.html
-  - sed -i "s/main.js/$TRAVIS_COMMIT.js/" ./src/_includes/footer.html
+  - sed -i "s/main.css/$TRAVIS_COMMIT.css/" ./src/_includes/head.html
+  - sed -i "s/main.js/$TRAVIS_COMMIT.js/" ./src/_layouts/default.html
 
 after_success:
   - git config --global user.name "Travis CI"
