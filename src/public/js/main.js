@@ -1,16 +1,12 @@
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
     navigator.serviceWorker.register('/public/js/service-worker.js').then(function(registration) {
-      // Registration was successful
       console.log('ServiceWorker registration successful with scope: ', registration.scope);
     }, function(err) {
-      // registration failed :(
       console.log('ServiceWorker registration failed: ', err);
     });
   });
 }
-
-document.addEventListener('touchstart', handler, {passive: true});
 
 $(document).ready(function() {
 
@@ -19,7 +15,7 @@ $(document).ready(function() {
     // ajax request to load the disqus javascript
     $.ajax({
       type: "GET",
-      url: "http://" + disqus_shortname + ".disqus.com/embed.js",
+      url: "https://" + disqus_shortname + ".disqus.com/embed.js",
       dataType: "script",
       cache: true
     });
