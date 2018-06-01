@@ -1,14 +1,15 @@
 const version = "0.1.1";
 const cacheName = `groveld-${version}`;
+const cacheFiles = [
+  '/',
+  '/index.html',
+  '/public/css/main.css'
+];
 
-self.addEventListener('install', e => {
-  const timeStamp = Date.now();
-  e.waitUntil(
+self.addEventListener('install', event => {
+  event.waitUntil(
     caches.open(cacheName).then(cache => {
-      return cache.addAll([
-        `/`
-      ])
-      .then(() => self.skipWaiting());
+      return cache.addAll(cacheFiles).then(() => self.skipWaiting());
     })
   );
 });
