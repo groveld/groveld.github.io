@@ -1,33 +1,26 @@
-const version = "7";
-const cacheName = `groveld-${version}`;
+const cacheName = 'groveld-0004';
 const cacheFiles = [
   '/',
   '/index.html',
   '/about.html',
   '/public/css/main.css',
-  '/public/images/logo.png',
-  '/public/js/main.js',
-  '/public/manifest.json',
-  'https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css'
+  '/public/images/logo.png'
 ];
 
-self.addEventListener('install', event => {
+self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(cacheName).then(cache => {
-      return cache.addAll(cacheFiles).then(() => self.skipWaiting());
+      return cache.addAll(cacheFiles);
     })
   );
 });
 
-self.addEventListener('activate', event => {
-  event.waitUntil(self.clients.claim());
+self.addEventListener('activate', (event) => {
 });
 
-self.addEventListener('fetch', event => {
+self.addEventListener('fetch', (event) => {
   event.respondWith(
-    caches.open(cacheName)
-      .then(cache => cache.match(event.request, {ignoreSearch: true}))
-      .then(response => {
+    caches.match(event.request).then(function(response) {
       return response || fetch(event.request);
     })
   );
