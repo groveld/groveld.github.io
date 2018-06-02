@@ -2,7 +2,7 @@ source                : src
 destination           : html
 url                   : https://www.groveld.com
 enforce_ssl           : www.groveld.com
-permalink             : /articles/:title/
+permalink             : /article/:title
 include               : ["_pages"]
 
 title                 : Martin Groeneveld
@@ -12,6 +12,6 @@ author                : groveld
 email                 : martin@groveld.com
 phone                 : "+31610106931"
 address               : De Kamp 8<br>8627SP Gauw<br>Netherlands
-legal                 : <a href="/legal/terms/">Terms</a> &bull; <a href="/legal/privacy/">Privacy</a> &bull; <a href="/legal/cookies/">Cookies</a>
+legal                 : <a href="/legal/terms">Terms</a> &bull; <a href="/legal/privacy">Privacy</a> &bull; <a href="/legal/cookies">Cookies</a>
 
 google_analytics      : UA-47976921-1

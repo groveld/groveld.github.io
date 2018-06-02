@@ -1,6 +1,6 @@
 ---
 layout      : page
-permalink   : /legal/privacy/
+permalink   : /legal/privacy
 title       : Privacy Policy
 description : This Privacy Policy governs the manner in which we collect, use, maintain and disclose information collected from users.
 toc         : true
@@ -58,4 +58,4 @@ By using this Site, you signify your acceptance of this policy. If you do not ag
 
 ### Contacting us
 
-If you have any questions about this Privacy Policy, the practices of this site, or your dealings with this site, please [contact us](/contact/).
+If you have any questions about this Privacy Policy, the practices of this site, or your dealings with this site, please [contact us](/contact).

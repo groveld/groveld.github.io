@@ -3,15 +3,15 @@
 const cacheName = 'groveld-cache';
 const cacheFiles = [
   '/',
-  '/about/',
-  '/contact/',
-  '/legal/terms/',
-  '/legal/privacy/',
-  '/legal/cookies/',
-  '/articles/',
+  '/about',
+  '/contact',
+  '/legal/terms',
+  '/legal/privacy',
+  '/legal/cookies',
   '/static/css/app.css',
   '/static/js/app.js',
-  '/static/images/logo.png'
+  '/static/images/logo.png',
+  '/articles/'
 ];
 
 self.addEventListener('install', event => {
