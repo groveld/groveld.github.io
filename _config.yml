@@ -2,7 +2,7 @@ source                : src
 destination           : html
 url                   : https://www.groveld.com
 enforce_ssl           : www.groveld.com
-permalink             : /article/:title
+permalink             : /b/:title
 include               : ["_pages"]
 
 title                 : Martin Groeneveld

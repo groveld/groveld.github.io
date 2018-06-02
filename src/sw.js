@@ -3,7 +3,7 @@
 const cacheName = 'groveld-cache';
 const cacheFiles = [
   '/',
-  '/articles',
+  '/blog',
   '/about',
   '/contact',
   '/legal/terms',
@@ -12,13 +12,9 @@ const cacheFiles = [
   '/static/css/app.css',
   '/static/js/app.js',
   '/static/images/logo.png',
-  '/article/htaccess-snippets',
-  '/article/www-non-www-redirection'
+  '/b/htaccess-snippets',
+  '/b/www-non-www-redirection'
 ];
-
-self.addEventListener('beforeinstallprompt', event => {
-  event.prompt();
-});
 
 self.addEventListener('install', event => {
   event.waitUntil(
@@ -33,6 +29,16 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', event => {
+  event.respondWith(
+    caches.open(cacheName).then(function(cache) {
+      return cache.match(event.request).then(function (response) {
+        return response || fetch(event.request).then(function(response) {
+          cache.put(event.request, response.clone());
+          return response;
+        });
+      });
+    })
+  );
   // event.respondWith(
   //   caches.match(event.request)
   //     .then(response => {

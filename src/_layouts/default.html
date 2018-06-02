@@ -18,7 +18,7 @@
     <meta name="description" content="{% if page.description %}{{ page.description | xml_escape }}{% else %}{{ site.description | xml_escape }}{% endif %}">
     <meta name="author" content="{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}">
     <link rel="alternate" type="application/atom+xml" title="{{ site.title | xml_escape }}" href="/atom.xml">
-    <link rel="canonical" href="{{ page.url }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
     <title>{% if page.title %}{{ page.title | xml_escape }} - {{ site.title | xml_escape }}{% else %}{{ site.title | xml_escape }}{% endif %}</title>
     <!-- Bootstrap CSS, Custom CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
