@@ -7,7 +7,6 @@ const cacheFiles = [
   'https://code.jquery.com/jquery-3.3.1.min.js',
   'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js',
   'https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js',
-  'https://groveld.disqus.com/embed.js',
   'https://www.googletagmanager.com/gtag/js?id=UA-47976921-1',
   '/',
   '/?utm_source=homescreen',
