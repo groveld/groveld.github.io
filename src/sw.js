@@ -14,8 +14,8 @@ const cacheFiles = [
   '/legal/terms',
   '/legal/privacy',
   '/legal/cookies',
-  '/static/css/app.css',
-  '/static/js/app.js',
+  '/static/css/style.css',
+  '/static/js/main.js',
   '/static/images/logo.png',
   '/articles/htaccess-snippets',
   '/articles/www-non-www-redirection'
