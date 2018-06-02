@@ -9,9 +9,9 @@ if ('serviceWorker' in navigator) {
 }
 
 window.addEventListener('beforeinstallprompt', async e => {
-    // e.preventDefault();
-    await e.prompt();
+  await e.prompt();
 });
+
 
 $(document).ready(function() {
 

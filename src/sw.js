@@ -1,3 +1,5 @@
+'use strict';
+
 const cacheName = 'groveld-cache';
 const cacheFiles = [
   'https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700',
@@ -28,17 +30,16 @@ const cacheFiles = [
   '/articles/ohm2013-observe-hack-make'
 ];
 
-self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open(cacheName)
-      .then(cache => {
-        return cache.addAll(cacheFiles);
-      })
+self.addEventListener('install', e => {
+  e.waitUntil(
+    caches.open(cacheName).then(cache => {
+      return cache.addAll(cacheFiles);
+    })
   );
 });
 
-self.addEventListener('activate', event => {
+self.addEventListener('activate', e => {
 });
 
-self.addEventListener('fetch', event => {
+self.addEventListener('fetch', e => {
 });
