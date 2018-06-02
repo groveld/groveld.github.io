@@ -16,13 +16,13 @@ end
 desc 'Validate generated site'
 task :test => :build do
   require 'html-proofer'
-  # HTMLProofer.check_directory('./html',{
-  #   :url_swap => { '*.groveld.com/' => '/' },
-  #   :only_4xx => true,
-  #   :check_favicon => true,
-  #   :check_html => false,
-  #   :assume_extension => true,
-  #   :allow_hash_href => true,
-  #   :disable_external => true
-  # }).run
+  HTMLProofer.check_directory('./html',{
+    :url_swap => { '*.groveld.com/' => '/' },
+    :only_4xx => true,
+    :check_favicon => true,
+    :check_html => false,
+    :assume_extension => true,
+    :allow_hash_href => true,
+    :disable_external => true
+  }).run
 end

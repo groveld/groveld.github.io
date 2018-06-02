@@ -12,10 +12,10 @@ branches:
 
 before_install:
   - echo "www.groveld.com" > ./src/CNAME
-  # - mv ./src/public/css/app.css ./src/public/css/$TRAVIS_COMMIT.css
-  # - mv ./src/public/js/app.js ./src/public/js/$TRAVIS_COMMIT.js
-  # - sed -i "s/app.css/$TRAVIS_COMMIT.css/" ./src/_includes/head.html
-  # - sed -i "s/app.js/$TRAVIS_COMMIT.js/" ./src/_layouts/default.html
+  # - mv ./src/public/css/app.css ./src/public/css/app.$TRAVIS_COMMIT.css
+  # - mv ./src/public/js/app.js ./src/public/js/app.$TRAVIS_COMMIT.js
+  # - sed -i "s/app.css/app.$TRAVIS_COMMIT.css/" ./src/_layouts/default.html
+  # - sed -i "s/app.js/app.$TRAVIS_COMMIT.js/" ./src/_layouts/default.html
 
 after_success:
   - git config --global user.name "Travis CI"
