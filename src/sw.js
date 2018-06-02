@@ -3,6 +3,7 @@
 const cacheName = 'groveld-cache';
 const cacheFiles = [
   '/',
+  '/articles',
   '/about',
   '/contact',
   '/legal/terms',
@@ -11,7 +12,8 @@ const cacheFiles = [
   '/static/css/app.css',
   '/static/js/app.js',
   '/static/images/logo.png',
-  '/articles/'
+  '/article/htaccess-snippets',
+  '/article/www-non-www-redirection'
 ];
 
 self.addEventListener('beforeinstallprompt', event => {
