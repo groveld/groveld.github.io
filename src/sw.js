@@ -12,8 +12,8 @@ const cacheFiles = [
   '/static/css/app.css',
   '/static/js/app.js',
   '/static/images/logo.png',
-  '/b/htaccess-snippets',
-  '/b/www-non-www-redirection'
+  '/articles/htaccess-snippets',
+  '/articles/www-non-www-redirection'
 ];
 
 self.addEventListener('install', event => {
