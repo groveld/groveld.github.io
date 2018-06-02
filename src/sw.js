@@ -1,29 +1,17 @@
----
-permalink: /sw.js
----
-
 'use strict';
 
 const cacheName = 'groveld-cache';
 const cacheFiles = [
   '/',
-  '/about',
-  '/contact',
-  '/cookies',
-  '/privacy',
-  '/terms',
+  '/about/',
+  '/contact/',
+  '/legal/terms/',
+  '/legal/privacy/',
+  '/legal/cookies/',
   '/articles/',
-  '/articles/htaccess-snippets',
-  '/articles/www-non-www-redirection',
-  '/articles/give-user-permission-to-edit-and-add-files-in-var-www',
-  '/articles/use-gitolite-to-control-access-to-a-git-server',
-  '/articles/open-hackerspaces-day-2014',
-  '/articles/how-to-use-gpg-to-encrypt-and-sign-messages',
-  '/articles/postfix-with-mysql-backend-and-tls',
-  '/articles/clean-urls-with-jekyll-apache',
-  '/articles/what-it-really-means-to-hack',
-  '/articles/teamspeak-3-server-on-debian-ubuntu',
-  '/articles/ohm2013-observe-hack-make'
+  '/static/css/app.css',
+  '/static/js/app.js',
+  '/static/images/logo.png'
 ];
 
 self.addEventListener('install', event => {

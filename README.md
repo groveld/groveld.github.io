@@ -17,14 +17,11 @@ The **front-matter** of a post should look like this;
 
 ```txt
 ---
-layout:     post
-title:      "Hello 2015"
-subtitle:   "Hello World, Hello Blog"
-date:       2015-01-29 12:00:00
-author:     "Groveld"
-image:      "/public/images/post-bg-2015.jpg"
-tags:
-    - Life
+layout      : post
+author      : "John Doe"
+title       : "Some Title Here"
+description : "A very descriptive description here"
+tags        : [some, tags, here]
 ---
 ```
 

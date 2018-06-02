@@ -1,6 +1,6 @@
 ---
 layout      : page
-permalink   : /contact
+permalink   : /contact/
 title       : We like hearing from you
 description :
 ---

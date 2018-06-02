@@ -1,6 +1,6 @@
 ---
 layout      : page
-permalink   : /cookies
+permalink   : /legal/cookies/
 title       : Cookie Policy
 description : This Terms of Service governs the legal terms of this website, sub-domains, and any associated web-based and mobile applications.
 toc         : true

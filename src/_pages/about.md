@@ -1,6 +1,6 @@
 ---
 layout      : page
-permalink   : /about
+permalink   : /about/
 title       : About the author of this blog
 description : About the author of this blog
 ---

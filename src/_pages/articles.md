@@ -1,6 +1,6 @@
 ---
 layout      : default
-permalink   : /articles
+permalink   : /articles/
 description :
 ---
 
