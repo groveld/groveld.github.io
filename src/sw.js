@@ -14,6 +14,10 @@ const cacheFiles = [
   '/articles/'
 ];
 
+self.addEventListener('beforeinstallprompt', event => {
+  event.prompt();
+});
+
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(cacheName)
