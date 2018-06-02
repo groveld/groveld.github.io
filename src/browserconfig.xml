@@ -6,10 +6,10 @@ permalink: /browserconfig.xml
 <browserconfig>
   <msapplication>
     <tile>
-      <square70x70logo src="/public/icons/windows/small.png"/>
-      <square150x150logo src="/public/icons/windows/medium.png"/>
-      <wide310x150logo src="/public/icons/windows/wide.png"/>
-      <square310x310logo src="/public/icons/windows/large.png"/>
+      <square70x70logo src="/static/icons/windows/small.png"/>
+      <square150x150logo src="/static/icons/windows/medium.png"/>
+      <wide310x150logo src="/static/icons/windows/wide.png"/>
+      <square310x310logo src="/static/icons/windows/large.png"/>
       <TileColor>#343a40</TileColor>
     </tile>
   </msapplication>

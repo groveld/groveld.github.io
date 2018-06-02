@@ -8,6 +8,11 @@ if ('serviceWorker' in navigator) {
   });
 }
 
+window.addEventListener('beforeinstallprompt', async e => {
+    // e.preventDefault();
+    await e.prompt();
+});
+
 $(document).ready(function() {
 
   $('#show-comments').click(function() {
