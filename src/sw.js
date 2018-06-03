@@ -17,23 +17,39 @@ const urlsToCache = ['/?utm_source=homescreen'];
 {% for page in site.html_pages %}{% if page.url != '/404' %}urlsToCache.push('{{ page.url }}')
 {% endif %}{% endfor %}
 
-self.addEventListener('install', event => {
+self.addEventListener('install', function(event) {
   self.skipWaiting();
   event.waitUntil(
-    caches.open(cacheName)
-      .then(cache => cache.addAll(urlsToCache))
+    caches.open(cacheName).then(function(cache) {
+      return cache.addAll(urlsToCache);
+    })
   );
 });
 
-self.addEventListener('activate', event => {
+self.addEventListener('activate', function(event) {
   event.waitUntil(
-    caches.keys().then(keys => Promise.all(
-      keys.map(key => {
-        if (!cacheName.includes(key)) return caches.delete(key);
-      })
-    ))
+    caches.keys().then(function(keys) {
+      return Promise.all(keys.map(function(key) {
+        if (cacheName.indexOf(key) === -1) {
+          return caches.delete(key);
+        }
+      }));
+    })
   );
 });
 
-self.addEventListener('fetch', event => {
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request).then(function(response) {
+      return response || fetch(event.request).then(function(response) {
+        let clone = response.clone();
+        caches.open(cacheName).then(function(cache) {
+          cache.put(event.request, clone);
+        });
+        return response;
+      });
+    }).catch(function() {
+      return caches.match('/static/images/logo.png');
+    })
+  );
 });
