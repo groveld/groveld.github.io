@@ -4,7 +4,9 @@ permalink: /sw.js
 
 'use strict';
 
+const cacheName = `groveld-{{ site.time | date: '%s' }}`;
 const urlsToCache = ['/?utm_source=homescreen'];
+
 // Cache assets
 {% for file in site.static_files %}urlsToCache.push('{{ file.path }}')
 {% endfor %}
@@ -14,8 +16,6 @@ const urlsToCache = ['/?utm_source=homescreen'];
 // Cache pages
 {% for page in site.html_pages %}{% if page.url != '/404' %}urlsToCache.push('{{ page.url }}')
 {% endif %}{% endfor %}
-
-const cacheName = `groveld-{{ site.time | date: '%s' }}`;
 
 self.addEventListener('install', event => {
   self.skipWaiting();
@@ -35,19 +35,5 @@ self.addEventListener('activate', event => {
   );
 });
 
-self.addEventListener('fetch', function(event) {
-  event.respondWith(
-    caches.match(event.request).then(function(response) {
-      if (response) {
-        return response;
-      } else {
-        return fetch(event.request).then(function(res) {
-          return caches.open(cacheName).then(function(cache) {
-            cache.put(event.request.url, res.clone());
-            return res;
-          });
-        });
-      }
-    })
-  );
+self.addEventListener('fetch', event => {
 });
