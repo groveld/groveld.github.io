@@ -20,8 +20,9 @@ const urlsToCache = ['/?utm_source=homescreen'];
 self.addEventListener('install', event => {
   self.skipWaiting();
   event.waitUntil(
-    caches.open(cacheName)
-      .then(cache => cache.addAll(urlsToCache))
+    caches.open(cacheName).then(cache => {
+      cache.addAll(urlsToCache)
+    })
   );
 });
 
