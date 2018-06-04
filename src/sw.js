@@ -5,7 +5,7 @@ permalink: /sw.js
 'use strict';
 
 const CACHE_NAME = 'groveld-{{ site.time | date: '%s' }}';
-const urlsToCache = ['/?utm_source=homescreen','/static/images/logo.png'];
+const urlsToCache = ['/','/?utm_source=homescreen'];
 
 self.addEventListener('install', function(event) {
   self.skipWaiting();
@@ -31,9 +31,11 @@ self.addEventListener('activate', function(event) {
 self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.open(CACHE_NAME).then(function(cache) {
-      return fetch(event.request).then(function(response) {
-        cache.put(event.request, response.clone());
-        return response;
+      return cache.match(event.request).then(function (response) {
+        return response || fetch(event.request).then(function(response) {
+          cache.put(event.request, response.clone());
+          return response;
+        });
       });
     })
   );
