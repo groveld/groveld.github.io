@@ -5,6 +5,9 @@ enforce_ssl           : www.groveld.com
 permalink             : /articles/:title
 include               : ["_pages"]
 
+sass:
+  style               : compressed
+
 title                 : Martin Groeneveld
 tagline               : Opensource, security and development
 description           : The personal website of Martin Groeneveld

@@ -7,10 +7,10 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-// Enable A2HS prompt
-window.addEventListener('beforeinstallprompt', async e => {
-  await e.prompt();
-});
+// // Enable A2HS prompt
+// window.addEventListener('beforeinstallprompt', async event => {
+//   await event.prompt();
+// });
 
 
 $(document).ready(function() {
