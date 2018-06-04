@@ -22,8 +22,8 @@
     <link rel="canonical" href="{{ page.url | absolute_url }}">
     <title>{% if page.title %}{{ page.title | xml_escape }} - {{ site.title | xml_escape }}{% else %}{{ site.title | xml_escape }}{% endif %}</title>
     <!-- Bootstrap CSS, Custom CSS -->
-    <link rel="preload" as="style" onload="this.rel = 'stylesheet'" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <link rel="preload" as="style" onload="this.rel = 'stylesheet'" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/style.css">
   </head>
   <body>
     {% include navigation.html %}
