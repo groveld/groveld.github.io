@@ -5,7 +5,7 @@ permalink: /sw.js
 'use strict';
 
 const CACHE_NAME = 'groveld-{{ site.time | date: '%s' }}';
-const urlsToCache = ['/','/?utm_source=homescreen','/sw.js','/manifest.json','/static/offline.html','/static/images/offline.svg','/blog','/articles/htaccess-snippets'];
+const urlsToCache = ['/','/?utm_source=homescreen','/sw.js','/manifest.json','/static/offline.html','/static/images/offline.svg'];
 
 self.addEventListener('install', function(event) {
   self.skipWaiting();
