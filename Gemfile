@@ -2,5 +2,6 @@ source 'https://rubygems.org'
 
 gem 'wdm', '~> 0.1.0' if Gem.win_platform?
 gem 'rake'
-gem 'jekyll'
 gem 'html-proofer'
+gem 'jekyll'
+gem 'bootstrap'

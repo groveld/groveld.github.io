@@ -5,6 +5,9 @@ enforce_ssl           : www.groveld.com
 permalink             : /articles/:title
 include               : ["_pages"]
 
+plugins:
+  - bootstrap
+
 sass:
   style               : compressed
 

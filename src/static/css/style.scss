@@ -4,17 +4,10 @@
 
 @charset "utf-8";
 
+@import "bootstrap";
+
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
-// Bootstrap Required
-@import "bootstrap/bootstrap";
-// @import "bootstrap/variables";
-// @import "bootstrap/mixins";
-
-// Bootstrap Optional
-// @import "bootstrap/navbar";
-
-// Custom styling
 * {
   margin: 0;
   padding: 0;
