@@ -1,5 +1,5 @@
 source                : src
-destination           : html
+destination           : public
 url                   : https://www.groveld.com
 enforce_ssl           : www.groveld.com
 permalink             : /articles/:title

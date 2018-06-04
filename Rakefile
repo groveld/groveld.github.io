@@ -2,7 +2,7 @@ task :default => [:test]
 
 desc 'Clean up generated site'
 task :clean do
-  sh 'rm -rf ./html'
+  sh 'rm -rf ./public'
 end
 
 desc 'Generate site'
@@ -16,7 +16,7 @@ end
 desc 'Validate generated site'
 task :test => :build do
   require 'html-proofer'
-  HTMLProofer.check_directory('./html',{
+  HTMLProofer.check_directory('./public',{
     :url_swap => { '*.groveld.com/' => '/' },
     :only_4xx => true,
     :check_favicon => true,

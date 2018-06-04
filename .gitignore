@@ -1,6 +1,7 @@
 # Project specific #
 ####################
-html/
+public
+node_modules
 Gemfile.lock
 package-lock.json
 
