@@ -2,7 +2,7 @@ task :default => [:test]
 
 desc 'Clean up generated site'
 task :clean do
-  sh 'rm -rf ./public'
+  sh 'rm -rf ./public ./.sass-cache'
 end
 
 desc 'Generate site'
