@@ -20,7 +20,7 @@ self.addEventListener('activate', function(event) {
   event.waitUntil(
     caches.keys().then(function(keys) {
       return Promise.all(keys.map(function(key) {
-        if (CACHE_NAME.indexOf(key) === -1) {
+        if (key !== CACHE_NAME) {
           return caches.delete(key);
         }
       }));
