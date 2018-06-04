@@ -43,22 +43,4 @@ self.addEventListener('activate', function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
-  event.respondWith(
-    caches.open(cacheVersion + 'dynamic').then(function(cache) {
-      return cache.match(event.request).then(function (response) {
-        return response || fetch(event.request).then(function(response) {
-          cache.put(event.request, response.clone());
-          return response;
-        })
-        .catch(function() {
-          // Offline fallback image
-          if (event.request.url.match(/\.(jpe?g|png|gif|svg)$/)) {
-            return caches.match('/static/images/offline.svg');
-          }
-          // If both fail, show a generic fallback:
-          return caches.match('/static/offline.html');
-        });
-      });
-    })
-  );
 });
