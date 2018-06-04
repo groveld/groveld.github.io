@@ -1,14 +1,14 @@
 <script>
+  // Register Service Worker
   if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-      navigator.serviceWorker.register('/sw.js').then(registration => {
-        console.log('ServiceWorker registration successful with scope:', registration.scope);
-      }).catch(err => {
-        console.log('ServiceWorker registration failed:', err);
-      });
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      // console.log('ServiceWorker registration successful with scope:', registration.scope);
+    }).catch(function(err) {
+      console.log('ServiceWorker registration failed:', err);
     });
   }
 
+  // Enable A2HS prompt
   window.addEventListener('beforeinstallprompt', async e => {
     await e.prompt();
   });
