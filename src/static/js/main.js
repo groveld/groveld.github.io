@@ -1,3 +1,18 @@
+// Register Service Worker
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').then(function(registration) {
+    // ServiceWorker registration successful
+  }).catch(function(err) {
+    console.log('ServiceWorker registration failed:', err);
+  });
+}
+
+// Enable A2HS prompt
+window.addEventListener('beforeinstallprompt', async e => {
+  await e.prompt();
+});
+
+
 $(document).ready(function() {
 
   $('#show-comments').click(function() {
