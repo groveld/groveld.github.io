@@ -1,3 +1,5 @@
+//=require bootstrap
+
 // Register Service Worker
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw.js').then(function(registration) {
@@ -8,10 +10,9 @@ if ('serviceWorker' in navigator) {
 }
 
 // Enable A2HS prompt
-window.addEventListener('beforeinstallprompt', async event => {
-  await event.prompt();
+window.addEventListener('beforeinstallprompt', function(event) {
+  event.prompt();
 });
-
 
 $(document).ready(function() {
 

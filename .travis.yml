@@ -10,13 +10,11 @@ branches:
   only:
     - build
 
-before_install:
-  - echo "www.groveld.com" > ./src/CNAME
-
 after_success:
   - git config --global user.name "Travis CI"
   - git config --global user.email "travis-ci@groveld.com"
   - git clone --quiet --depth=50 --branch=master https://$GITHUB_API_KEY@github.com/groveld/groveld.github.io.git ../master > /dev/null 2>&1
+  - echo "www.groveld.com" > ./public/CNAME
   - rsync -vrth --delete --exclude '.git*' ./public/ ../master/
   - cd ../master
   - git add -A .

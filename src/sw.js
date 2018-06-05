@@ -10,12 +10,7 @@ const urlsToCache = [
   '/?utm_source=homescreen',
   '/sw.js',
   '/manifest.json',
-  '/browserconfig.xml',
-  '/static/css/style.css',
-  '/static/js/main.js',
-  '/static/images/logo.png',
-  '/static/offline.html',
-  '/static/images/offline.svg'
+  '/browserconfig.xml'
 ];
 
 self.addEventListener('install', function(event) {

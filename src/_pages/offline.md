@@ -1,6 +1,6 @@
 ---
 layout      : page
-permalink   : /static/offline
+permalink   : /offline
 title       : No Connectivity
 description : No Connectivity
 ---

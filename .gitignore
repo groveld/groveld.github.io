@@ -1,9 +1,10 @@
 # Project specific #
 ####################
 public
-node_modules
+.jekyll-cache
 .sass-cache
 Gemfile.lock
+node_modules
 package-lock.json
 
 # OS generated files #
