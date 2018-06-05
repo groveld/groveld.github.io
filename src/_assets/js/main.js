@@ -1,4 +1,4 @@
-//=require bootstrap
+//= require bootstrap
 
 // Register Service Worker
 if ('serviceWorker' in navigator) {
