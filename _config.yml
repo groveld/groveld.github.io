@@ -20,12 +20,12 @@ google_analytics      : UA-47976921-1
 
 # Plugin: Jekyll Assets
 assets:
-  digest: true
+  digest: false
   compression: true
   gzip: false
   caching:
     enabled: true
   defaults:
-    js: { integrity: true }
-    css: { integrity: true }
+    js: { integrity: false }
+    css: { integrity: false }
     img: { integrity: false }
