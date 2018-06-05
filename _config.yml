@@ -20,6 +20,7 @@ google_analytics      : UA-47976921-1
 
 # Plugin: Jekyll Assets
 assets:
+  digest: true
   compression: true
   gzip: false
   caching:
