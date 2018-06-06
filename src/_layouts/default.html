@@ -22,7 +22,8 @@
     <link rel="canonical" href="{{ page.url | absolute_url }}">
     <title>{% if page.title %}{{ page.title | xml_escape }} - {{ site.title | xml_escape }}{% else %}{{ site.title | xml_escape }}{% endif %}</title>
     <!-- Bootstrap CSS and Custom CSS -->
-    {% asset style.css !type %}
+    {% asset style.css !type rel="preload" as="style" onload="this.rel='stylesheet'" %}
+    {% asset critical.css !type @inline %}
   </head>
   <body>
     {% include navigation.html %}

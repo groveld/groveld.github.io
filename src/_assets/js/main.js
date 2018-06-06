@@ -10,9 +10,9 @@ if ('serviceWorker' in navigator) {
 }
 
 // Enable A2HS prompt
-window.addEventListener('beforeinstallprompt', function(event) {
-  event.prompt();
-});
+// window.addEventListener('beforeinstallprompt', function(event) {
+//   event.prompt();
+// });
 
 $(document).ready(function() {
 

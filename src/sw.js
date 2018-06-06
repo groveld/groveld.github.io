@@ -12,16 +12,15 @@ const urlsToCache = [
 ];
 
 self.addEventListener('install', function(event) {
-  self.skipWaiting();
   event.waitUntil(
     caches.open(cacheVersion + 'static').then(function(cache) {
       return cache.addAll(urlsToCache);
     })
   );
+  return self.skipWaiting();
 });
 
 self.addEventListener('activate', function(event) {
-  self.clients.claim();
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
       return Promise.all(
@@ -33,6 +32,7 @@ self.addEventListener('activate', function(event) {
       );
     })
   );
+  return self.clients.claim();
 });
 
 self.addEventListener('fetch', function(event) {
