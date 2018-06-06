@@ -22,7 +22,7 @@
     <link rel="canonical" href="{{ page.url | absolute_url }}">
     <title>{% if page.title %}{{ page.title | xml_escape }} - {{ site.title | xml_escape }}{% else %}{{ site.title | xml_escape }}{% endif %}</title>
     <!-- Bootstrap CSS and Custom CSS -->
-    {% asset style.css %}
+    {% asset style.css !type %}
   </head>
   <body>
     {% include navigation.html %}
@@ -42,7 +42,7 @@
     </footer>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS, then custom scripts -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous" type="text/javascript"></script>
-    {% asset main.js %}
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    {% asset main.js !type %}
   </body>
 </html>

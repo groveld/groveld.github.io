@@ -2,13 +2,11 @@
 layout      : post
 author      : groveld
 title       : Postfix with MySQL backend and TLS
-description :
-update      :
-comments    : true
-toc         : false
+description : Install a ready to use Postfix mail server with MySql backend for virtual users.
+tags        : [linux, mailserver, postfix, mysql]
 ---
 
-In this tutorial we'll install a ready to use Postfix mail server with MySql backend for virtual users. Notice that this tutorial only covers installing the SMTP server (not POP3 and IMAP). Click here for a tutorial on installing Courier POP3 and IMAp services.
+In this tutorial we'll install a ready to use Postfix mail server with MySql backend for virtual users. Notice that this tutorial only covers installing the SMTP server (not POP3 and IMAP). Click here for a tutorial on installing Courier POP3 and IMAP services.
 
 Once installed and configured, you can easily create your own admin system to modifiy the domains and users because the table structure is very simple.
 

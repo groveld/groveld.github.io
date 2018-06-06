@@ -2,10 +2,8 @@
 layout      : post
 author      : groveld
 title       : TeamSpeak 3 server on Debian/Ubuntu
-description :
-update      :
-comments    : true
-toc         : false
+description : Install TeamSpeak 3 on a Ubuntu 10.04 server.
+tags        : [teamspeak, linux]
 ---
 
 It has been a long time since my last post – I’m sorry for that but I didn’t have the time. Anyway I just installed TeamSpeak 3 on a Ubuntu 10.04 for a friend and want to share that info. Getting TeamSpeak running is mostly not the problem but you don’t want to start it after every boot by hand or run it as root. This Howto shows what I did. I assume that all user actions shown in this howto are performed as root or after executing sudo bash.

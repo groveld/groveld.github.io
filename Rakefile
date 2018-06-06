@@ -2,7 +2,7 @@ task :default => [:test]
 
 desc 'Clean up generated site'
 task :clean do
-  sh 'rm -rf public .jekyll-cache .sass-cache'
+  sh 'rm -rf public .jekyll-cache .sass-cache Gemfile.lock'
 end
 
 desc 'Generate site'

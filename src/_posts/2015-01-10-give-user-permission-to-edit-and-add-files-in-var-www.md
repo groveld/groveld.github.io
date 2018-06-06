@@ -2,9 +2,8 @@
 layout      : post
 author      : groveld
 title       : Give user permission to edit and add files in /var/www
-description :
-update      :
-toc         : true
+description : A tutorial showing you how to give an Ubuntu user the right to edit and add files in the /var/www folders.
+tags        : [linux]
 ---
 
 Tutorial showing you how to give an Ubuntu user the right to edit and add files in the `/var/www` folders.

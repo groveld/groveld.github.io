@@ -2,9 +2,8 @@
 layout      : post
 author      : groveld
 title       : A collection of useful .htaccess snippets
-description :
-update      :
-toc         : true
+description : A collection of useful .htaccess snippets from all over the interwebs into one place.
+tags        : [apache]
 ---
 
 <div class="alert alert-warning"><strong>Disclaimer:</strong> While dropping the snippet into an ".htaccess" file is most of the time sufficient, there are cases when certain modifications might be required. Use at your own risk.</div>

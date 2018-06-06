@@ -6,11 +6,9 @@ permalink: /sw.js
 
 const cacheVersion = '{{ site.time | date: "%s" }}::';
 const urlsToCache = [
-  '/',
   '/?utm_source=homescreen',
-  '/sw.js',
-  '/manifest.json',
-  '/browserconfig.xml'
+  {% for page in site.pages %}'{{ page.url | prepend: site.baseurl }}',{% endfor %}
+  {% for post in site.posts %}'{{ post.url | prepend: site.baseurl }}',{% endfor %}
 ];
 
 self.addEventListener('install', function(event) {
@@ -38,4 +36,16 @@ self.addEventListener('activate', function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.open(cacheVersion + 'static').then(function(cache) {
+      return cache.match(event.request).then(function (response) {
+        return response || fetch(event.request).then(function(response) {
+          cache.put(event.request, response.clone());
+          return response;
+        });
+      }).catch(function() {
+        return caches.match('/404')
+      });
+    })
+  );
 });

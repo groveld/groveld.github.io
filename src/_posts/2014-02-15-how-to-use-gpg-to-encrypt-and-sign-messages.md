@@ -2,10 +2,8 @@
 layout      : post
 author      : groveld
 title       : How To Use GPG to Encrypt and Sign Messages
-description :
-update      :
-comments    : true
-toc         : false
+description : How GPG works and how to implement it.
+tags        : [linux, GPG]
 ---
 
 GPG, or GNU Privacy Guard, is a public key cryptography implementation. This allows for the secure transmission of information between parties and can be used to verify that the origin of a message is genuine.

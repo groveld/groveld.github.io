@@ -2,8 +2,8 @@
 layout      : post
 author      : groveld
 title       : Nginx config for www and non-www redirection
-description :
-update      :
+description : Force users to use either the WWW version or non-WWW version of URLs for your site.
+tags        : [nginx]
 ---
 
 There are many ways to force Nginx to use either WWW version or non-WWW version of URLs for your site.

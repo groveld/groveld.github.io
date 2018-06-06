@@ -2,8 +2,8 @@
 layout      : post
 author      : groveld
 title       : March 29th marks this years International open Hackerspaces day
-description :
-update      :
+description : 
+tags        : ["hackerspace", "open house"]
 ---
 
 Just like the past three years, the hackerspace community will open their doors to the public, on Saturday the 29th of March 2014.

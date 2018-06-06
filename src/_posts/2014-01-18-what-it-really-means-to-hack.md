@@ -3,7 +3,7 @@ layout      : post
 author      : groveld
 title       : What it really means to Hack
 description :
-update      :
+tags        : [hacking]
 ---
 
 I once mentioned it to a classmate that I use GNU/Linux as the only Operating System at home, and he replied in shock, "That's used by *Hackers*? Right?"

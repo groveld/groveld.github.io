@@ -3,7 +3,7 @@ layout      : post
 author      : groveld
 title       : Clean URLs with Jekyll/Apache
 description :
-update      :
+tags        : [jekyll, apache]
 ---
 
 Yesterday I decided to shorten and clear the urls of my posts once and for all. By clean, I mean short and simple urls without dates, categories or anything else in them, only the post slug. My definition of cleanness also includes **not** having a slash at the end of the urls. For example, `groveld.com/about`.
