@@ -1,8 +1,8 @@
-task :default => [:test, :ghpages]
+task :default => [:ghpages, :test]
 
 desc 'Clean up workspace before build'
 task :clean do
-  sh 'rm -rf public .jekyll-cache .sass-cache Gemfile.lock'
+  sh 'rm -rf public .jekyll-cache .sass-cache'
 end
 
 desc 'Generate site'
@@ -14,7 +14,7 @@ task :build => :clean do
 end
 
 desc 'Validate generated site'
-task :test => :build do
+task :test do
   require 'html-proofer'
   HTMLProofer.check_directory('public', {
     :url_swap => { '*.groveld.com/' => '/' },
@@ -28,8 +28,7 @@ task :test => :build do
 end
 
 desc 'Prepare site for GitHub Pages'
-task :ghpages => :test do
-  sh 'rm -rf .jekyll-cache .sass-cache'
+task :ghpages => :build do
   sh 'find public/assets -type f -name ".sprockets-manifest-*.json" -delete'
   sh 'echo "www.groveld.com" > public/CNAME'
 end

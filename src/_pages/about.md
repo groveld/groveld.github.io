@@ -11,7 +11,7 @@ Apart from programming and hacking for fun, I’m a professional DevOps, a mix o
 
 From time to time, when an interesting offer comes along, I do freelance jobs. If you have something I can help you with, please [contact me](/contact).
 
-{% asset images/snail.jpg width=100% alt="pretty snail" %}
+{% asset snail.jpg alt=snail width=100% magick:resize=1000x1000 magick:quality=75 %}
 
 ### About This Website
 
