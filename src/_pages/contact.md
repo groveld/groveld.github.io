@@ -5,30 +5,19 @@ title       : We like hearing from you
 description :
 ---
 
-<p>Want to get in touch with me? Fill out the form to send me a message and I will try to get back to you within 24 hours!</p>
-<div class="row">
-  <div class="col-xs-6 text-left">
-    <strong>Address</strong>
-    <address>{{ site.address }}</address>
-  </div>
-  <div class="col-xs-6 text-left">
-    <strong>Contact</strong>
-    <address>
-      <a href="tel:{{ site.phone }}">{{ site.phone }}</a><br><a href="mailto:{{ site.email }}">{{ site.email }}</a>
-    </address>
-  </div>
-</div>
-<div id="share" class="btn-group btn-group-justified" role="group">
-  {% if site.github %}<a href="https://github.com/{{ site.github }}" class="btn btn-github" role="button"><span class="fa fa-github"></span></a>{% endif %}
-  {% if site.bitbucket %}<a href="https://bitbucket.org/{{ site.bitbucket }}" class="btn btn-bitbucket" role="button"><span class="fa fa-bitbucket"></span></a>{% endif %}
-  {% if site.googleplus %}<a href="https://plus.google.com/{{ site.googleplus }}" class="btn btn-googleplus" role="button"><span class="fa fa-google-plus"></span></a>{% endif %}
-  {% if site.linkedin %}<a href="https://www.linkedin.com/in/{{ site.linkedin }}" class="btn btn-linkedin" role="button"><span class="fa fa-linkedin"></span></a>{% endif %}
-  {% if site.twitter %}<a href="https://twitter.com/{{ site.twitter }}" class="btn btn-twitter" role="button"><span class="fa fa-twitter"></span></a>{% endif %}
-  {% if site.facebook %}<a href="https://www.facebook.com/{{ site.facebook }}" class="btn btn-facebook" role="button"><span class="fa fa-facebook"></span></a>{% endif %}
-  {% if site.keybase %}<a href="https://keybase.io/{{ site.keybase }}" class="btn btn-keybase" role="button"><span class="fa fa-key"></span></a>{% endif %}
-</div>
+Want to get in touch with me? Fill out the form to send me a message and I will try to get back to you within 24 hours!
 
-### PGP Public Key
+##### Address
+
+{{ site.address }}
+
+##### Contact
+
+{{ site.phone }}
+
+{{ site.email }}
+
+##### PGP Public Key
 
 ```text
 -----BEGIN PGP PUBLIC KEY BLOCK-----

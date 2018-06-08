@@ -4,6 +4,7 @@ This is the personal website of Martin Groeneveld.
 
 ## Getting Started
 
+ImageMagick-7.0.7-38-Q16-x64-dll.exe with 'install legacy (or older) utilities' checked.
 You need Ruby+Devkit 2.5.X for this to work on Windows.
 
 ```shell

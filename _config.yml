@@ -29,3 +29,5 @@ assets:
     js: { integrity: false }
     css: { integrity: false }
     img: { integrity: false }
+  autoprefixer:
+    browsers: ["last 2 versions","> 0.2%","IE > 9"]
