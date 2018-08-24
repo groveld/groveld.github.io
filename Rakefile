@@ -1,4 +1,4 @@
-task :default => [:ghpages, :test]
+task :default => [:build, :test]
 
 desc 'Clean up workspace before build'
 task :clean do
@@ -25,9 +25,4 @@ task :test do
     :allow_hash_href => true,
     :disable_external => true
   }).run
-end
-
-desc 'Prepare site for GitHub Pages'
-task :ghpages => :build do
-  sh 'echo "www.groveld.com" > public/CNAME'
 end

@@ -4,7 +4,7 @@ permalink: /sw.js
 
 'use strict';
 
-const cacheVersion = '{{ site.time | date: "%s" }}::';
+const cacheVersion = '{{ site.time }}::';
 const urlsToCache = [
   {% for page in site.pages %}'{{ page.url | relative_url }}',{% endfor %}
   {% for post in site.posts %}'{{ post.url | relative_url }}',{% endfor %}

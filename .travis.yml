@@ -10,6 +10,14 @@ branches:
   only:
     - build
 
+before_script:
+  - echo "www.groveld.com" > ./src/CNAME
+  - mv ./src/assets/css/style.css ./src/assets/css/$TRAVIS_COMMIT.css
+  - mv ./src/assets/js/script.js ./src/assets/js/$TRAVIS_COMMIT.js
+  - sed -i "" -e "s/style.css/$TRAVIS_COMMIT.css/g" ./src/_layouts/default.html
+  - sed -i "" -e "s/script.js/$TRAVIS_COMMIT.js/g" ./src/_layouts/default.html
+  - sed -i "" -e "s/{{ site.time }}::/$TRAVIS_COMMIT::/g" ./src/sw.js
+
 after_success:
   - git config --global user.name "Travis CI"
   - git config --global user.email "travis-ci@groveld.com"
