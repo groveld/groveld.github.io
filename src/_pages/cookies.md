@@ -1,6 +1,6 @@
 ---
 layout      : page
-permalink   : /legal/cookies
+permalink   : /terms/cookies
 title       : Cookie Policy
 description : Cookie Policy.
 ---

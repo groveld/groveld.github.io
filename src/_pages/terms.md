@@ -1,6 +1,6 @@
 ---
 layout      : page
-permalink   : /legal/terms
+permalink   : /terms/
 title       : Terms of Service "Agreement"
 description : This Terms of Service governs the legal terms of this website, sub-domains, and any associated web-based and mobile applications.
 ---

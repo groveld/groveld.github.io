@@ -1,6 +1,6 @@
 ---
 layout      : page
-permalink   : /legal/privacy
+permalink   : /terms/privacy
 title       : Privacy Policy
 description : This Privacy Policy governs the manner in which we collect, use, maintain and disclose information collected from users.
 ---

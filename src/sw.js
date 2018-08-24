@@ -6,9 +6,8 @@ permalink: /sw.js
 
 const cacheVersion = '{{ site.time | date: "%s" }}::';
 const urlsToCache = [
-  '/?utm_source=homescreen',
-  {% for page in site.pages %}'{{ page.url | prepend: site.baseurl }}',{% endfor %}
-  {% for post in site.posts %}'{{ post.url | prepend: site.baseurl }}',{% endfor %}
+  {% for page in site.pages %}'{{ page.url | relative_url }}',{% endfor %}
+  {% for post in site.posts %}'{{ post.url | relative_url }}',{% endfor %}
 ];
 
 self.addEventListener('install', function(event) {
@@ -44,7 +43,7 @@ self.addEventListener('fetch', function(event) {
           return response;
         });
       }).catch(function() {
-        return caches.match('/404')
+        return caches.match('{{ "/404" | relative_url }}')
       });
     })
   );

@@ -4,9 +4,6 @@ This is the personal website of Martin Groeneveld.
 
 ## Getting Started
 
-ImageMagick-7.0.7-38-Q16-x64-dll.exe with 'install legacy (or older) utilities' checked.
-You need Ruby+Devkit 2.5.X for this to work on Windows.
-
 ```shell
 git clone https://github.com/groveld/groveld.github.io.git
 cd groveld.github.io
@@ -14,15 +11,28 @@ gem install bundler && bundle install # Ensures you have all RubyGems needed
 jekyll serve # Build site and run a local server
 ```
 
-The **front-matter** of a post should look like this;
+The **front-matter** of a _post_ should look like this;
 
 ```txt
 ---
 layout      : post
 author      : "John Doe"
+email       : "johndoe@example.email"
+update      : ""
 title       : "Some Title Here"
 description : "A very descriptive description here"
 tags        : [some, tags, here]
+---
+```
+
+The **front-matter** of a _page_ should look like this;
+
+```txt
+---
+layout      : page
+permalink   : /page-url
+title       : "Some Title Here"
+description : "A very descriptive description here"
 ---
 ```
 
@@ -40,6 +50,6 @@ The following directories and their contents are Copyright Martin Groeneveld. Yo
 
 - src/_pages
 - src/_posts
-- src/static/images
+- src/assets/images
 
 All other directories and files are ISC Licensed. Feel free to use the HTML and CSS as you please. If you do use them, a link back to https://github.com/groveld/groveld.github.io/ would be appreciated.

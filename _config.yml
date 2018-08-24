@@ -1,33 +1,23 @@
 # Core Jekyll Configuration
+locale                : en
 source                : src
 destination           : public
 url                   : https://www.groveld.com
 enforce_ssl           : www.groveld.com
 permalink             : /articles/:title
 include               : ["_pages"]
-plugins               : ["jekyll-assets", "bootstrap"]
+plugins               : []
+
+pwa_title             : "Groveld"
+pwa_color             : "#343a40"
+pwa_background        : "#fafafa"
 
 # Custom Jekyll Configuration
 title                 : Martin Groeneveld
-tagline               : Opensource, security and development
 description           : The personal website of Martin Groeneveld
-author                : groveld
+author                : Martin Groeneveld
 email                 : martin@groveld.com
 phone                 : "+31610106931"
 address               : De Kamp 8<br>8627SP Gauw<br>Netherlands
-legal                 : <a href="/legal/terms">Terms</a> &bull; <a href="/legal/privacy">Privacy</a> &bull; <a href="/legal/cookies">Cookies</a>
+legal                 : <a href="/terms/">Terms</a> &bull; <a href="/terms/privacy">Privacy</a> &bull; <a href="/terms/cookies">Cookies</a>
 google_analytics      : UA-47976921-1
-
-# Plugin: Jekyll Assets
-assets:
-  digest: true
-  compression: true
-  gzip: false
-  caching:
-    enabled: true
-  defaults:
-    js: { integrity: false }
-    css: { integrity: false }
-    img: { integrity: false }
-  autoprefixer:
-    browsers: ["last 2 versions","> 0.2%","IE > 9"]

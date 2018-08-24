@@ -3,4 +3,4 @@ permalink: /robots.txt
 ---
 
 User-agent: *
-Sitemap: /sitemap.xml
+Sitemap: {{ "/sitemap.xml" | absolute_url }}

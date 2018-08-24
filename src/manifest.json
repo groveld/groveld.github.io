@@ -3,26 +3,25 @@ permalink: /manifest.json
 ---
 
 {
-  "short_name": "Groveld",
-  "name": "Groveld's Blog",
-  "description": "This is the personal website of Martin Groeneveld",
-  "default_locale": "en",
+  "short_name": "{{ site.pwa_title }}",
+  "name": "{{ site.title }}",
+  "description": "{{ site.description }}",
+  "default_locale": "{{ site.locale }}",
   "icons": [
     {
-      "src": "{% asset icons/android-chrome-192x192.png @path %}",
+      "src": "{{ "/assets/images/icons/android-chrome-192x192.png" | relative_url }}",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "{% asset icons/android-chrome-512x512.png @path %}",
+      "src": "{{ "/assets/images/icons/android-chrome-512x512.png" | relative_url }}",
       "sizes": "512x512",
       "type": "image/png"
     }
   ],
-  "start_url": "/?utm_source=homescreen",
-  "scope": "/",
+  "start_url": "{{ "/" | relative_url }}",
   "display": "standalone",
   "orientation": "portrait",
-  "theme_color": "#343a40",
-  "background_color": "#fafafa"
+  "theme_color": "{{ site.pwa_color }}",
+  "background_color": "{{ site.pwa_background }}"
 }

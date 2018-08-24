@@ -3,29 +3,18 @@ layout: default
 ---
 
 <div class="container-fluid">
-
   <div class="row">
     <div class="col">
+
       <div class="card card-mobile my-3">
         <div class="card-body">
           <h1 class="card-title">{{ page.title }}</h1>
-          {{ content }}
+          <p class="card-text my-0">
+            {{ content }}
+          </p>
         </div>
       </div>
+
     </div>
   </div>
-
-  {% if page.comments %}
-  <div class="row">
-    <div class="col">
-      <button type="button" class="btn btn-primary btn-lg btn-block mb-3" id="show-comments">Show Comments</button>
-      <div id="comments" class="card card-mobile mb-3">
-        <div class="card-body">
-          <div id="disqus_thread"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  {% endif %}
-
 </div>

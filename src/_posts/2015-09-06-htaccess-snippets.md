@@ -13,7 +13,6 @@ tags        : [apache]
 ## Credits
 What we are doing here is mostly collecting useful snippets from all over the interwebs (for example, a good chunk is from [Apache Server Configs](https://github.com/h5bp/server-configs-apache)) into one place. While we've been trying to credit where due, things might be missing. If you believe anything here is your work and credits should be given, let us know, or just send a PR.
 
-{% asset snail.jpg alt=snail width=100% magick:resize=920x920 magick:quality=50 %}
 ## Rewrite and Redirection
 Note: It is assumed that you have `mod_rewrite` installed and enabled.
 

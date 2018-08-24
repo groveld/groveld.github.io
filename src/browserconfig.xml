@@ -6,11 +6,11 @@ permalink: /browserconfig.xml
 <browserconfig>
   <msapplication>
     <tile>
-      <square70x70logo src="{% asset icons/small.jpg @path %}"/>
-      <square150x150logo src="{% asset icons/medium.jpg @path %}"/>
-      <wide310x150logo src="{% asset icons/wide.jpg @path %}"/>
-      <square310x310logo src="{% asset icons/large.jpg @path %}"/>
-      <TileColor>#343a40</TileColor>
+      <square70x70logo src="{{ "/assets/images/icons/small.jpg" | relative_url }}"/>
+      <square150x150logo src="{{ "/assets/images/icons/medium.jpg" | relative_url }}"/>
+      <wide310x150logo src="{{ "/assets/images/icons/wide.jpg" | relative_url }}"/>
+      <square310x310logo src="{{ "/assets/images/icons/large.jpg" | relative_url }}"/>
+      <TileColor>{{ site.pwa_color }}</TileColor>
     </tile>
   </msapplication>
 </browserconfig>

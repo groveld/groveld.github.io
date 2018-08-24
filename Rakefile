@@ -29,6 +29,5 @@ end
 
 desc 'Prepare site for GitHub Pages'
 task :ghpages => :build do
-  sh 'find public/assets -type f -name ".sprockets-manifest-*.json" -delete'
   sh 'echo "www.groveld.com" > public/CNAME'
 end

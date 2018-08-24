@@ -1,37 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ site.locale }}">
   <head>
     <!-- meta info -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
     <meta name="format-detection" content="telephone=no">
     <!-- favicon and webapp behaviour -->
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#343a40">
-    <meta name="msapplication-config" content="/browserconfig.xml">
+    <link rel="shortcut icon" href="{{ "/favicon.ico" | relative_url }}">
+    <link rel="manifest" href="{{ "/manifest.json" | relative_url }}">
+    <meta name="theme-color" content="{{ site.pwa_color }}">
+    <meta name="msapplication-config" content="{{ "/browserconfig.xml" | relative_url }}">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="Groveld">
-    <link rel="apple-touch-icon" sizes="180x180" href="{% asset icons/apple-touch-icon.png @path %}">
-    <link rel="mask-icon" href="{% asset icons/safari-pinned-tab.svg @path %}" color="#343a40">
+    <meta name="apple-mobile-web-app-title" content="{{ site.pwa_title }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/images/icons/apple-touch-icon.png" | relative_url }}">
+    <link rel="mask-icon" href="{{ "/assets/images/icons/safari-pinned-tab.svg" | relative_url }}" color="{{ site.pwa_color }}">
     <!-- site info -->
     <meta name="description" content="{% if page.description %}{{ page.description | xml_escape }}{% else %}{{ site.description | xml_escape }}{% endif %}">
     <meta name="author" content="{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}">
-    <link rel="alternate" type="application/atom+xml" title="{{ site.title | xml_escape }}" href="/atom.xml">
+    <link rel="alternate" type="application/atom+xml" title="{{ site.title | xml_escape }}" href="{{ "/atom.xml" | relative_url }}">
     <link rel="canonical" href="{{ page.url | absolute_url }}">
     <title>{% if page.title %}{{ page.title | xml_escape }} - {{ site.title | xml_escape }}{% else %}{{ site.title | xml_escape }}{% endif %}</title>
     <!-- Bootstrap CSS and Custom CSS -->
-    {% asset style.css !type rel="preload" as="style" onload="this.rel='stylesheet'" %}
-    {% asset critical.css !type @inline %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
   </head>
   <body>
     {% include navigation.html %}
 
     {{ content }}
 
-    <!-- <button type="button" class="btn btn-primary" id="scrollUp">Scroll to top</button> -->
-
+    <!-- Footer -->
     <footer class="container-fluid my-3">
       <div class="row">
         <div class="col">
@@ -42,8 +41,12 @@
       </div>
     </footer>
 
+    {% include analytics.html %}
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS, then custom scripts -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    {% asset main.js !type %}
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="{{ "/assets/js/main.js" | relative_url }}"></script>
   </body>
 </html>
