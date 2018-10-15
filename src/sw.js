@@ -6,8 +6,7 @@ permalink: /sw.js
 
 const cacheVersion = '{{ site.time }}::';
 const urlsToCache = [
-  {% for page in site.pages %}'{{ page.url | relative_url }}',{% endfor %}
-  {% for post in site.posts %}'{{ post.url | relative_url }}',{% endfor %}
+{% assign isFirst = true %}{% for page in site.pages %}{% unless page.url == "/sw.js" %}{% unless isFirst %},{% endunless %}{% assign isFirst = false %}'{{ page.url | relative_url }}'{% endunless %}{% endfor %}{% for post in site.posts %}{% unless isFirst %},{% endunless %}'{{ post.url | relative_url }}'{% endfor %}
 ];
 
 self.addEventListener('install', function(event) {
