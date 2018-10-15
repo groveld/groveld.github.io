@@ -45,6 +45,7 @@ sudo adduser --system --group --shell /bin/bash --disabled-password git
 We now have a user called "git" that will handle gitolite configuration. We need to be able to access this user from a normal account. We will do this by configuring an SSH key associated with git administration.
 
 ## Configure SSH Keys for Git Administration
+
 On your **local computer**, which you will be using to administer git and gitolite, you need to create an SSH key pair if you have not done so already.
 
 ***Note:*** *If you already have a key pair created, you should skip this command to avoid overwriting your SSH keys.*
@@ -68,6 +69,7 @@ sudo service ssh restart
 ```
 
 ## Configure Gitolite
+
 The next steps will take place back on our git server. Log back in with your normal user.
 
 We can log in with our "git" user to initialize gitolite with the public key we just transferred.
@@ -87,6 +89,7 @@ Hit `ENTER` to pull the configuration into your editor. Scan the contents to mak
 When you are finished, save and exit out of the file.
 
 ## How To Administer Gitolite
+
 Back on your **local** computer, you can begin administering gitolite.
 
 If you do not already have git installed on this computer, you need to install it with:
@@ -104,6 +107,7 @@ git clone git@git_server_IP_address:gitolite-admin
 This will create a new directory called `gitolite-admin` within your current directory. Here, we can make changes to our access policies and then push those changes to the git server.
 
 ## Add New Users to Gitolite
+
 To add users to your projects, you will need their public keys. Gitolite works by associating the username that will be signing in with the public key with the same name. We will pretend we have a user called `john` for this demonstration.
 
 On the local machine, we can change into the `gitolite-admin` directory and see what is inside:
@@ -159,6 +163,7 @@ git push
 ```
 
 ## Configure Access with Gitolite
+
 When you added the user in the last section, you may have noticed a warning like this:
 
 ``` shell
@@ -237,6 +242,7 @@ git clone git@git_server_IP_address:johns-project
 ```
 
 ## Conclusion
+
 You should now have gitolite configured correctly. You should be able to create git users easily without worrying about configuring accompanying operating system users and permissions every time.
 
 If you are managing multiple projects with diverse teams, it is probably best to set up groups that correspond to projects. It might also be helpful to organize your `keydir` keys into subdirectories based on project. Gitolite will use them the same way, but they will be easier to find for administrative purposes.

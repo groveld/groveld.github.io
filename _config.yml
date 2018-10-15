@@ -1,24 +1,32 @@
 # Core Jekyll Configuration
-locale                : en
-source                : src
-destination           : public
-url                   : https://www.groveld.com
-enforce_ssl           : www.groveld.com
-permalink             : /articles/:title
-include               : ["_pages"]
+locale                : 'en'
+source                : 'src'
+destination           : 'html'
+url                   : 'https://www.groveld.com'
+enforce_ssl           : 'www.groveld.com'
+permalink             : '/articles/:title'
+include               : ['_pages']
 plugins               : []
 
-pwa_title             : "Groveld"
-pwa_color             : "#343a40"
-pwa_background        : "#fafafa"
+# Progressive Web App Settings
+pwa_title             : 'Groveld'
+pwa_color             : '#1e88e5'
+pwa_background        : '#1e88e5'
 
 # Custom Jekyll Configuration
-title                 : Martin Groeneveld
-description           : The personal website of Martin Groeneveld
-author                : Martin Groeneveld
-email                 : martin@groveld.com
-phone                 : "+31610106931"
-address               : De Kamp 8<br>8627SP Gauw<br>Netherlands
-legal                 : <a href="/terms/">Terms</a> &bull; <a href="/terms/privacy">Privacy</a> &bull; <a href="/terms/cookies">Cookies</a>
-# google_analytics      : UA-47976921-1
-# disqus                : groveld
+title                 : 'Martin Groeneveld'
+description           : 'The personal website of Martin Groeneveld'
+tagline               : 'Hacker, Maker, Tinkerer, Learner'
+
+author                : 'Martin Groeneveld'
+email                 : 'martin@groveld.com'
+phone                 : '+31610106931'
+address               : 'De Kamp 8<br>8627SP Gauw<br>Netherlands'
+
+legal                 : '<a href="/terms">Terms</a> &bull; <a href="/privacy">Privacy</a>'
+google_analytics      : 'UA-47976921-1'
+disqus                : 'groveld'
+
+jekyll_get:
+  data: repos
+  json: 'https://api.github.com/users/groveld/repos'

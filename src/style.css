@@ -1,0 +1,153 @@
+---
+---
+
+header {
+  background: #1e88e5;
+  background-image: url({{ "/images/section-gradient-light.png" | relative_url }});
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: 20px;
+}
+header h1 {
+  color: #fff;
+}
+
+footer {
+  background-color: #263238;
+}
+
+.navbar {
+  /* padding: 0 1rem; */
+  /* min-height: 56px; */
+  background-color: rgba(255,255,255,1);
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
+}
+.navbar-offset {
+  margin-top: 56px!important;
+}
+.container-fluid {
+  max-width: 991.98px;
+}
+.navbar-toggler, .navbar-toggler:focus, .navbar-toggler:hover, .navbar-toggler:active {
+  border: none;
+  outline: none;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    margin-top: 10px!important;
+  }
+  .nav-item {
+    text-align: center!important;
+    margin-bottom: 10px;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+  }
+  .nav-item:active, .nav-item.active {
+    background-color: #f50057;
+  }
+  .nav-item:hover {
+    background-color: #f50057;
+  }
+}
+
+
+
+
+
+
+
+
+section {
+  padding: 40px 0;
+}
+
+
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero::before {
+  background-image: url({{ "/images/hero01.jpg" | relative_url }});
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  /* opacity: 0.6; */
+}
+
+.info {
+  background: #263238;
+  background-image: url({{ "/images/section-gradient-dark.png" | relative_url }});
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: 20px;
+}
+.info h2 {
+  color: #fff;
+}
+.info a, .info a:hover, .info a:active {
+  color: #fff;
+  text-decoration: none;
+}
+.info img {
+  height: 60px;
+}
+
+
+.services span {
+  color: #f50057;
+}
+
+
+.interested {
+  background: #eceff1;
+  background-image: url({{ "/images/section-gradient-light.png" | relative_url }});
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: 20px;
+}
+.interested a, .interested a:hover, .interested a:active {
+  color: #f50057;
+}
+
+
+.clients .thumbnail {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  padding: 0;
+  -webkit-filter: grayscale(100%);
+  -webkit-transition: .2s ease-in-out;
+  -moz-filter: grayscale(100%);
+  -moz-transition: .2s ease-in-out;
+  -o-filter: grayscale(100%);
+  -o-transition: .2s ease-in-out;
+}
+.clients .thumbnail:hover {
+  -webkit-filter: grayscale(0%);
+  -webkit-transition: .2s ease-in-out;
+  -moz-filter: grayscale(0%);
+  -moz-transition: .2s ease-in-out;
+  -o-filter: grayscale(0%);
+  -o-transition: .2s ease-in-out;
+}
+.clients .thumbnail img {
+  max-height: 75%;
+  max-width: 75%;
+  height: auto;
+  width: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}

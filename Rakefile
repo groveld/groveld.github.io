@@ -2,7 +2,7 @@ task :default => [:build, :test]
 
 desc 'Clean up workspace before build'
 task :clean do
-  sh 'rm -rf public .jekyll-cache .sass-cache'
+  sh 'rm -rf html .jekyll-cache .sass-cache'
 end
 
 desc 'Generate site'
@@ -16,7 +16,7 @@ end
 desc 'Validate generated site'
 task :test do
   require 'html-proofer'
-  HTMLProofer.check_directory('public', {
+  HTMLProofer.check_directory('html', {
     :url_swap => { '*.groveld.com/' => '/' },
     :only_4xx => true,
     :check_favicon => true,

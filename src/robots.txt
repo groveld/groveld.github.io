@@ -3,4 +3,5 @@ permalink: /robots.txt
 ---
 
 User-agent: *
+Disallow: /images/
 Sitemap: {{ "/sitemap.xml" | absolute_url }}
