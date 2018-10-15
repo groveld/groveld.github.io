@@ -42,4 +42,4 @@ Our Legal Terms shall be treated as though it were executed and performed in The
 
 ### Contacting us
 
-If you have any questions about this Terms of Service, the practices of this site, or your dealings with this site, please [contact us](/contact).
+If you have any questions about this Terms of Service, the practices of this site, or your dealings with this site, please [contact us](/about).

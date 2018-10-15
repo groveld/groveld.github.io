@@ -9,7 +9,7 @@ Hi! My name is Martin Groeneveld. I'm a hacker, a maker, a tinkerer and a learne
 
 Apart from programming and hacking for fun, I’m a professional DevOps, a mix of a Software Developer and a System Administrator, experienced in development of high performance and high availability platforms.
 
-From time to time, when an interesting offer comes along, I do freelance jobs. If you have something I can help you with, please [contact me](/contact).
+From time to time, when an interesting offer comes along, I do freelance jobs. If you have something I can help you with, please [contact me](/about).
 
 ### About This Website
 

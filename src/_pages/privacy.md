@@ -57,4 +57,4 @@ By using this Site, you signify your acceptance of this policy. If you do not ag
 
 ### Contacting us
 
-If you have any questions about this Privacy Policy, the practices of this site, or your dealings with this site, please [contact us](/contact).
+If you have any questions about this Privacy Policy, the practices of this site, or your dealings with this site, please [contact us](/about).
