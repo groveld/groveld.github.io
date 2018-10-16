@@ -25,7 +25,6 @@ address               : 'De Kamp 8<br>8627SP Gauw<br>Netherlands'
 
 legal                 : '<a href="/terms">Terms</a> &bull; <a href="/privacy">Privacy</a>'
 google_analytics      : 'UA-47976921-1'
-disqus                : 'groveld'
 
 jekyll_get:
   data: repos
