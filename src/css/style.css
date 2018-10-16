@@ -7,7 +7,12 @@ header {
   background-repeat: repeat-x;
   background-position: bottom;
   background-size: 20px;
+  background: #000;
+  background: -moz-linear-gradient(-45deg, #000000 0%, #000000 25%, #1e539e 50%, #ff3083 75%, #7800a8 100%);
+  background: -webkit-linear-gradient(-45deg, #000000 0%,#000000 25%,#1e539e 50%,#ff3083 75%,#7800a8 100%);
+  background: linear-gradient(135deg, #000000 0%,#000000 25%,#1e539e 50%,#ff3083 75%,#7800a8 100%);
 }
+
 header h1 {
   color: #fff;
 }

@@ -13,8 +13,8 @@ branches:
 
 before_script:
   - echo "www.groveld.com" > ./src/CNAME
-  - mv ./src/style.css ./src/$TRAVIS_COMMIT.css
-  - mv ./src/scripts.js ./src/$TRAVIS_COMMIT.js
+  - mv ./src/css/style.css ./src/css/$TRAVIS_COMMIT.css
+  - mv ./src/js/scripts.js ./src/js/$TRAVIS_COMMIT.js
   - sed -i -e "s/style.css/$TRAVIS_COMMIT.css/g" ./src/_layouts/default.html
   - sed -i -e "s/scripts.js/$TRAVIS_COMMIT.js/g" ./src/_layouts/default.html
   - sed -i -e "s/{{ site.time }}::/$TRAVIS_COMMIT::/g" ./src/sw.js
