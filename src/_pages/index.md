@@ -7,4 +7,4 @@ description :
 
 {% include navigation.html %}
 
-<section class="hero"></section>
+<div class="hero"></div>

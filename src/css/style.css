@@ -16,7 +16,7 @@ main {
 }
 
 header {
-  padding-top: 40px;
+  padding-top: 50px;
   background: #1e88e5;
   background-image: url({{ "/images/section-gradient-light.png" | relative_url }});
   background-repeat: repeat-x;
@@ -47,7 +47,7 @@ footer {
 }
 
 .navbar {
-  padding: 0 1rem;
+  padding: 5px 1rem;
   background-color: rgba(255,255,255,0.9);
   box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
 }
@@ -76,6 +76,8 @@ footer {
 }
 
 .hero {
+  /* padding-top: 50px; */
+  /* padding-bottom: 40px; */
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -86,13 +88,14 @@ footer {
   display: block;
   content: "";
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: -100;
   background-image: url({{ "/images/hero01.jpg" | relative_url }});
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
+
 
 section {
   padding: 40px 0;
