@@ -5,5 +5,6 @@ title       :
 description :
 ---
 
-<section class="hero">
-</section>
+{% include navigation.html %}
+
+<section class="hero"></section>

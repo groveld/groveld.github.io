@@ -1,10 +1,11 @@
 {% assign location = page.url | downcase | remove_first:'/' | split: '/' | first %}
 <nav class="navbar fixed-top navbar-expand-lg navbar-light">
-  <!-- <div class="container-fluid"> -->
-  <a class="navbar-brand" href="{{ "/" | relative_url }}">
-    <img src="{{ "/images/logo.png" | relative_url }}" width="30" height="30" class="d-inline-block align-top mr-1" alt="logo">
-    <span style="font-weight: 200;">Martin</span> Groeneveld
-  </a>
+  <span class="navbar-brand mb-0 h1">
+    <a class="d-inline-block mr-1" href="{{ "/" | relative_url }}">
+      <img src="{{ "/images/logo.png" | relative_url }}" width="30" height="30" class="d-inline-block align-top" alt="logo">
+    </a>
+    Martin Groeneveld
+  </span>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -13,14 +14,12 @@
       <a class="nav-item nav-link{% if location == nil %} active{% endif %}" href="{{ "/" | relative_url }}">Home</a>
       <a class="nav-item nav-link{% if location == 'articles' %} active{% endif %}" href="{{ "/articles/" | relative_url }}">Articles</a>
       <a class="nav-item nav-link{% if location == 'about' %} active{% endif %}" href="{{ "/about" | relative_url }}">About</a>
-      <!-- <a class="nav-item nav-link{% if location == 'contact' %} active{% endif %}" href="{{ "/contact" | relative_url }}">Contact</a> -->
     </div>
   </div>
-  <!-- </div> -->
 </nav>
 
 {% if page.title %}
-<header class="navbar-offset mb-4">
+<header>
   <div class="container-fluid py-5">
     <h1 class="my-0">{{ page.title }}</h1>
   </div>
