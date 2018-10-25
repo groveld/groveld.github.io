@@ -1,3 +1,6 @@
+---
+---
+
 var vhFix = function (selectors) {
   var self = this;
   var userAgent = navigator.userAgent.toLowerCase();

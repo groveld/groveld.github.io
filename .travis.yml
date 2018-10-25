@@ -13,11 +13,11 @@ branches:
 
 before_script:
   - echo "www.groveld.com" > ./src/CNAME
-  - mv ./src/css/style.css ./src/css/$TRAVIS_COMMIT.css
-  - mv ./src/js/scripts.js ./src/js/$TRAVIS_COMMIT.js
-  - sed -i -e "s/style.css/$TRAVIS_COMMIT.css/g" ./src/_layouts/default.html
-  - sed -i -e "s/scripts.js/$TRAVIS_COMMIT.js/g" ./src/_layouts/default.html
-  - sed -i -e "s/{{ site.time }}::/$TRAVIS_COMMIT::/g" ./src/sw.js
+  - sed -i -e "s/{{ site.time }}::/${TRAVIS_COMMIT::8}::/g" ./src/sw.js
+  - mv ./src/css/style.css ./src/css/${TRAVIS_COMMIT::8}.css
+  - mv ./src/js/scripts.js ./src/js/${TRAVIS_COMMIT::8}.js
+  - sed -i -e "s/style.css/${TRAVIS_COMMIT::8}.css/g" ./src/_layouts/default.html
+  - sed -i -e "s/scripts.js/${TRAVIS_COMMIT::8}.js/g" ./src/_layouts/default.html
 
 after_success:
   - git config --global user.name "Travis CI"
