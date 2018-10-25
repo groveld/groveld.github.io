@@ -18,7 +18,7 @@ before_script:
   - mv ./src/css/style.css ./src/css/style.${TRAVIS_COMMIT::7}.css
   - mv ./src/js/scripts.js ./src/js/script.${TRAVIS_COMMIT::7}.js
   - sed -i -e "s/style.css/style.${TRAVIS_COMMIT::7}.css/g" ./src/_layouts/default.html
-  - sed -i -e "s/scripts.js/style.${TRAVIS_COMMIT::7}.js/g" ./src/_layouts/default.html
+  - sed -i -e "s/scripts.js/script.${TRAVIS_COMMIT::7}.js/g" ./src/_layouts/default.html
 
 after_success:
   - git config --global user.name "Travis CI"
