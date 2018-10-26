@@ -146,10 +146,13 @@ keyUsage = critical, digitalSignature
 extendedKeyUsage = critical, OCSPSigning
 ```
 
-#### openssl.cnf
-
 ```ini
+# Add the CommonName also to SAN DNS for older systems and mobile apps.
+# Needed for Server certificate
+--flag serverAuth --flag ikeIntermediate
 
+# Needed for Client certificate
+--flag clientAuth
 ```
 
 #### create-ca.sh
