@@ -14,7 +14,7 @@ branches:
 before_script:
   - echo "www.groveld.com" > ./src/CNAME
   - sed -i -e "s/{{ site.time }}::/${TRAVIS_COMMIT::7}::/g" ./src/sw.js
-  - sed -i -e "s/{{ site.time | date: '%Y' }}/${TRAVIS_COMMIT::7} $(date +'%Y')/g" ./src/_includes/footer.html
+  # - sed -i -e "s/{{ site.time | date\: '%Y' }}/${TRAVIS_COMMIT::7}/g" ./src/_includes/footer.html
   - mv ./src/css/style.css ./src/css/style.${TRAVIS_COMMIT::7}.css
   - mv ./src/js/scripts.js ./src/js/script.${TRAVIS_COMMIT::7}.js
   - sed -i -e "s/style.css/style.${TRAVIS_COMMIT::7}.css/g" ./src/_layouts/default.html
