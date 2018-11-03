@@ -1,6 +1,6 @@
 ---
 layout      : page
-permalink   : /articles/
+permalink   : /archive
 title       : My Articles
 description :
 ---
