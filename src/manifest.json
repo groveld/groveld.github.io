@@ -22,6 +22,6 @@ permalink: /manifest.json
   "start_url": "{{ "/" | relative_url }}",
   "display": "standalone",
   "orientation": "portrait",
-  "theme_color": "{{ site.pwa_color }}",
-  "background_color": "{{ site.pwa_background }}"
+  "theme_color": "{{ site.pwa_themecolor }}",
+  "background_color": "{{ site.pwa_backgroundcolor }}"
 }

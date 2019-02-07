@@ -16,9 +16,9 @@ The **front-matter** of a _post_ should look like this;
 ```txt
 ---
 layout      : post
+updated     : "2018-05-27@12:23"
 author      : "John Doe"
 email       : "johndoe@example.email"
-update      : ""
 title       : "Some Title Here"
 description : "A very descriptive description here"
 tags        : [some, tags, here]
@@ -48,6 +48,7 @@ description : "A very descriptive description here"
 
 The following directories and their contents are Copyright Martin Groeneveld. You may not reuse anything therein without my permission:
 
+- src/_drafts
 - src/_pages
 - src/_posts
 - src/images

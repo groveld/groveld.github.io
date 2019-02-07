@@ -10,7 +10,7 @@ permalink: /browserconfig.xml
       <square150x150logo src="{{ "/images/icons/medium.jpg" | relative_url }}"/>
       <wide310x150logo src="{{ "/images/icons/wide.jpg" | relative_url }}"/>
       <square310x310logo src="{{ "/images/icons/large.jpg" | relative_url }}"/>
-      <TileColor>{{ site.pwa_color }}</TileColor>
+      <TileColor>{{ site.pwa_themecolor }}</TileColor>
     </tile>
   </msapplication>
 </browserconfig>
