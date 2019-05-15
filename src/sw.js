@@ -7,6 +7,7 @@
 const cacheVersion = '{{ site.time }}::';
 const urlsToCache = [{% assign isFirst = true %}{% for page in site.pages %}{% unless page.url == "/sw.js" %}{% unless isFirst %},{% endunless %}{% assign isFirst = false %}'{{ page.url | relative_url }}'{% endunless %}{% endfor %}{% for post in site.posts %}{% unless isFirst %},{% endunless %}'{{ post.url | relative_url }}'{% endfor %}];
 
+// The install handler takes care of precaching the resources we always need.
 self.addEventListener('install', function (event) {
   event.waitUntil(
     caches.open(cacheVersion + 'static').then(function (cache) {
@@ -16,6 +17,7 @@ self.addEventListener('install', function (event) {
   return self.skipWaiting();
 });
 
+// The activate handler takes care of cleaning up old caches.
 self.addEventListener('activate', function (event) {
   event.waitUntil(
     caches.keys().then(function (cacheNames) {

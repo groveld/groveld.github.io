@@ -14,28 +14,43 @@ if ('serviceWorker' in navigator) {
 {% endif %}
 
 
-var main, bar;
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+  var progressBar = document.querySelector('#reading-progress');
+  var lastScrollY = window.scrollY;
+  var lastWindowHeight = window.innerHeight;
+  var lastDocumentHeight = $(document).height();
+  var ticking = false;
 
-// declare vars once so that they are not redefined every scroll event
-document.addEventListener("DOMContentLoaded", () => {
-    main = document.querySelector("body"); // locate here your content element to count progress in
-    bar = document.getElementById("reading-progress");
-});
+  function onScroll() {
+    lastScrollY = window.scrollY;
+    requestTick();
+  }
 
-window.addEventListener("scroll", () => {
-    let top = main.getBoundingClientRect().top + window.scrollY; // find where content element starts
-    let bottom = top + main.offsetHeight; // find where content element ends
+  function onResize() {
+    lastWindowHeight = window.innerHeight;
+    lastDocumentHeight = $(document).height();
+    requestTick();
+  }
 
-    // if the user has started scrolling inside the target element
-    if (window.scrollY >= top) {
-        let progress = (window.scrollY - top) / main.clientHeight; // count part of element we've scrolled
+  function requestTick() {
+    if (!ticking) {
+      requestAnimationFrame(update);
+    }
+    ticking = true;
+  }
 
-        // or, if the target element remains visible when document ends
-        if (document.body.offsetHeight - bottom <= window.innerHeight)
-            progress = (window.scrollY - top) / (document.body.offsetHeight - window.innerHeight);
+  function update() {
+    var progressMax = lastDocumentHeight - lastWindowHeight;
+    progressBar.setAttribute('max', progressMax);
+    progressBar.setAttribute('value', lastScrollY);
+    ticking = false;
+  }
 
-        if (progress <= 1)
-            bar.style.width = parseFloat(progress * 100).toFixed(2) + "%";
-        else bar.style.width = "100%"; // to avoid progress bar being stuck a bit less than 100%
-    } else bar.style.width = "0%"; // to avoid progress bar being stuck a bit more than 0%
+  window.addEventListener('scroll', onScroll, {passive: true});
+  window.addEventListener('resize', onResize, false);
+  update();
 });
