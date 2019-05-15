@@ -5,15 +5,23 @@ layout: default
 {% include navigation.html %}
 
 <main>
-  <div class="container-fluid mt-3 mb-2 mt-lg-4 mb-lg-3">
+
+  <div class="container-fluid mb-5">
     <div class="row">
       <div class="col">
+
+        {% if page.title %}
+        <header>
+          <div class="container-fluid text-center py-3 py-lg-5">
+            <h1 class="m-0">{{ page.title }}</h1>
+          </div>
+        </header>
+        {% endif %}
 
         {{ content }}
 
       </div>
     </div>
   </div>
-</main>
 
-{% include footer.html %}
+</main>

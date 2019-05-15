@@ -1,6 +1,6 @@
 {% assign location = page.url | downcase | remove_first:'/' | split: '/' | first %}
-<nav class="navbar fixed-top navbar-expand-lg navbar-light">
-  <span class="navbar-brand mb-0 h1">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light d-print-none">
+  <span class="navbar-brand mb-0 font-weight-bold">
     <a class="d-inline-block mr-1" href="{{ "/" | relative_url }}">
       <img src="{{ "/images/logo.svg" | relative_url }}" width="30" height="30" class="d-inline-block align-top" alt="logo">
     </a>
@@ -11,17 +11,9 @@
   </button>
   <div class="collapse navbar-collapse" id="navbar">
     <div class="navbar-nav ml-auto">
-      <a class="nav-item nav-link{% if location == nil %} active{% endif %}" href="{{ "/" | relative_url }}">Home</a>
-      <a class="nav-item nav-link{% if location == 'archive' or location == 'articles' %} active{% endif %}" href="{{ "/archive" | relative_url }}">Archive</a>
+      <a class="nav-item nav-link{% if location == nil or location == 'articles' %} active{% endif %}" href="{{ "/" | relative_url }}">Home</a>
       <a class="nav-item nav-link{% if location == 'about' %} active{% endif %}" href="{{ "/about" | relative_url }}">About</a>
     </div>
   </div>
+  <progress id="reading-progress"></progress>
 </nav>
-
-{% if page.title %}
-<header>
-  <div class="container-fluid py-3 py-lg-5">
-    <h1 class="my-0 py-0">{{ page.title }}</h1>
-  </div>
-</header>
-{% endif %}

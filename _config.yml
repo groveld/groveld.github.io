@@ -13,6 +13,9 @@ pwa_title             : 'Groveld'
 pwa_themecolor        : '#1e88e5'
 pwa_backgroundcolor   : '#1e88e5'
 
+serviceworker         : true
+google_analytics      : 'UA-134156954-1'
+
 # Custom Jekyll Configuration
 title                 : 'Martin Groeneveld'
 tagline               : 'Hacker, Maker, Tinkerer, Learner'
@@ -22,6 +25,4 @@ author                : 'Martin Groeneveld'
 email                 : 'martin@groveld.com'
 phone                 : '+31610106931'
 address               : 'De Kamp 8<br>8627SP Gauw<br>Netherlands'
-
 legal                 : '<a href="/terms">Terms</a> &bull; <a href="/privacy">Privacy</a>'
-google_analytics      : 'UA-134156954-1'

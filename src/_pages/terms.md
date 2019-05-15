@@ -5,7 +5,7 @@ title       : Terms of Service "Agreement"
 description : This Terms of Service governs the legal terms of this website, sub-domains, and any associated web-based and mobile applications.
 ---
 
-This web page represents a legal document that serves as our Terms of Service and it governs the legal terms of our website, [https://www.groveld.com](https://www.groveld.com), sub-domains, and any associated web-based and mobile applications (collectively, "Website"), as owned and operated by Groveld Technologies.
+This web page represents a legal document that serves as our Terms of Service and it governs the legal terms of our website, [www.groveld.com](https://www.groveld.com), sub-domains, and any associated web-based and mobile applications (collectively, "Website"), as owned and operated by Groveld Technologies.
 
 Capitalized terms, unless otherwise defined, have the meaning specified within the Definitions section below. This Terms of Service, along with our [Privacy Policy](/privacy), any mobile license agreement, and other posted guidelines within our Website, collectively "Legal Terms", constitute the entire and only agreement between you and Groveld Technologies, and supersede all other agreements, representations, warranties and understandings with respect to our Website and the subject matter contained herein. We may amend our Legal Terms at any time without specific notice to you. The latest copies of our Legal Terms will be posted on our Website, and you should review all Legal Terms prior to using our Website. After any revisions to our Legal Terms are posted, you agree to be bound to any such changes to them. Therefore, it is important for you to periodically review our Legal Terms to make sure you still agree to them.
 
@@ -14,7 +14,7 @@ By using our Website, you agree to fully comply with and be bound by our Legal T
 ### Definitions
 
 - The terms "**us**" or "**we**" or "**our**" refers to Groveld Technologies, the owner of the Website.
-- A "**Visitor**" is someone who merely browses our Website, but has not registered as Member.
+- A "**Visitor**" is someone who merely browses our Website, but has not registered as a Member.
 - A "**Member**" is an individual that has registered with us to use our Service.
 - Our "**Service**" represents the collective functionality and features as offered through our Website to our Members.
 - A "**User**" is a collective identifier that refers to either a Visitor or a Member.

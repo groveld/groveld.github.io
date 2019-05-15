@@ -11,7 +11,7 @@ Apart from programming and hacking for fun, I’m a professional DevOps, a mix o
 
 From time to time, when an interesting offer comes along, I do freelance jobs. If you have something I can help you with, please [contact me](/about).
 
-### About This Website
+## About This Website
 
 Rather than relying on a complex content management system to serve content, this website is built with [Jekyll](http://jekyllrb.com/), a “simple, blog aware, static site generator” written in [Ruby](https://www.ruby-lang.org/en/). As a purely static site, no server-side processing is necessary after the site is initially built.
 
