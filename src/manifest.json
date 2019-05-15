@@ -14,8 +14,8 @@ permalink: /manifest.json
   "orientation": "portrait",
   "theme_color": "{{ site.pwa_themecolor }}",
   "background_color": "{{ site.pwa_backgroundcolor }}",
-  "related_applications": "",
-  "prefer_related_applications": "false",
+  "related_applications": [],
+  "prefer_related_applications": false,
   "icons": [
     {
       "src": "{{ '/images/icons/android-chrome-36x36.png' | relative_url }}",
