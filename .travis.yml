@@ -20,8 +20,6 @@ before_script:
   - sed -i -e "s/syntax.css/syntax.${TRAVIS_COMMIT::7}.css/g" ./src/_layouts/default.html
   - mv ./src/js/main.js ./src/js/main.${TRAVIS_COMMIT::7}.js
   - sed -i -e "s/main.js/main.${TRAVIS_COMMIT::7}.js/g" ./src/_layouts/default.html
-  - mv ./src/js/vhfix.js ./src/js/vhfix.${TRAVIS_COMMIT::7}.js
-  - sed -i -e "s/vhfix.js/vhfix.${TRAVIS_COMMIT::7}.js/g" ./src/_layouts/default.html
 
 after_success:
   - git config --global user.name "Travis CI"
