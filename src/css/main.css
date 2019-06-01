@@ -56,7 +56,7 @@ main {
 }
 
 header {
-  padding-top: 56px;
+  padding-top: 50px;
   /* background: #1e88e5; */
   /* background-image: url({{ "/images/section-gradient-light.png" | relative_url }}); */
   /* background-repeat: repeat-x; */
@@ -173,6 +173,11 @@ footer {
   border: none;
   outline: none;
 }
+
+/* .navbar a{ */
+  /* color: white !important; */
+  /* font-size: 1em !important; */
+/* } */
 
 @media (max-width: 991.98px) {
   body {
