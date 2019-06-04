@@ -1,6 +1,7 @@
 language: ruby
 rvm: 2.5
 sudo: false
+cache: bundler
 
 env:
   global:
