@@ -14,6 +14,7 @@
 
   <div class="collapse navbar-collapse" id="navbar">
     <div class="navbar-nav ml-auto small font-weight-bold">
+      <a class="nav-item nav-link{% if location == 'tools' %} active{% endif %}" href="{{ "/tools/" | relative_url }}">Tools</a>
       <a class="nav-item nav-link{% if location == nil or location == 'articles' %} active{% endif %}" href="{{ "/" | relative_url }}">Articles</a>
       <a class="nav-item nav-link{% if location == 'about' %} active{% endif %}" href="{{ "/about" | relative_url }}">About</a>
     </div>
