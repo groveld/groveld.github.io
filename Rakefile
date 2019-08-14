@@ -20,7 +20,7 @@ task :test do
     :url_swap => { '*.groveld.com/' => '/' },
     :only_4xx => true,
     :check_favicon => true,
-    :check_html => false,
+    :check_html => true,
     :assume_extension => true,
     :allow_hash_href => true,
     :disable_external => true
