@@ -1,7 +1,7 @@
 /* Firewatch style for Pygments syntax highlighter, for use with Jekyll */
 
-.highlight { background: #282c34; color: #abb2bf; padding: 6px 10px; border-radius: 3px }
-.highlight pre { background: #282c34 }
+.highlight { background: #282c34; color: #abb2bf; padding: 6px 10px; border-radius: 3px; margin-bottom: 1rem; font-size: 0.9em }
+.highlight pre { background: #282c34; margin-bottom: unset }
 .highlight .hll { background: #282c34 }
 .highlight .c { color: #5c6370; font-style: italic }
 .highlight .err { color: #960050; background-color: #1e0010 }
