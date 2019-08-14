@@ -1,5 +1,6 @@
 /* One Dark Vivid style for Pygments syntax highlighter, for use with Jekyll */
-.highlight, pre.highlight { background: #31343f; color: #dee2f7; padding: 6px 10px; border-radius: 3px }
+
+.highlight { background: #31343f; color: #dee2f7; padding: 6px 10px; border-radius: 3px; margin-bottom: 1rem }
 .highlight pre { background: #31343f }
 .highlight .hll { background: #31343f }
 .highlight .c { color: #63677e; font-style: italic }
