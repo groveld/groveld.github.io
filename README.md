@@ -48,9 +48,9 @@ description : "A very descriptive description here"
 
 The following directories and their contents are Copyright Martin Groeneveld. You may not reuse anything therein without my permission:
 
-- src/_drafts
-- src/_pages
-- src/_posts
-- src/images
+- jekyll/_drafts
+- jekyll/_pages
+- jekyll/_posts
+- jekyll/images
 
 All other directories and files are ISC Licensed. Feel free to use the HTML and CSS as you please. If you do use them, a link back to https://github.com/groveld/groveld.github.io/ would be appreciated.
