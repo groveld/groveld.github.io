@@ -1,6 +1,6 @@
 # Core Jekyll Configuration
 locale                : 'en'
-source                : 'src'
+source                : 'jekyll'
 destination           : 'html'
 url                   : 'https://www.groveld.com'
 enforce_ssl           : 'www.groveld.com'
