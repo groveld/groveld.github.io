@@ -20,9 +20,9 @@ google_analytics      : 'UA-134156954-1'
 title                 : 'Martin Groeneveld'
 tagline               : 'Hacker, Maker, Tinkerer, Learner'
 description           : 'The personal website of Martin Groeneveld'
-
 author                : 'Martin Groeneveld'
 email                 : 'martin@groveld.com'
+
 phone                 : '+31610106931'
 address               : 'De Kamp 8<br>8627SP Gauw<br>Netherlands'
 legal                 : '<a href="/terms">Terms</a> &bull; <a href="/privacy">Privacy</a>'
