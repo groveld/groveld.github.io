@@ -11,7 +11,7 @@ gem install bundler && bundle install # Ensures you have all RubyGems needed
 jekyll serve # Build site and run a local server
 ```
 
-The **front-matter** of a _post_ should look like this;
+The _front-matter_ of a **post** should look like this;
 
 ```txt
 ---
@@ -25,7 +25,7 @@ tags        : [some, tags, here]
 ---
 ```
 
-The **front-matter** of a _page_ should look like this;
+The _front-matter_ of a **page** should look like this;
 
 ```txt
 ---
