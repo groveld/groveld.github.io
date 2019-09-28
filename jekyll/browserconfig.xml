@@ -6,10 +6,10 @@ permalink: /browserconfig.xml
 <browserconfig>
   <msapplication>
     <tile>
-      <square70x70logo src="{{ '/images/icons/mstile-70x70.jpg' | relative_url }}"/>
-      <square150x150logo src="{{ '/images/icons/mstile-150x150.jpg' | relative_url }}"/>
-      <wide310x150logo src="{{ '/images/icons/mstile-310x150.jpg' | relative_url }}"/>
-      <square310x310logo src="{{ '/images/icons/mstile-310x310.jpg' | relative_url }}"/>
+      <square70x70logo src="{{ '/img/icons/mstile-70x70.jpg' | relative_url }}"/>
+      <square150x150logo src="{{ '/img/icons/mstile-150x150.jpg' | relative_url }}"/>
+      <wide310x150logo src="{{ '/img/icons/mstile-310x150.jpg' | relative_url }}"/>
+      <square310x310logo src="{{ '/img/icons/mstile-310x310.jpg' | relative_url }}"/>
       <TileColor>{{ site.pwa_themecolor }}</TileColor>
     </tile>
   </msapplication>
