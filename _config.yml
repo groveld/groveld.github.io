@@ -2,8 +2,8 @@
 locale                : 'en'
 source                : 'jekyll'
 destination           : 'html'
-url                   : 'https://martin.groeneveld.xyz'
-enforce_ssl           : 'martin.groeneveld.xyz'
+url                   : 'https://www.groveld.com'
+enforce_ssl           : 'www.groveld.com'
 permalink             : '/articles/:title'
 include               : ['_pages']
 plugins               : []
