@@ -13,6 +13,15 @@ if ('serviceWorker' in navigator) {
 }
 {% endif %}
 
+/** CLOSE MAIN NAVIGATION WHEN CLICKING OUTSIDE THE MAIN NAVIGATION AREA**/
+$(document).on('click', function (e){
+    /* bootstrap collapse js adds "in" class to your collapsible element*/
+    var menu_opened = $('#navbar').hasClass('in');
+    if(!$(e.target).closest('#navbar').length &&
+        !$(e.target).is('#navbar') && menu_opened === true){
+            $('#navbar').collapse('toggle');
+    }
+});
 
 // NOTE: Scroll performance is poor in Safari
 // - this appears to be due to the events firing much more slowly in Safari.
