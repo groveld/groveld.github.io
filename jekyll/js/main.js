@@ -16,7 +16,7 @@ if ('serviceWorker' in navigator) {
 /** CLOSE MAIN NAVIGATION WHEN CLICKING OUTSIDE THE MAIN NAVIGATION AREA**/
 $(document).on('click', function (e){
     /* bootstrap collapse js adds "in" class to your collapsible element*/
-    var menu_opened = $('#navbar').hasClass('in');
+    var menu_opened = $('#navbar').hasClass('show');
     if(!$(e.target).closest('#navbar').length &&
         !$(e.target).is('#navbar') && menu_opened === true){
             $('#navbar').collapse('toggle');
