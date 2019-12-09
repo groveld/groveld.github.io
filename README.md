@@ -2,6 +2,12 @@
 
 This is the personal website of Martin Groeneveld.
 
+## To-Do
+
+- [x] atom.xml
+- [ ] rss.xml
+- [ ] feed.json
+
 ## Getting Started
 
 ```shell
