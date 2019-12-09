@@ -7,8 +7,13 @@ enforce_ssl           : 'www.groveld.com'
 permalink             : '/articles/:title'
 include               : ['_pages']
 plugins               : []
+
 sass:
   style: compressed
+
+compress_html:
+  blanklines: true
+  comments: ["<!-- ", " -->"]
 
 # Progressive Web App Settings
 pwa_title             : 'Groveld'
