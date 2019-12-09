@@ -12,8 +12,13 @@ sass:
   style: compressed
 
 compress_html:
-  blanklines: true
+  clippings: all
   comments: ["<!-- ", " -->"]
+  endings: [html, head, body, li, dt, dd, rt, rp, optgroup, option, colgroup, caption, thead, tbody, tfoot, tr, td, th]
+  profile: false
+  blanklines: false
+  ignore:
+    envs: []
 
 # Progressive Web App Settings
 pwa_title             : 'Groveld'
