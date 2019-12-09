@@ -4,9 +4,13 @@ This is the personal website of Martin Groeneveld.
 
 ## To-Do
 
-- [x] atom.xml
-- [ ] rss.xml
-- [ ] feed.json
+- [ ] Critical inline CSS
+- [ ] Add a footer with copyright/links/info
+- [ ] Add [Disqus](https://disqus.com/) for site comments/interaction
+- [ ] Add Analytics
+- [x] atom.xml [Atom 1.0](https://validator.w3.org/feed/docs/atom.html)
+- [ ] rss.xml [RSS 2.0](https://validator.w3.org/feed/docs/rss2.html)
+- [ ] feed.json [JSON Feed Version 1](https://jsonfeed.org/version/1)
 
 ## Getting Started
 
