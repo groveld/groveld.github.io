@@ -1,4 +1,6 @@
-/* One Dark Vivid style for Pygments syntax highlighter, for use with Jekyll */
+---
+layout: compress_css
+---
 
 .highlight {
   background: #31343f;
