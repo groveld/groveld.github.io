@@ -15,7 +15,7 @@ permalink: /atom.xml
     <email>{{ site.email }}</email>
   </author>
   <rights type="text">Copyright (c) {{ site.time | date: '%Y' }}, {{ site.title }}; all rights reserved.</rights>
-  {% for post in site.posts limit: 1 %}
+  {% for post in site.posts limit: 50 %}
   <entry>
     <id>{{ post.id | absolute_url }}</id>
     <link rel="alternate" type="text/html" href="{{ post.url | absolute_url }}"/>
@@ -27,9 +27,6 @@ permalink: /atom.xml
     <published>{{ post.date | date_to_xmlschema }}</published>
     <updated>{{ post.updated | default: post.date | date_to_xmlschema }}</updated>
     <content type="html">{{ post.content | xml_escape }}</content>
-    <content type="html">{{ post.content | markdownify }}</content>
-    <content type="html">{{ post.content | xml_escape | markdownify }}</content>
-    <content type="html"><![CDATA[ {{ post.content | markdownify }} ]]></content>
   </entry>
   {% endfor %}
 </feed>
