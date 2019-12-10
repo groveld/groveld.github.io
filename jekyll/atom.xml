@@ -11,18 +11,18 @@ permalink: /atom.xml
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>{{ "/" | absolute_url }}</id>
   <author>
-    <name>{{ site.author }}</name>
-    <email>{{ site.email }}</email>
+    <name>{{ site.author | xml_escape }}</name>
+    <email>{{ site.email | xml_escape }}</email>
   </author>
-  <rights type="text">Copyright (c) {{ site.time | date: '%Y' }}, {{ site.title }}; all rights reserved.</rights>
+  <rights type="text">Copyright (c) {{ site.time | date: '%Y' }}, {{ site.title | xml_escape }}; all rights reserved.</rights>
   {% for post in site.posts limit: 50 %}
   <entry>
     <id>{{ post.id | absolute_url }}</id>
     <link rel="alternate" type="text/html" href="{{ post.url | absolute_url }}"/>
     <title>{{ post.title | xml_escape }}</title>
     <author>
-      <name>{% if post.author %}{{ post.author }}{% else %}{{ site.author }}{% endif %}</name>
-      <email>{% if post.email %}{{ post.email }}{% else %}{{ site.email }}{% endif %}</email>
+      <name>{{ post.author | default: site.author | xml_escape }}</name>
+      <email>{{ post.email | default: site.email | xml_escape }}</email>
     </author>
     <published>{{ post.date | date_to_xmlschema }}</published>
     <updated>{{ post.updated | default: post.date | date_to_xmlschema }}</updated>
