@@ -15,7 +15,7 @@ permalink: /atom.xml
     <email>{{ site.email | xml_escape }}</email>
   </author>
   <rights type="text">Copyright (c) {{ site.time | date: '%Y' }}, {{ site.title | xml_escape }}; all rights reserved.</rights>
-  {% for post in site.posts limit: 50 %}
+  {% for post in site.posts limit:50 %}
   <entry>
     <id>{{ post.id | absolute_url }}</id>
     <link rel="alternate" type="text/html" href="{{ post.url | absolute_url }}"/>
