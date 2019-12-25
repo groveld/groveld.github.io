@@ -1,5 +1,6 @@
 # Core Jekyll Configuration
 locale                : 'en'
+timezone              : 'Europe/Amsterdam'
 source                : 'jekyll'
 destination           : 'html'
 url                   : 'https://www.groveld.com'
