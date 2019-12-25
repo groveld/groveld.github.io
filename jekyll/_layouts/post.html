@@ -14,7 +14,8 @@ layout: default
         <header>
           <div class="container-fluid text-center py-3 py-lg-5">
             <h1 class="m-0">{{ page.title }}</h1>
-            <p class="text-muted m-0">{{ page.date | date: "%B %-d, %Y" }} - {% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</p>
+            <p class="text-muted m-0">{{ page.date | date_to_long_string }} - {{ page.author | default: site.author | xml_escape }}</p>
+            {% include read-time.html %}
           </div>
         </header>
         {% endif %}
