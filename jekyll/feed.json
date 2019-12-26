@@ -1,19 +1,25 @@
 ---
-permalink: /feed/json
+permalink: /feed/json.html
 ---
 
 {
   "version": "https://jsonfeed.org/version/1",
   "title": "{{ site.title | xml_escape }}",
   "home_page_url": "{{ "/" | absolute_url }}",
-  "feed_url": "{{ "/feed/json" | absolute_url }}",
-  "items": [
-    {% for post in site.posts limit:10 %}
+  "feed_url": "{{ "/feed/json.html" | absolute_url }}",
+  "description": "{{ site.description | xml_escape }}",
+  "icon": "{{ '/img/icons/android-chrome-512x512.png' | relative_url }}",
+  "favicon": "{{ "/favicon.ico" | relative_url }}",
+  "author": {
+    "name": "{{ site.author | xml_escape }}",
+    "url": "mailto:{{ site.email | xml_escape }}"
+  },
+  "items": [{% for post in site.posts limit:10 %}
     {
       "id": "{{ post.id | absolute_url }}",
       "url": "{{ post.url | absolute_url }}",
       "title": "{{ post.title | xml_escape }}",
-      "content_html": "shit goes here...",
+      "content_html": "post content goes here...",
       "date_published": "{{ post.date | date_to_xmlschema }}",
       "date_modified": "{{ post.updated | default: post.date | date_to_xmlschema }}",
       "author": {
@@ -21,6 +27,5 @@ permalink: /feed/json
         "url": "mailto:{{ post.email | default: site.email | xml_escape }}"
       }
     },
-    {% endfor %}
-  ]
+  {% endfor %}]
 }
