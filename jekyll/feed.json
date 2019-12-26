@@ -1,12 +1,12 @@
 ---
-permalink: /feed/json.html
+permalink: /feed.json
 ---
 
 {
   "version": "https://jsonfeed.org/version/1",
   "title": "{{ site.title | xml_escape }}",
   "home_page_url": "{{ "/" | absolute_url }}",
-  "feed_url": "{{ "/feed/json.html" | absolute_url }}",
+  "feed_url": "{{ "/feed.json" | absolute_url }}",
   "description": "{{ site.description | xml_escape }}",
   "icon": "{{ '/img/icons/android-chrome-512x512.png' | relative_url }}",
   "favicon": "{{ "/favicon.ico" | relative_url }}",
