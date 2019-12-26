@@ -8,8 +8,8 @@ permalink: /feed.json
   "home_page_url": "{{ "/" | absolute_url }}",
   "feed_url": "{{ "/feed.json" | absolute_url }}",
   "description": "{{ site.description | xml_escape }}",
-  "icon": "{{ '/img/icons/android-chrome-512x512.png' | relative_url }}",
-  "favicon": "{{ "/favicon.ico" | relative_url }}",
+  "icon": "{{ '/img/icons/android-chrome-512x512.png' | absolute_url }}",
+  "favicon": "{{ "/favicon.ico" | absolute_url }}",
   "author": {
     "name": "{{ site.author | xml_escape }}",
     "url": "mailto:{{ site.email | xml_escape }}"
@@ -26,6 +26,6 @@ permalink: /feed.json
         "name": "{{ post.author | default: site.author | xml_escape }}",
         "url": "mailto:{{ post.email | default: site.email | xml_escape }}"
       }
-    },
-  {% endfor %}]
+    },{% endfor %}
+  ]
 }
