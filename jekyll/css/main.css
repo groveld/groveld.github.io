@@ -2,6 +2,21 @@
 layout: compress_css
 ---
 
+:root {
+  --background-color-normal: #ffffff;
+  --text-color-normal: #383838;
+}
+
+/* html[data-theme='light'] {
+  --background-color-normal: #ffffff;
+  --text-color-normal: #383838;
+} */
+
+html[data-theme='dark'] {
+  --background-color-normal: #383838;
+  --text-color-normal: #ffffff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,27 +29,28 @@ html {
 }
 
 body {
+  background-color: var(--background-color-normal);
   position: relative;
   min-height: 100%;
   font-family: 'Source Sans Pro', sans-serif;
-  color: #383838;
+  color: var(--text-color-normal);
   font-size: 1.25em;
   word-wrap: break-word;
   text-rendering: optimizeLegibility;
-  /* -webkit-font-smoothing: subpixel-antialiased; */
-  /* -moz-font-smoothing: subpixel-antialiased; */
-  /* font-smoothing: subpixel-antialiased; */
 }
 
 ul {
   padding-left: 1.2em;
 }
+
 ol {
   counter-reset: item;
 }
+
 ol li {
   display: block
 }
+
 ol li:before {
   content: counter(item) ". ";
   counter-increment: item;
@@ -44,7 +60,7 @@ ol li:before {
 h1, h2, h3, h4, h5, h6 {
   padding-top: 1rem;
   margin-bottom: 1rem;
-  color: #000000;
+  color: var(--text-color-normal);
   font-weight: bold;
 }
 
@@ -56,37 +72,9 @@ code {
   color: #cc0041;
 }
 
-main {
-  /* padding-top: 3rem; */
-  /* padding-bottom: 40px; */
-}
-
 header {
   padding-top: 50px;
-  /* background: #1e88e5; */
-  /* background-image: url({{ "/img/section-gradient-light.png" | relative_url }}); */
-  /* background-repeat: repeat-x; */
-  /* background-position: bottom; */
-  /* background-size: 20px; */
-  /* background: #000000; */
-  /* background: -moz-linear-gradient(-45deg, #000000 0%, #000000 25%, #1e539e 50%, #ff3083 75%, #7800a8 100%); */
-  /* background: -webkit-linear-gradient(-45deg, #000000 0%,#000000 25%,#1e539e 50%,#ff3083 75%,#7800a8 100%); */
-  /* background: linear-gradient(135deg, #000000 0%,#000000 25%,#1e539e 50%,#ff3083 75%,#7800a8 100%); */
 }
-
-/* header h1 {
-  color: #ffffff;
-} */
-
-/* The progress container (grey background) */
-/* #reading-progress { */
-  /* height: .18rem; */
-  /* position: fixed; */
-  /* top: 54px; */
-  /* border: 0; */
-  /* background: blue; */
-  /* width: 100%; */
-/* } */
 
 .progress {
   position: absolute;
@@ -98,7 +86,6 @@ header {
   border: none;
   color: var(--pink);
   background: transparent;
-
   appearance: none;
 }
 
@@ -135,7 +122,6 @@ header {
   width: 100%;
   border-top: 1px solid rgba(0,0,0,.06);
   display: flex;
-  /* float: left; */
 }
 
 .post-nav a {
@@ -150,15 +136,6 @@ header {
 }
 
 footer {
-  /* display: none; */
-  /* position: absolute; */
-  /* bottom: 0; */
-  /* width: 100%; */
-  /* height: 40px; */
-  /* line-height: 40px; */
-  /* background-color: #f5f5f5; */
-  /* padding: 1rem; */
-  /* box-shadow: 0 -1px 4px -1px rgba(0,0,0,0.25); */
   border-top: 1px solid rgba(0,0,0,.06);
 }
 
@@ -169,10 +146,7 @@ footer {
 .navbar {
   padding: 5px 1rem;
   border-bottom: 1px solid rgba(0,0,0,.06);
-  /* background: hsla(0,0%,100%,.95); */
-  /* transition: all .5s cubic-bezier(.22,1,.27,1); */
   background-color: rgba(255,255,255,.95);
-  /* box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25); */
 }
 
 .navbar-toggler, .navbar-toggler:focus, .navbar-toggler:hover, .navbar-toggler:active {
@@ -180,33 +154,22 @@ footer {
   outline: none;
 }
 
-/* .navbar a{ */
-  /* color: white !important; */
-  /* font-size: 1em !important; */
-/* } */
-
 @media (max-width: 991.98px) {
-  body {
-    /* font-size: 1rem; */
-  }
-  h1 {
-    /* font-size: 2rem; */
-  }
-  .navbar {
-    /* background-color: rgba(255,255,255,1); */
-  }
   .navbar-nav {
     margin-top: 5px!important;
   }
+
   .nav-item {
     text-align: center!important;
     margin-bottom: 10px;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
   }
+
   .nav-item:active, .nav-item.active {
     background-color: #f50057;
   }
+
   .nav-item:hover {
     background-color: #f50057;
   }
