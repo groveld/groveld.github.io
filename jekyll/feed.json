@@ -14,12 +14,12 @@ permalink: /feed.json
     "name": "{{ site.author | xml_escape }}",
     "url": "mailto:{{ site.email | xml_escape }}"
   },
-  "items": [{% for post in site.posts limit:10 %}
+  "items": [{% for post in site.posts limit: 10 %}
     {
       "id": "{{ post.id | absolute_url }}",
       "url": "{{ post.url | absolute_url }}",
       "title": "{{ post.title | xml_escape }}",
-      "content_html": "post content goes here...",
+      "content_html": "{{ post.excerpt | strip_html | truncatewords: 75 }}",
       "date_published": "{{ post.date | date_to_xmlschema }}",
       "date_modified": "{{ post.updated | default: post.date | date_to_xmlschema }}",
       "author": {
