@@ -2,7 +2,7 @@
 layout      : post
 author      : groveld
 title       : What it really means to Hack
-description :
+description : What it really means to Hack
 tags        : [hacking]
 ---
 

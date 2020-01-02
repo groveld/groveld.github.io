@@ -4,7 +4,6 @@ author      : groveld
 title       : "Understanding Group Policy Processing"
 description : "Understanding Group Policy Processing in Active Directory Domain Services"
 tags        : [Active Directory, Group Policy]
-comments    : true
 ---
 
 **Group Policy Processing**: You can have local policies, site policies, domain policies, and OU policies within your domain structure. To learn how to best implement Group Policies to serve the organization, you need to understand the order in which the policies are applied.

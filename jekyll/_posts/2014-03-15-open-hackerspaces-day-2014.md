@@ -2,7 +2,7 @@
 layout      : post
 author      : groveld
 title       : March 29th marks this years International open Hackerspaces day
-description : 
+description : March 29th marks this years International open Hackerspaces day
 tags        : ["hackerspace", "open house"]
 ---
 
