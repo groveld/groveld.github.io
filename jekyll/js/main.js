@@ -1,4 +1,5 @@
 ---
+layout: null
 ---
 
 {% if site.serviceworker and jekyll.environment == 'production' %}
