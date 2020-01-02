@@ -2,7 +2,7 @@
 layout      : post
 author      : groveld
 title       : Clean URLs with Jekyll/Apache
-description :
+description : Clean URLs with Jekyll/Apache
 tags        : [jekyll, apache]
 ---
 

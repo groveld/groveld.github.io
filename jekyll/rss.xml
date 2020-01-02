@@ -9,7 +9,7 @@ permalink: /rss.xml
     <description>{{ site.description | xml_escape }}</description>
     <link>{{ "/" | absolute_url }}</link>
     <atom:link rel="self" type="application/rss+xml" href="{{ "/rss.xml" | absolute_url }}"/>
-    {% for post in site.posts limit:10 %}
+    {% for post in site.posts limit: 10 %}
     <item>
       <title>{{ post.title | xml_escape }}</title>
       <description>{{ post.content | markdownify | xml_escape }}</description>
