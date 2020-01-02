@@ -1,8 +1,8 @@
 ---
 layout      : page
 permalink   : /
-title       : Articles
-description : List of articles
+title       :
+description :
 ---
 
 {% for post in site.posts %}
