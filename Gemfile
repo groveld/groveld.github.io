@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'wdm', '~> 0.1.0' if Gem.win_platform?
+gem 'wdm' if Gem.win_platform?
+gem 'tzinfo-data' if Gem.win_platform?
 gem 'rake'
 gem 'jekyll'
 gem 'html-proofer'
