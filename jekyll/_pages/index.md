@@ -1,8 +1,8 @@
 ---
 layout      : page
 permalink   : /
-title       :
-description :
+title       : Articles
+description : The personal website of Martin Groeneveld
 ---
 
 {% for post in site.posts %}
