@@ -2,12 +2,12 @@
 layout: null
 ---
 
-function isDarkMode() {
-  return (
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-  );
-}
+// function isDarkMode() {
+//   return (
+//     window.matchMedia &&
+//     window.matchMedia("(prefers-color-scheme: dark)").matches
+//   );
+// }
 
 // if (isDarkMode()) {
 //   document.documentElement.setAttribute('data-theme', 'dark');
