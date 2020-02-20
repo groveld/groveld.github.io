@@ -4,7 +4,7 @@ layout: compress_css
 
 :root {
   --background-color-normal: #ffffff;
-  --text-color-normal: #383838;
+  --text-color-normal: #243b53;
 }
 
 /* html[data-theme='light'] {
@@ -12,9 +12,12 @@ layout: compress_css
   --text-color-normal: #383838;
 } */
 
-html[data-theme='dark'] {
-  --background-color-normal: #383838;
-  --text-color-normal: #ffffff;
+/* html[data-theme='dark'] { */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color-normal: #383838;
+    --text-color-normal: #ffffff;
+  }
 }
 
 * {
@@ -32,7 +35,7 @@ body {
   background-color: var(--background-color-normal);
   position: relative;
   min-height: 100%;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Fira Sans', sans-serif;
   color: var(--text-color-normal);
   font-size: 1.25em;
   word-wrap: break-word;
@@ -65,8 +68,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a, a:hover, a:active {
-  color: #cc0041;
+  -webkit-text-decoration-skip: objects;
+  background-color: transparent;
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(75%,transparent),color-stop(0,rgba(136,136,252,.35)));
+  background-image: linear-gradient(180deg,
+  transparent 75%,
+  rgba(136,136,252,.35) 0);
+  color:
+  #243b53;
+  outline: none;
+  text-decoration: none;
 }
+
+/* a, a:hover, a:active {
+  color: #cc0041;
+} */
 
 code {
   color: #cc0041;
@@ -146,7 +162,7 @@ footer {
 .navbar {
   padding: 5px 1rem;
   border-bottom: 1px solid rgba(0,0,0,.06);
-  background-color: rgba(255,255,255,.95);
+  background-color: rgba(255,255,255,1);
 }
 
 .navbar-toggler, .navbar-toggler:focus, .navbar-toggler:hover, .navbar-toggler:active {
@@ -162,15 +178,15 @@ footer {
   .nav-item {
     text-align: center!important;
     margin-bottom: 10px;
-    border: 1px solid rgba(0,0,0,.125);
-    border-radius: .25rem;
+    /* border: 1px solid rgba(0,0,0,.125); */
+    /* border-radius: .25rem; */
   }
 
   .nav-item:active, .nav-item.active {
-    background-color: #f50057;
+    /* background-color: #f50057; */
   }
 
   .nav-item:hover {
-    background-color: #f50057;
+    /* background-color: #f50057; */
   }
 }
