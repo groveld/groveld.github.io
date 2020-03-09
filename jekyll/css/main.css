@@ -34,6 +34,7 @@ layout: compress_css
 html {
   height: 100%;
   width: 100%;
+  font-size: 112.5%;
 }
 
 body {
@@ -42,7 +43,7 @@ body {
   min-height: 100%;
   font-family: 'Fira Sans', sans-serif;
   color: var(--text-color-normal);
-  font-size: 1.25em;
+  font-size: 1.1em;
   word-wrap: break-word;
   text-rendering: optimizeLegibility;
 }
@@ -72,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
-a, a:hover, a:active {
+/* a, a:hover, a:active {
   -webkit-text-decoration-skip: objects;
   background-color: transparent;
   background-image: -webkit-gradient(linear,left top,left bottom,color-stop(75%,transparent),color-stop(0,rgba(136,136,252,.35)));
@@ -80,7 +81,7 @@ a, a:hover, a:active {
   color: var(--link-color);
   outline: none;
   text-decoration: none;
-}
+} */
 
 /* a, a:hover, a:active {
   color: #cc0041;
@@ -173,6 +174,10 @@ footer {
 }
 
 @media (max-width: 991.98px) {
+  html {
+    font-size: 100%;
+  }
+
   .navbar-nav {
     margin-top: 5px!important;
   }
