@@ -178,6 +178,11 @@ footer {
     font-size: 100%;
   }
 
+  .h1, h1 {
+    font-size: 1.75em;
+    line-height: 1.2;
+  }
+
   .navbar-nav {
     margin-top: 5px!important;
   }
