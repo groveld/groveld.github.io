@@ -12,10 +12,8 @@ layout: default
 
         {% if page.title %}
         <header>
-          <div class="container-fluid text-center py-3 py-lg-5">
-            <h1 class="m-0">{{ page.title }}</h1>
-            <p class="text-muted m-0">{{ page.date | date_to_long_string }} &bull; {{ page.author | default: site.author | xml_escape }} &bull; {% include read-time.html %}</p>
-          </div>
+          <h1 class="m-0">{{ page.title }}</h1>
+          <p class="text-muted m-0">{{ page.date | date_to_long_string }} &bull; {{ page.author | default: site.author | xml_escape }} &bull; {% include read-time.html %}</p>
         </header>
         {% endif %}
 
