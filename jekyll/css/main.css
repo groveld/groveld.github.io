@@ -73,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
-/* a, a:hover, a:active {
+main a, main a:hover, main a:active {
   -webkit-text-decoration-skip: objects;
   background-color: transparent;
   background-image: -webkit-gradient(linear,left top,left bottom,color-stop(75%,transparent),color-stop(0,rgba(136,136,252,.35)));
@@ -81,7 +81,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--link-color);
   outline: none;
   text-decoration: none;
-} */
+}
 
 /* a, a:hover, a:active {
   color: #cc0041;
