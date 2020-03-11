@@ -13,7 +13,7 @@ layout: default
         {% if page.title %}
         <header>
           <h1 class="m-0">{{ page.title }}</h1>
-          <p class="text-muted m-0">{{ page.date | date_to_long_string }} &bull; {{ page.author | default: site.author | xml_escape }} &bull; {% include read-time.html %}</p>
+          <p class="m-0">Posted on <time class="font-weight-bold">{{ page.date | date_to_long_string }}</time></p>
         </header>
         {% endif %}
 

@@ -87,21 +87,23 @@ h1, h2, h3, h4, h5, h6 {
   color: #cc0041;
 } */
 
-header::after {
-  background-color: #5d55fa;
-  content: "";
-  display: block;
-  height: 5px;
-  margin: .5em 0;
-  width: 3.5em;
-}
-
 code {
   color: #cc0041;
 }
 
 header {
   padding-top: 50px;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+header::after {
+  background-color: #5d55fa;
+  content: "";
+  display: block;
+  height: 5px;
+  margin: 1.75em auto 0;
+  width: 6em;
 }
 
 .progress {
@@ -185,6 +187,15 @@ footer {
 @media (max-width: 991.98px) {
   html {
     font-size: 100%;
+  }
+
+  header {
+    text-align: left;
+  }
+
+  header::after {
+    margin: .5em 0;
+    width: 3.5em;
   }
 
   .h1, h1 {
