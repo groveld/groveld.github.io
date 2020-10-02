@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /img/
+Allow: /img/logo.svg
+Sitemap: https://www.groveld.com/sitemap.xml
