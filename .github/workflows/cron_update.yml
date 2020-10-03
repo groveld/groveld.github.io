@@ -1,0 +1,69 @@
+name: Build and deploy site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron:  '0 0 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Ruby
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+
+      - name: Checkout groveld/jekyll-theme
+        uses: actions/checkout@v2
+        with:
+          repository: groveld/jekyll-theme
+          ref: main
+          path: theme
+
+      - name: Checkout main branch
+        uses: actions/checkout@v2
+        with:
+          ref: main
+          path: main
+
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v2
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Populate Jekyll with production content
+        run: |
+          rsync -av --exclude ".gitkeep" ${GITHUB_WORKSPACE}/main/drafts/ ${GITHUB_WORKSPACE}/theme/_drafts/
+          rsync -av --exclude ".gitkeep" ${GITHUB_WORKSPACE}/main/assets/ ${GITHUB_WORKSPACE}/theme/assets/
+          rsync -av --exclude ".gitkeep" ${GITHUB_WORKSPACE}/main/pages/ ${GITHUB_WORKSPACE}/theme/_pages/
+          rsync -av --exclude ".gitkeep" --delete ${GITHUB_WORKSPACE}/main/posts/ ${GITHUB_WORKSPACE}/theme/_posts/
+          rsync -av ${GITHUB_WORKSPACE}/main/_config.yml ${GITHUB_WORKSPACE}/theme/_config.yml
+          rsync -av ${GITHUB_WORKSPACE}/main/Gemfile ${GITHUB_WORKSPACE}/theme/Gemfile
+
+      - name: Install Jekyll and build site
+        env:
+          JEKYLL_ENV: production
+        run: |
+          cd ${GITHUB_WORKSPACE}/theme/
+          gem install bundler
+          bundle install --jobs 4 --retry 3
+          bundle exec jekyll build
+          bundle exec htmlproofer ./_site --check-html --check-sri
+
+      - name: Prepare main branch
+        run: |
+          echo "www.groveld.com" > ${GITHUB_WORKSPACE}/theme/_site/CNAME
+          rsync -vrth --delete --exclude ".git*" ${GITHUB_WORKSPACE}/theme/_site/ ${GITHUB_WORKSPACE}/gh-pages/
+
+      - name: Publish site to GitHub
+        run: |
+          cd ${GITHUB_WORKSPACE}/gh-pages/
+          git config --global user.name "${GITHUB_ACTOR}"
+          git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git add -A
+          git commit -am "Published by GitHub Actions (${GITHUB_SHA::7})"
+          git push -f origin gh-pages > /dev/null 2>&1

@@ -1,0 +1,49 @@
+locale: 'en'
+timezone: 'Europe/Amsterdam'
+url: 'https://www.groveld.com'
+# baseurl: '/blog'
+permalink: '/articles/:title'
+
+# Progressive Web App Settings
+pwa_title             : 'Groveld'
+pwa_themecolor        : '#1e88e5'
+pwa_backgroundcolor   : '#1e88e5'
+
+serviceworker         : true
+# google_analytics      : 'UA-134156954-1'
+#disqus_name           : 'groveld'
+
+# Custom Jekyll Configuration
+title                 : 'Martin Groeneveld'
+tagline               : 'The personal website of Martin Groeneveld'
+description           : 'The personal website of Martin Groeneveld'
+author                : 'Martin Groeneveld'
+email                 : 'groveld@pm.me'
+
+phone                 : '+31610106931'
+address               : 'Streetname 123<br>Zipcode City<br>Country'
+legal                 : '<a href="/terms">Terms</a> &bull; <a href="/privacy">Privacy</a>'
+
+# Core Jekyll Configuration
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+
+include:
+  - _pages
+
+exclude:
+  - .git*
+  - _site
+  - .gitattributes
+  - .gitignore
+  - .jekyll-cache
+  - Gemfile
+  - Gemfile.lock
+  - Rakefile
+  - README.md
+  - LICENSE
+  - CNAME
