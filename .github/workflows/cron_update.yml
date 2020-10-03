@@ -37,12 +37,12 @@ jobs:
 
       - name: Populate Jekyll with production content
         run: |
-          rsync -av --exclude ".gitkeep" ${GITHUB_WORKSPACE}/main/drafts/ ${GITHUB_WORKSPACE}/theme/_drafts/
-          rsync -av --exclude ".gitkeep" ${GITHUB_WORKSPACE}/main/assets/ ${GITHUB_WORKSPACE}/theme/assets/
-          rsync -av --exclude ".gitkeep" ${GITHUB_WORKSPACE}/main/pages/ ${GITHUB_WORKSPACE}/theme/_pages/
-          rsync -av --exclude ".gitkeep" --delete ${GITHUB_WORKSPACE}/main/posts/ ${GITHUB_WORKSPACE}/theme/_posts/
-          rsync -av ${GITHUB_WORKSPACE}/main/_config.yml ${GITHUB_WORKSPACE}/theme/_config.yml
-          rsync -av ${GITHUB_WORKSPACE}/main/Gemfile ${GITHUB_WORKSPACE}/theme/Gemfile
+          rsync -av --exclude ".git*" ${GITHUB_WORKSPACE}/main/ ${GITHUB_WORKSPACE}/theme/
+          # rsync -av --exclude ".gitkeep" ${GITHUB_WORKSPACE}/main/assets/ ${GITHUB_WORKSPACE}/theme/assets/
+          # rsync -av --exclude ".gitkeep" ${GITHUB_WORKSPACE}/main/pages/ ${GITHUB_WORKSPACE}/theme/_pages/
+          # rsync -av --exclude ".gitkeep" --delete ${GITHUB_WORKSPACE}/main/posts/ ${GITHUB_WORKSPACE}/theme/_posts/
+          # rsync -av ${GITHUB_WORKSPACE}/main/_config.yml ${GITHUB_WORKSPACE}/theme/_config.yml
+          # rsync -av ${GITHUB_WORKSPACE}/main/Gemfile ${GITHUB_WORKSPACE}/theme/Gemfile
 
       - name: Install Jekyll and build site
         env:
