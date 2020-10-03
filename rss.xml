@@ -15,14 +15,6 @@
     </item>
     
     <item>
-      <title>Markdown Common Elements</title>
-      <description>Summary:</description>
-      <pubDate>Wed, 24 Feb 2016 22:44:00 +0100</pubDate>
-      <link>https://www.groveld.com/articles/markdown-common-elements</link>
-      <guid isPermaLink="true">https://www.groveld.com/articles/markdown-common-elements</guid>
-    </item>
-    
-    <item>
       <title>A collection of useful .htaccess snippets</title>
       <description>Disclaimer: While dropping the snippet into an &quot;.htaccess&quot; file is most of the time sufficient, there are cases when certain modifications might be required. Use at your own risk.</description>
       <pubDate>Sun, 06 Sep 2015 00:00:00 +0200</pubDate>
@@ -84,6 +76,14 @@
       <pubDate>Sat, 01 Feb 2014 00:00:00 +0100</pubDate>
       <link>https://www.groveld.com/articles/clean-urls-with-jekyll-apache</link>
       <guid isPermaLink="true">https://www.groveld.com/articles/clean-urls-with-jekyll-apache</guid>
+    </item>
+    
+    <item>
+      <title>What it really means to Hack</title>
+      <description>I once mentioned it to a classmate that I use GNU/Linux as the only Operating System at home, and he replied in shock, “That’s used by Hackers? Right?” That is true. Almost everyone who calls himself/herself a Hacker uses it, but the fear on his face suggested that he meant to say Crackers. Noooo! Linux users aren’t Crackers. That would be similar to saying that everyone who owns a slide hammer, is a car thief!...</description>
+      <pubDate>Sat, 18 Jan 2014 00:00:00 +0100</pubDate>
+      <link>https://www.groveld.com/articles/what-it-really-means-to-hack</link>
+      <guid isPermaLink="true">https://www.groveld.com/articles/what-it-really-means-to-hack</guid>
     </item>
     
   </channel>

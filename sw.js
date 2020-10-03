@@ -1,6 +1,6 @@
 'use strict';
 
-const cacheVersion = '1601751018::';
+const cacheVersion = '1601751575::';
 
 const urlsToExclude = [
   '/atom.xml',
@@ -22,7 +22,6 @@ const urlsToCache = [
   '/articles/group-policy-processing',
   '/articles/how-to-use-gpg-to-encrypt-and-sign-messages',
   '/articles/htaccess-snippets',
-  '/articles/markdown-common-elements',
   '/articles/ohm2013-observe-hack-make',
   '/articles/open-hackerspaces-day-2014',
   '/articles/postfix-with-mysql-backend-and-tls',

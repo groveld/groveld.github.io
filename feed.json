@@ -24,18 +24,6 @@
       }
     },
     {
-      "id": "https://www.groveld.com/articles/markdown-common-elements",
-      "url": "https://www.groveld.com/articles/markdown-common-elements",
-      "title": "Markdown Common Elements",
-      "content_html": "Summary:",
-      "date_published": "2016-02-24T22:44:00+01:00",
-      "date_modified": "2016-02-24T22:44:00+01:00",
-      "author": {
-        "name": "johndoe",
-        "url": "mailto:groveld@pm.me"
-      }
-    },
-    {
       "id": "https://www.groveld.com/articles/htaccess-snippets",
       "url": "https://www.groveld.com/articles/htaccess-snippets",
       "title": "A collection of useful .htaccess snippets",
@@ -126,6 +114,18 @@
       "content_html": "Yesterday I decided to shorten and clear the urls of my posts once and for all. By clean, I mean short and simple urls without dates, categories or anything else in them, only the post slug. My definition of cleanness also includes not having a slash at the end of the urls. For example, groveld.com/about.",
       "date_published": "2014-02-01T00:00:00+01:00",
       "date_modified": "2014-02-01T00:00:00+01:00",
+      "author": {
+        "name": "groveld",
+        "url": "mailto:groveld@pm.me"
+      }
+    },
+    {
+      "id": "https://www.groveld.com/articles/what-it-really-means-to-hack",
+      "url": "https://www.groveld.com/articles/what-it-really-means-to-hack",
+      "title": "What it really means to Hack",
+      "content_html": "I once mentioned it to a classmate that I use GNU/Linux as the only Operating System at home, and he replied in shock, “That’s used by Hackers? Right?” That is true. Almost everyone who calls himself/herself a Hacker uses it, but the fear on his face suggested that he meant to say Crackers. Noooo! Linux users aren’t Crackers. That would be similar to saying that everyone who owns a slide hammer, is a car thief!...",
+      "date_published": "2014-01-18T00:00:00+01:00",
+      "date_modified": "2014-01-18T00:00:00+01:00",
       "author": {
         "name": "groveld",
         "url": "mailto:groveld@pm.me"
