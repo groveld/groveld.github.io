@@ -52,7 +52,7 @@ jobs:
           gem install bundler
           bundle install --jobs 4 --retry 3
           bundle exec jekyll build
-          bundle exec htmlproofer ./_site --check-html --check-sri
+          # bundle exec htmlproofer ./_site --check-html --check-sri
 
       - name: Prepare main branch
         run: |
