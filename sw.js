@@ -1,6 +1,6 @@
 'use strict';
 
-const cacheVersion = '1601716862::';
+const cacheVersion = '1601718260::';
 
 const urlsToExclude = [
   '/atom.xml',
@@ -29,9 +29,9 @@ const urlsToCache = [
   '/articles/use-gitolite-to-control-access-to-a-git-server',
   '/articles/what-it-really-means-to-hack',
   '/articles/www-non-www-redirection',
-  '/css/main.css',
-  '/css/syntax.css',
-  '/js/main.js',
+  '/assets/css/main.css',
+  '/assets/css/syntax.css',
+  '/assets/js/main.js',
   '/privacy',
   '/terms'
 ];
