@@ -1,6 +1,4 @@
-'use strict';
-
-const cacheVersion = '1606349781::';
+const cacheVersion = '1606427189::';
 
 const urlsToExclude = [
   '/atom.xml',
@@ -9,8 +7,8 @@ const urlsToExclude = [
   '/manifest.json',
   '/robots.txt',
   '/rss.xml',
-  '/sitemap.xml',
-  '/sw.js'
+  '/serviceWorker.js',
+  '/sitemap.xml'
 ];
 
 const urlsToCache = [
