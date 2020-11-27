@@ -11,7 +11,7 @@ pwa_backgroundcolor   : '#1e88e5'
 
 serviceworker         : true
 # google_analytics      : 'UA-134156954-1'
-#disqus_name           : 'groveld'
+# disqus_name           : 'groveld'
 
 # Custom Jekyll Configuration
 title                 : 'Martin Groeneveld'
