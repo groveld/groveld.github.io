@@ -28,14 +28,14 @@ I like to reboot my computer while the system updates are being applied, just to
 And hacking isn't only about doing awesome stuff, it is also about sharing it with the community, and collaborating with like minded people.
 See [Hacker ethics](https://en.wikipedia.org/wiki/Hacker_ethic).
 
-The hacker culture shares its roots with the [Free Software](http://fsf.org), the [Open Source](http://opensource.org) and the [Linux](http://linuxfoundation.org) culture.
-These cultures overlap so much, that to much extent, they are the same. [[ref]](http://www.catb.org/~esr/faqs/hacker-howto.html#what_is)
+The hacker culture shares its roots with the [Free Software](https://www.fsf.org/), the [Open Source](https://opensource.org/) and the [Linux](https://www.linuxfoundation.org/) culture.
+These cultures overlap so much, that to much extent, they are the same. [[ref]](https://www.catb.org/~esr/faqs/hacker-howto.html#what_is)
 Hackers are the people who provided the backbone to the World Wide Web, as we know it today. They invented Unix.
 They resurrected the lost principle of sharing and collaborating code. They proved that *given enough eyeballs, all bugs are shallow*.
 
 Here are a few sources from very influential people in the Hacker community, which inspired this post:
 Richard Stallman's post [On Hacking](https://stallman.org/articles/on-hacking.html)
-Eric Raymond's [How To Become A Hacker](http://www.catb.org/~esr/faqs/hacker-howto.html)
-and the [Wikipedia Article](https://en.wikipedia.org/wiki/Hacker_%28programmer_subculture%29) on Hacker subculture.
+Eric Raymond's [How To Become A Hacker](https://www.catb.org/~esr/faqs/hacker-howto.html)
+and the [Wikipedia Article](https://en.wikipedia.org/wiki/Hacker_culture) on Hacker subculture.
 
 Happy Hacking!

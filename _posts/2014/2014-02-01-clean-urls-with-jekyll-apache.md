@@ -8,7 +8,7 @@ tags        : [jekyll, apache]
 
 Yesterday I decided to shorten and clear the urls of my posts once and for all. By clean, I mean short and simple urls without dates, categories or anything else in them, only the post slug. My definition of cleanness also includes **not** having a slash at the end of the urls. For example, `groveld.com/about`.
 
-To view options available when setting the permalink structure of posts in jekyll, you can take a look at the [documentation](http://jekyllrb.com/docs/permalinks/), but for our purpose, it's so simple and you might have already guessed it without looking at the docs: `permalink: /:title`
+To view options available when setting the permalink structure of posts in jekyll, you can take a look at the [documentation](https://jekyllrb.com/docs/permalinks/), but for our purpose, it's so simple and you might have already guessed it without looking at the docs: `permalink: /:title`
 
 You have to put the above line in the `_config.yml` file in the root directory of your jekyll project.
 
@@ -33,6 +33,4 @@ RewriteRule ^([\w\/-]+)(\?.*)?$ $1/index.html$2 [L,T=application/x-httpd-html]
 
 We're done! but there's one more thing I'd like to mention:
 
-In this approach, jekyll creates a directory for each post, which in my opinion is not very nice. The solution for that will be to tell jekyll to create all posts as html files in some directory, like `blog` and then have Apache load the actual file for each post from the `blog` folder. However, if you try this, you'll realize that jekyll always creates the paginations in folder structure (`/page/2/index.html`) and there's no easy way to make it create html files (`/page/2.html`), and therefore that'll messup our htaccess url rewrite. Now, if you have a decent knowledge of [regex](http://regex.learncodethehardway.org/), then you're fine and you can separate blog posts from paginations, but that's not the case for me :p, so this is as far as I will go.
-
-I also thought it might be useful to link to [this article](http://andrewho.co.uk/weblog/clean-urls-on-jekyll-apache); although I didn't use it myself and I only found it after doing what I just described in this post.
+In this approach, jekyll creates a directory for each post, which in my opinion is not very nice. The solution for that will be to tell jekyll to create all posts as html files in some directory, like `blog` and then have Apache load the actual file for each post from the `blog` folder. However, if you try this, you'll realize that jekyll always creates the paginations in folder structure (`/page/2/index.html`) and there's no easy way to make it create html files (`/page/2.html`), and therefore that'll messup our htaccess url rewrite. Now, if you have a decent knowledge of [RegEx](https://en.wikipedia.org/wiki/Regular_expression), then you're fine and you can separate blog posts from paginations, but that's not the case for me :p, so this is as far as I will go.

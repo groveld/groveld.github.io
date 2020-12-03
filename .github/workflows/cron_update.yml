@@ -11,6 +11,9 @@ on:
       - 'LICENSE'
       - 'README.md'
       - '_drafts/**'
+  pull_request:
+    branches:
+      - main
   schedule:
     - cron:  '0 0 * * *'
 
