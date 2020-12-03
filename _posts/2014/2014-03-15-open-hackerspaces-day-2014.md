@@ -24,7 +24,7 @@ Everybody is welcome to come over!
 
 12 Dutch hackerspaces are joining, for more information about the activities take a look at their own website.
 
-* Almere: [Sk1llz](https://sk1llz.nl/)
+* Almere: [Sk1llz](http://sk1llz.nl/)
 * Amersfoort: [Bitlair](https://bitlair.nl/)
 * Amsterdam: [Technologia Incognita](https://techinc.nl/)
 * Amsterdam: [LAG](https://laglab.org/)
