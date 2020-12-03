@@ -18,21 +18,21 @@ The members of many hackerspaces demonstrate this goal by inviting anyone curiou
 
 Next to building machines, members also work on projects to, for example, remotely open the front door of their space, or to adjust the temperature of multiple areas via the internet. There's also a collaboration with a library to teach kids how to solder, there are privacy workshops on multiple locations and spaces work together with municipalities regarding security and open data.
 
-The open day will be a colourful whole, with activities spread all through the country. Every hackerspace will have their own interpretation. An overview of activities and opening times can be found at [http://hackerspaces.nl/](http://hackerspaces.nl/) or on the website of the local space.
+The open day will be a colourful whole, with activities spread all through the country. Every hackerspace will have their own interpretation. An overview of activities and opening times can be found at [Hackerspaces.nl](https://hackerspaces.nl/) or on the website of the local space.
 
 Everybody is welcome to come over!
 
 12 Dutch hackerspaces are joining, for more information about the activities take a look at their own website.
 
-* Almere: [Sk1llz](http://sk1llz.nl/)
-* Amersfoort: [Bitlair](http://bitlair.nl/)
-* Amsterdam: [Technologia Incognita](http://techinc.nl/)
-* Amsterdam: [LAG](http://laglab.org/)
-* Arnhem: [Hack42](http://hack42.nl/)
-* Den Haag: [Revelation Space](http://revspace.nl/)
-* Eindhoven : [MADspace](http://madspace.nl/)
-* Enschede: [TkkrLab](http://tkkrlab.nl/)
+* Almere: [Sk1llz](https://sk1llz.nl/)
+* Amersfoort: [Bitlair](https://bitlair.nl/)
+* Amsterdam: [Technologia Incognita](https://techinc.nl/)
+* Amsterdam: [LAG](https://laglab.org/)
+* Arnhem: [Hack42](https://hack42.nl/)
+* Den Haag: [Revelation Space](https://revspace.nl/)
+* Eindhoven: [MADspace](https://madspace.nl/)
+* Enschede: [TkkrLab](https://tkkrlab.nl/)
 * Heerlen: [ACKspace](https://ackspace.nl/)
-* Leeuwarden: [Frack](http://frack.nl/)
-* Utrecht: [RandomData](http://www.randomdata.nl/)
-* Wageningen: [NURDspace](http://nurdspace.nl/)
+* Leeuwarden: [Frack](https://frack.nl/)
+* Utrecht: [RandomData](https://randomdata.nl/)
+* Wageningen: [NURDspace](https://nurdspace.nl/)
