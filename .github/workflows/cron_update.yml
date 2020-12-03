@@ -62,9 +62,8 @@ jobs:
           bundle exec jekyll build
 
       - name: Validate Jekyll
-        run: |
-          cd ${GITHUB_WORKSPACE}/theme/_site/
-          bundle exec htmlproofer ./ --check-html --check-sri
+        run: bundle exec htmlproofer ${GITHUB_WORKSPACE}/theme/_site/ \
+          --assume_extension --check-html --enforce_https --check_favicon
 
       - name: Prepare GitHub Pages
         run: |
