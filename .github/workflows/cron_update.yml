@@ -1,4 +1,4 @@
-name: Build and deploy site to GitHub Pages
+name: Build and Deploy to GitHub Pages
 
 on:
   push:
@@ -63,7 +63,7 @@ jobs:
           bundle exec jekyll build
 
       - name: Validate Jekyll
-        run: bundle exec htmlproofer ${GITHUB_WORKSPACE}/theme/_site/ --assume_extension --check-html --enforce_https --check_favicon
+        run: bundle exec htmlproofer ${GITHUB_WORKSPACE}/theme/_site --assume_extension --check-html --enforce_https --check_favicon
 
       - name: Prepare GitHub Pages
         run: |
