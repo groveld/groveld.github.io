@@ -34,7 +34,7 @@ RewriteRule ^ http%1://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 This works for _any_ domain. [Source](https://stackoverflow.com/questions/4916222/htaccess-how-to-force-www-in-a-generic-way)
 
 ### Force non-www
-It's [still](http://www.sitepoint.com/domain-www-or-no-www/) [open](https://devcenter.heroku.com/articles/apex-domains) [for](http://yes-www.org/) [debate](http://no-www.org/) whether www or non-www is the way to go, so if you happen to be a fan of bare domains, here you go:
+It's [still](https://www.sitepoint.com/domain-www-or-no-www/) [open](https://devcenter.heroku.com/articles/apex-domains) [for](https://www.yes-www.org/) [debate](https://dropwww.com/) whether www or non-www is the way to go, so if you happen to be a fan of bare domains, here you go:
 
 ```
 RewriteEngine on
@@ -91,7 +91,7 @@ Redirect 301 /oldpage.html http://www.example.com/newpage.html
 Redirect 301 /oldpage2.html http://www.example.com/folder/
 ```
 
-[Source](http://css-tricks.com/snippets/htaccess/301-redirects/)
+[Source](https://css-tricks.com/snippets/htaccess/301-redirects/)
 
 ### Alias a Single Directory
 ```
@@ -118,7 +118,7 @@ This is a less efficient version of the FallbackResource directive (because usin
 Redirect 301 / http://newsite.com/
 ```
 
-This way does it with links intact. That is `www.oldsite.com/some/crazy/link.html` will become `www.newsite.com/some/crazy/link.html`. This is extremely helpful when you are just "moving" a site to a new domain. [Source](http://css-tricks.com/snippets/htaccess/301-redirects/)
+This way does it with links intact. That is `www.oldsite.com/some/crazy/link.html` will become `www.newsite.com/some/crazy/link.html`. This is extremely helpful when you are just "moving" a site to a new domain. [Source](https://css-tricks.com/snippets/htaccess/301-redirects/)
 
 ### Alias "Clean" URLs
 This snippet lets you use "clean URLs" -- those without a PHP extension, e.g. `example.com/users` instead of `example.com/users.php`.
@@ -129,7 +129,7 @@ RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteRule ^([^.]+)$ $1.php [NC,L]
 ```
 
-[Source](http://www.abeautifulsite.net/access-pages-without-the-php-extension-using-htaccess/)
+[Source](https://www.abeautifulsite.net/access-pages-without-the-php-extension-using-htaccess)
 
 ## Security
 
@@ -156,7 +156,7 @@ Allow from xxx.xxx.xxx.xxx
 # Require ip xxx.xxx.xxx.xxx
 ```
 
-`xxx.xxx.xxx.xxx` is your IP. If you replace the last three digits with 0/12 for example, this will specify a range of IPs within the same network, thus saving you the trouble to list all allowed IPs separately. [Source](http://speckyboy.com/2013/01/08/useful-htaccess-snippets-and-hacks/)
+`xxx.xxx.xxx.xxx` is your IP. If you replace the last three digits with 0/12 for example, this will specify a range of IPs within the same network, thus saving you the trouble to list all allowed IPs separately. [Source](https://speckyboy.com/useful-htaccess-snippets-and-hacks/)
 
 Now of course there's a reversed version:
 
@@ -272,7 +272,6 @@ Require valid-user
 
 ### Block Visitors by Referrer
 This denies access for all users who are coming from (referred by) a specific domain.
-[Source](http://www.htaccess-guide.com/deny-visitors-by-referrer/)
 
 ```
 RewriteEngine on
@@ -391,7 +390,7 @@ If you don't control versioning with filename-based cache busting, consider lowe
 ```
 
 ### Turn eTags Off
-By removing the `ETag` header, you disable caches and browsers from being able to validate files, so they are forced to rely on your `Cache-Control` and `Expires` header. [Source](http://www.askapache.com/htaccess/apache-speed-etags.html)
+By removing the `ETag` header, you disable caches and browsers from being able to validate files, so they are forced to rely on your `Cache-Control` and `Expires` header. [Source](https://www.askapache.com/htaccess/apache-speed-etags/)
 
 ```
 <IfModule mod_headers.c>
