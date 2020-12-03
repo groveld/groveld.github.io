@@ -1,0 +1,26 @@
+name: Compress Images
+
+on:
+  push:
+    branches:
+      - gh-pages
+    paths:
+      - '**.jpg'
+      - '**.jpeg'
+      - '**.png'
+      - '**.webp'
+jobs:
+  compress:
+    name: calibreapp/image-actions
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+
+      - name: Compress Images
+        uses: calibreapp/image-actions@master
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          jpegQuality: "70"
+          jpegProgressive: true
+          pngQuality: "70"
