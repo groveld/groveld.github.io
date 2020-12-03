@@ -182,10 +182,3 @@ We’d like to implement some improvements on this process in the future:
 
 With our current setup, we can’t deploy when our tests are failing.
 Providing consistency with Ruby and Node dependencies across different operating systems and environments has proven difficult. We’ve considered Dockerizing our site but that’s a subject for another post!
-
-## Resources
-
-We’d like to give credit to these helpful posts, which we adapted for our site:
-
-Automate GitHub Pages publishing with Jekyll and Travis CI by Evgeny Shepelyuk
-Automating deployment of a GitHub Pages hosted site with Jekyll and Travis CI by Mel Lota
