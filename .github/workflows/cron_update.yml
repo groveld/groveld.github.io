@@ -4,6 +4,13 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+#       - '.github/**'
+      - '.gitattributes'
+      - '.gitignore'
+      - 'LICENSE'
+      - 'README.md'
+      - '_drafts/**'
   schedule:
     - cron:  '0 0 * * *'
 
@@ -16,20 +23,20 @@ jobs:
         with:
           ruby-version: 2.7
 
-      - name: Checkout groveld/jekyll-theme
+      - name: Checkout Theme
         uses: actions/checkout@v2
         with:
           repository: groveld/jekyll-theme
           ref: main
           path: theme
 
-      - name: Checkout main branch
+      - name: Checkout Content
         uses: actions/checkout@v2
         with:
           ref: main
           path: content
 
-      - name: Checkout gh-pages branch
+      - name: Checkout Pages
         uses: actions/checkout@v2
         with:
           ref: gh-pages
