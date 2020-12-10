@@ -1,7 +1,6 @@
 locale: 'en'
 timezone: 'Europe/Amsterdam'
 url: 'https://groveld.com'
-# baseurl: '/blog'
 permalink: '/articles/:title'
 
 # Progressive Web App Settings
