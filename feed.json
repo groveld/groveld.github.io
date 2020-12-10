@@ -1,19 +1,19 @@
 {
   "version": "https://jsonfeed.org/version/1",
   "title": "Martin Groeneveld",
-  "home_page_url": "https://www.groveld.com/",
-  "feed_url": "https://www.groveld.com/feed.json",
+  "home_page_url": "https://groveld.com/",
+  "feed_url": "https://groveld.com/feed.json",
   "description": "The personal website of Martin Groeneveld",
-  "icon": "https://www.groveld.com/assets/img/icons/android-chrome-512x512.png",
-  "favicon": "https://www.groveld.com/favicon.ico",
+  "icon": "https://groveld.com/assets/img/icons/android-chrome-512x512.png",
+  "favicon": "https://groveld.com/favicon.ico",
   "author": {
     "name": "Martin Groeneveld",
     "url": "mailto:groveld@pm.me"
   },
   "items": [
     {
-      "id": "https://www.groveld.com/articles/group-policy-processing",
-      "url": "https://www.groveld.com/articles/group-policy-processing",
+      "id": "https://groveld.com/articles/group-policy-processing",
+      "url": "https://groveld.com/articles/group-policy-processing",
       "title": "Understanding Group Policy Processing",
       "content_html": "Group Policy Processing: You can have local policies, site policies, domain policies, and OU policies within your domain structure. To learn how to best implement Group Policies to serve the organization, you need to understand the order in which the policies are applied.",
       "date_published": "2018-10-09T00:00:00+02:00",
@@ -24,8 +24,8 @@
       }
     },
     {
-      "id": "https://www.groveld.com/articles/htaccess-snippets",
-      "url": "https://www.groveld.com/articles/htaccess-snippets",
+      "id": "https://groveld.com/articles/htaccess-snippets",
+      "url": "https://groveld.com/articles/htaccess-snippets",
       "title": "A collection of useful .htaccess snippets",
       "content_html": "Disclaimer: While dropping the snippet into an &quot;.htaccess&quot; file is most of the time sufficient, there are cases when certain modifications might be required. Use at your own risk.",
       "date_published": "2015-09-06T00:00:00+02:00",
@@ -36,8 +36,8 @@
       }
     },
     {
-      "id": "https://www.groveld.com/articles/www-non-www-redirection",
-      "url": "https://www.groveld.com/articles/www-non-www-redirection",
+      "id": "https://groveld.com/articles/www-non-www-redirection",
+      "url": "https://groveld.com/articles/www-non-www-redirection",
       "title": "Nginx config for www and non-www redirection",
       "content_html": "There are many ways to force Nginx to use either WWW version or non-WWW version of URLs for your site.",
       "date_published": "2015-01-16T00:00:00+01:00",
@@ -48,8 +48,8 @@
       }
     },
     {
-      "id": "https://www.groveld.com/articles/give-user-permission-to-edit-and-add-files-in-var-www",
-      "url": "https://www.groveld.com/articles/give-user-permission-to-edit-and-add-files-in-var-www",
+      "id": "https://groveld.com/articles/give-user-permission-to-edit-and-add-files-in-var-www",
+      "url": "https://groveld.com/articles/give-user-permission-to-edit-and-add-files-in-var-www",
       "title": "Give user permission to edit and add files in /var/www",
       "content_html": "Tutorial showing you how to give an Ubuntu user the right to edit and add files in the /var/www folders.",
       "date_published": "2015-01-10T00:00:00+01:00",
@@ -60,8 +60,8 @@
       }
     },
     {
-      "id": "https://www.groveld.com/articles/use-gitolite-to-control-access-to-a-git-server",
-      "url": "https://www.groveld.com/articles/use-gitolite-to-control-access-to-a-git-server",
+      "id": "https://groveld.com/articles/use-gitolite-to-control-access-to-a-git-server",
+      "url": "https://groveld.com/articles/use-gitolite-to-control-access-to-a-git-server",
       "title": "Use Gitolite to Control Access to a Git Server",
       "content_html": "Git is a great distributed version control system that can be used to keep track of changes and code for any kind of project. Sometimes, it is helpful to configure a git server to house your team’s projects.",
       "date_published": "2015-01-09T00:00:00+01:00",
@@ -72,8 +72,8 @@
       }
     },
     {
-      "id": "https://www.groveld.com/articles/open-hackerspaces-day-2014",
-      "url": "https://www.groveld.com/articles/open-hackerspaces-day-2014",
+      "id": "https://groveld.com/articles/open-hackerspaces-day-2014",
+      "url": "https://groveld.com/articles/open-hackerspaces-day-2014",
       "title": "March 29th marks this years International open Hackerspaces day",
       "content_html": "Just like the past three years, the hackerspace community will open their doors to the public, on Saturday the 29th of March 2014.",
       "date_published": "2014-03-15T00:00:00+01:00",
@@ -84,8 +84,8 @@
       }
     },
     {
-      "id": "https://www.groveld.com/articles/how-to-use-gpg-to-encrypt-and-sign-messages",
-      "url": "https://www.groveld.com/articles/how-to-use-gpg-to-encrypt-and-sign-messages",
+      "id": "https://groveld.com/articles/how-to-use-gpg-to-encrypt-and-sign-messages",
+      "url": "https://groveld.com/articles/how-to-use-gpg-to-encrypt-and-sign-messages",
       "title": "How To Use GPG to Encrypt and Sign Messages",
       "content_html": "GPG, or GNU Privacy Guard, is a public key cryptography implementation. This allows for the secure transmission of information between parties and can be used to verify that the origin of a message is genuine.",
       "date_published": "2014-02-15T00:00:00+01:00",
@@ -96,8 +96,8 @@
       }
     },
     {
-      "id": "https://www.groveld.com/articles/postfix-with-mysql-backend-and-tls",
-      "url": "https://www.groveld.com/articles/postfix-with-mysql-backend-and-tls",
+      "id": "https://groveld.com/articles/postfix-with-mysql-backend-and-tls",
+      "url": "https://groveld.com/articles/postfix-with-mysql-backend-and-tls",
       "title": "Postfix with MySQL backend and TLS",
       "content_html": "In this tutorial we’ll install a ready to use Postfix mail server with MySql backend for virtual users. Notice that this tutorial only covers installing the SMTP server (not POP3 and IMAP). Click here for a tutorial on installing Courier POP3 and IMAP services.",
       "date_published": "2014-02-08T00:00:00+01:00",
@@ -108,8 +108,8 @@
       }
     },
     {
-      "id": "https://www.groveld.com/articles/clean-urls-with-jekyll-apache",
-      "url": "https://www.groveld.com/articles/clean-urls-with-jekyll-apache",
+      "id": "https://groveld.com/articles/clean-urls-with-jekyll-apache",
+      "url": "https://groveld.com/articles/clean-urls-with-jekyll-apache",
       "title": "Clean URLs with Jekyll/Apache",
       "content_html": "Yesterday I decided to shorten and clear the urls of my posts once and for all. By clean, I mean short and simple urls without dates, categories or anything else in them, only the post slug. My definition of cleanness also includes not having a slash at the end of the urls. For example, groveld.com/about.",
       "date_published": "2014-02-01T00:00:00+01:00",
@@ -120,8 +120,8 @@
       }
     },
     {
-      "id": "https://www.groveld.com/articles/what-it-really-means-to-hack",
-      "url": "https://www.groveld.com/articles/what-it-really-means-to-hack",
+      "id": "https://groveld.com/articles/what-it-really-means-to-hack",
+      "url": "https://groveld.com/articles/what-it-really-means-to-hack",
       "title": "What it really means to Hack",
       "content_html": "I once mentioned it to a classmate that I use GNU/Linux as the only Operating System at home, and he replied in shock, “That’s used by Hackers? Right?” That is true. Almost everyone who calls himself/herself a Hacker uses it, but the fear on his face suggested that he meant to say Crackers. Noooo! Linux users aren’t Crackers. That would be similar to saying that everyone who owns a slide hammer, is a car thief!...",
       "date_published": "2014-01-18T00:00:00+01:00",
