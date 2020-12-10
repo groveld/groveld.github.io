@@ -35,7 +35,7 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
           restore-keys: |
             ${{ runner.os }}-gems-
 
@@ -84,12 +84,6 @@ jobs:
         run: |
           cd ${GITHUB_WORKSPACE}/theme/
           bundle exec htmlproofer ./_site --assume_extension --check_favicon --check-html --disable_external
-
-      - name: Gemfile.lock
-        run: |
-          cd ${GITHUB_WORKSPACE}/theme/
-          bundle lock
-          cp Gemfile.lock ./_site/Gemfile.lock
 
       - name: Prepare GitHub Pages
         run: |
