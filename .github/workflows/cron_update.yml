@@ -85,6 +85,12 @@ jobs:
           cd ${GITHUB_WORKSPACE}/theme/
           bundle exec htmlproofer ./_site --assume_extension --check_favicon --check-html --disable_external
 
+      - name: Gemfile.lock
+        run: |
+          cd ${GITHUB_WORKSPACE}/theme/
+          bundle lock
+          cp Gemfile.lock ./_site/Gemfile.lock
+
       - name: Prepare GitHub Pages
         run: |
           echo "groveld.com" > ${GITHUB_WORKSPACE}/theme/_site/CNAME
