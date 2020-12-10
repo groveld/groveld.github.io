@@ -43,7 +43,6 @@ exclude:
   - .jekyll-cache
   - Gemfile
   - Gemfile.lock
-  - Rakefile
   - README.md
   - LICENSE
   - CNAME
