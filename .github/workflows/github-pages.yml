@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths-ignore:
-#       - '.github/**'
+      - '.github/**'
       - '.gitattributes'
       - '.gitignore'
       - 'LICENSE'
@@ -32,6 +32,13 @@ jobs:
         with:
           ruby-version: 2.7
 
+      - uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+
       - name: Checkout Theme
         uses: actions/checkout@v2
         with:
@@ -56,17 +63,10 @@ jobs:
           rm -rf ${GITHUB_WORKSPACE}/theme/_posts/
           rsync -av --exclude ".git*" --exclude "LICENSE" --exclude "README.md" ${GITHUB_WORKSPACE}/content/ ${GITHUB_WORKSPACE}/theme/
 
-      - uses: actions/cache@v2
-        with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
-
       - name: Install Jekyll
         run: |
           cd ${GITHUB_WORKSPACE}/theme/
-          gem install bundler
+          bundle config path vendor/bundle
           bundle install --jobs 4 --retry 3
 
       - name: Build Jekyll
