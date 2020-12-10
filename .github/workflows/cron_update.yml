@@ -87,7 +87,7 @@ jobs:
 
       - name: Prepare GitHub Pages
         run: |
-          echo "www.groveld.com" > ${GITHUB_WORKSPACE}/theme/_site/CNAME
+          echo "groveld.com" > ${GITHUB_WORKSPACE}/theme/_site/CNAME
           rsync -av --delete --exclude ".git*" ${GITHUB_WORKSPACE}/theme/_site/ ${GITHUB_WORKSPACE}/pages/
 
       - name: Publish GitHub Pages
