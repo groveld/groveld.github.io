@@ -1,6 +1,6 @@
 locale: 'en'
 timezone: 'Europe/Amsterdam'
-url: 'https://www.groveld.com'
+url: 'https://groveld.com'
 # baseurl: '/blog'
 permalink: '/articles/:title'
 
