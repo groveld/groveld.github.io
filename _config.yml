@@ -36,8 +36,8 @@ include:
   - _pages
 
 exclude:
-  - .git*
   - _site
+  - .github
   - .gitattributes
   - .gitignore
   - .jekyll-cache
