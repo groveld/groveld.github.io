@@ -3,87 +3,87 @@
   <channel>
     <title>Martin Groeneveld</title>
     <description>The personal website of Martin Groeneveld</description>
-    <link>https://groveld.com/</link>
-    <atom:link rel="self" type="application/rss+xml" href="https://groveld.com/rss.xml"/>
+    <link>https://www.groveld.com/</link>
+    <atom:link rel="self" type="application/rss+xml" href="https://www.groveld.com/rss.xml"/>
     
     <item>
       <title>Understanding Group Policy Processing</title>
       <description>Group Policy Processing: You can have local policies, site policies, domain policies, and OU policies within your domain structure. To learn how to best implement Group Policies to serve the organization, you need to understand the order in which the policies are applied.</description>
       <pubDate>Tue, 09 Oct 2018 00:00:00 +0200</pubDate>
-      <link>https://groveld.com/articles/group-policy-processing</link>
-      <guid isPermaLink="true">https://groveld.com/articles/group-policy-processing</guid>
+      <link>https://www.groveld.com/articles/group-policy-processing</link>
+      <guid isPermaLink="true">https://www.groveld.com/articles/group-policy-processing</guid>
     </item>
     
     <item>
       <title>A collection of useful .htaccess snippets</title>
       <description>Disclaimer: While dropping the snippet into an &quot;.htaccess&quot; file is most of the time sufficient, there are cases when certain modifications might be required. Use at your own risk.</description>
       <pubDate>Sun, 06 Sep 2015 00:00:00 +0200</pubDate>
-      <link>https://groveld.com/articles/htaccess-snippets</link>
-      <guid isPermaLink="true">https://groveld.com/articles/htaccess-snippets</guid>
+      <link>https://www.groveld.com/articles/htaccess-snippets</link>
+      <guid isPermaLink="true">https://www.groveld.com/articles/htaccess-snippets</guid>
     </item>
     
     <item>
       <title>Nginx config for www and non-www redirection</title>
       <description>There are many ways to force Nginx to use either WWW version or non-WWW version of URLs for your site.</description>
       <pubDate>Fri, 16 Jan 2015 00:00:00 +0100</pubDate>
-      <link>https://groveld.com/articles/www-non-www-redirection</link>
-      <guid isPermaLink="true">https://groveld.com/articles/www-non-www-redirection</guid>
+      <link>https://www.groveld.com/articles/www-non-www-redirection</link>
+      <guid isPermaLink="true">https://www.groveld.com/articles/www-non-www-redirection</guid>
     </item>
     
     <item>
       <title>Give user permission to edit and add files in /var/www</title>
       <description>Tutorial showing you how to give an Ubuntu user the right to edit and add files in the /var/www folders.</description>
       <pubDate>Sat, 10 Jan 2015 00:00:00 +0100</pubDate>
-      <link>https://groveld.com/articles/give-user-permission-to-edit-and-add-files-in-var-www</link>
-      <guid isPermaLink="true">https://groveld.com/articles/give-user-permission-to-edit-and-add-files-in-var-www</guid>
+      <link>https://www.groveld.com/articles/give-user-permission-to-edit-and-add-files-in-var-www</link>
+      <guid isPermaLink="true">https://www.groveld.com/articles/give-user-permission-to-edit-and-add-files-in-var-www</guid>
     </item>
     
     <item>
       <title>Use Gitolite to Control Access to a Git Server</title>
       <description>Git is a great distributed version control system that can be used to keep track of changes and code for any kind of project. Sometimes, it is helpful to configure a git server to house your team’s projects.</description>
       <pubDate>Fri, 09 Jan 2015 00:00:00 +0100</pubDate>
-      <link>https://groveld.com/articles/use-gitolite-to-control-access-to-a-git-server</link>
-      <guid isPermaLink="true">https://groveld.com/articles/use-gitolite-to-control-access-to-a-git-server</guid>
+      <link>https://www.groveld.com/articles/use-gitolite-to-control-access-to-a-git-server</link>
+      <guid isPermaLink="true">https://www.groveld.com/articles/use-gitolite-to-control-access-to-a-git-server</guid>
     </item>
     
     <item>
       <title>March 29th marks this years International open Hackerspaces day</title>
       <description>Just like the past three years, the hackerspace community will open their doors to the public, on Saturday the 29th of March 2014.</description>
       <pubDate>Sat, 15 Mar 2014 00:00:00 +0100</pubDate>
-      <link>https://groveld.com/articles/open-hackerspaces-day-2014</link>
-      <guid isPermaLink="true">https://groveld.com/articles/open-hackerspaces-day-2014</guid>
+      <link>https://www.groveld.com/articles/open-hackerspaces-day-2014</link>
+      <guid isPermaLink="true">https://www.groveld.com/articles/open-hackerspaces-day-2014</guid>
     </item>
     
     <item>
       <title>How To Use GPG to Encrypt and Sign Messages</title>
       <description>GPG, or GNU Privacy Guard, is a public key cryptography implementation. This allows for the secure transmission of information between parties and can be used to verify that the origin of a message is genuine.</description>
       <pubDate>Sat, 15 Feb 2014 00:00:00 +0100</pubDate>
-      <link>https://groveld.com/articles/how-to-use-gpg-to-encrypt-and-sign-messages</link>
-      <guid isPermaLink="true">https://groveld.com/articles/how-to-use-gpg-to-encrypt-and-sign-messages</guid>
+      <link>https://www.groveld.com/articles/how-to-use-gpg-to-encrypt-and-sign-messages</link>
+      <guid isPermaLink="true">https://www.groveld.com/articles/how-to-use-gpg-to-encrypt-and-sign-messages</guid>
     </item>
     
     <item>
       <title>Postfix with MySQL backend and TLS</title>
       <description>In this tutorial we’ll install a ready to use Postfix mail server with MySql backend for virtual users. Notice that this tutorial only covers installing the SMTP server (not POP3 and IMAP). Click here for a tutorial on installing Courier POP3 and IMAP services.</description>
       <pubDate>Sat, 08 Feb 2014 00:00:00 +0100</pubDate>
-      <link>https://groveld.com/articles/postfix-with-mysql-backend-and-tls</link>
-      <guid isPermaLink="true">https://groveld.com/articles/postfix-with-mysql-backend-and-tls</guid>
+      <link>https://www.groveld.com/articles/postfix-with-mysql-backend-and-tls</link>
+      <guid isPermaLink="true">https://www.groveld.com/articles/postfix-with-mysql-backend-and-tls</guid>
     </item>
     
     <item>
       <title>Clean URLs with Jekyll/Apache</title>
       <description>Yesterday I decided to shorten and clear the urls of my posts once and for all. By clean, I mean short and simple urls without dates, categories or anything else in them, only the post slug. My definition of cleanness also includes not having a slash at the end of the urls. For example, groveld.com/about.</description>
       <pubDate>Sat, 01 Feb 2014 00:00:00 +0100</pubDate>
-      <link>https://groveld.com/articles/clean-urls-with-jekyll-apache</link>
-      <guid isPermaLink="true">https://groveld.com/articles/clean-urls-with-jekyll-apache</guid>
+      <link>https://www.groveld.com/articles/clean-urls-with-jekyll-apache</link>
+      <guid isPermaLink="true">https://www.groveld.com/articles/clean-urls-with-jekyll-apache</guid>
     </item>
     
     <item>
       <title>What it really means to Hack</title>
       <description>I once mentioned it to a classmate that I use GNU/Linux as the only Operating System at home, and he replied in shock, “That’s used by Hackers? Right?” That is true. Almost everyone who calls himself/herself a Hacker uses it, but the fear on his face suggested that he meant to say Crackers. Noooo! Linux users aren’t Crackers. That would be similar to saying that everyone who owns a slide hammer, is a car thief!...</description>
       <pubDate>Sat, 18 Jan 2014 00:00:00 +0100</pubDate>
-      <link>https://groveld.com/articles/what-it-really-means-to-hack</link>
-      <guid isPermaLink="true">https://groveld.com/articles/what-it-really-means-to-hack</guid>
+      <link>https://www.groveld.com/articles/what-it-really-means-to-hack</link>
+      <guid isPermaLink="true">https://www.groveld.com/articles/what-it-really-means-to-hack</guid>
     </item>
     
   </channel>
