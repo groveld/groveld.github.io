@@ -1,6 +1,6 @@
 locale: 'en'
 timezone: 'Europe/Amsterdam'
-url: 'https://groveld.com'
+url: 'https://www.groveld.com'
 permalink: '/articles/:title'
 
 # Progressive Web App Settings
