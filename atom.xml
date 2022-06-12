@@ -4,13 +4,13 @@
   <title type="text" xml:lang="en">Martin Groeneveld</title>
   <link rel="self" type="application/atom+xml" href="https://www.groveld.com/atom.xml"/>
   <link rel="alternate" href="https://www.groveld.com/"/>
-  <updated>2021-08-10T03:06:23+02:00</updated>
+  <updated>2022-06-12T02:08:32+02:00</updated>
   <id>https://www.groveld.com/</id>
   <author>
     <name>Martin Groeneveld</name>
     <email>groveld@pm.me</email>
   </author>
-  <rights type="text">Copyright (c) 2021, Martin Groeneveld; all rights reserved.</rights>
+  <rights type="text">Copyright (c) 2022, Martin Groeneveld; all rights reserved.</rights>
   
   <entry>
     <id>https://www.groveld.com/articles/group-policy-processing</id>
