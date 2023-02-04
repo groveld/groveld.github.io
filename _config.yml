@@ -20,7 +20,7 @@ author                : 'Martin Groeneveld'
 email                 : 'martin@groveld.com'
 
 phone                 : '+31612345678'
-address               : 'Streetname 123<br>Zipcode City<br>Country'
+address               : 'Street 123<br>Zipcode City<br>Country'
 legal                 : '<a href="/terms">Terms</a> &bull; <a href="/privacy">Privacy</a>'
 
 # Core Jekyll Configuration
