@@ -23,14 +23,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install Node.js
-        uses: actions/setup-node@v2-beta
+        uses: actions/setup-node@v3
         with:
-          node-version: '12'
+          node-version: '18'
 
       - name: Install Ruby
         uses: actions/setup-ruby@v1
         with:
-          ruby-version: 2.7
+          ruby-version: '3.2'
 
       - uses: actions/cache@v2
         with:
