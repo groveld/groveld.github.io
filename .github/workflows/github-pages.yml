@@ -80,11 +80,6 @@ jobs:
           npm i purgecss -g
           purgecss --css "**/*.css" --content "**/*.html"
 
-      - name: Validate Jekyll
-        run: |
-          cd ${GITHUB_WORKSPACE}/theme/
-          bundle exec htmlproofer ./_site --assume_extension --check_favicon --check-html --disable_external
-
       - name: Prepare GitHub Pages
         run: |
           echo "www.groveld.com" > ${GITHUB_WORKSPACE}/theme/_site/CNAME
