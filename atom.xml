@@ -4,13 +4,13 @@
   <title type="text" xml:lang="en">Martin Groeneveld</title>
   <link rel="self" type="application/atom+xml" href="https://www.groveld.com/atom.xml"/>
   <link rel="alternate" href="https://www.groveld.com/"/>
-  <updated>2022-07-11T02:08:33+02:00</updated>
+  <updated>2023-02-04T19:03:53+01:00</updated>
   <id>https://www.groveld.com/</id>
   <author>
     <name>Martin Groeneveld</name>
-    <email>groveld@pm.me</email>
+    <email>martin@groveld.com</email>
   </author>
-  <rights type="text">Copyright (c) 2022, Martin Groeneveld; all rights reserved.</rights>
+  <rights type="text">Copyright (c) 2023, Martin Groeneveld; all rights reserved.</rights>
   
   <entry>
     <id>https://www.groveld.com/articles/group-policy-processing</id>
@@ -18,7 +18,7 @@
     <title>Understanding Group Policy Processing</title>
     <author>
       <name>groveld</name>
-      <email>groveld@pm.me</email>
+      <email>martin@groveld.com</email>
     </author>
     <published>2018-10-09T00:00:00+02:00</published>
     <updated>2018-10-09T00:00:00+02:00</updated>
@@ -31,7 +31,7 @@
     <title>A collection of useful .htaccess snippets</title>
     <author>
       <name>groveld</name>
-      <email>groveld@pm.me</email>
+      <email>martin@groveld.com</email>
     </author>
     <published>2015-09-06T00:00:00+02:00</published>
     <updated>2015-09-06T00:00:00+02:00</updated>
@@ -44,7 +44,7 @@
     <title>Nginx config for www and non-www redirection</title>
     <author>
       <name>groveld</name>
-      <email>groveld@pm.me</email>
+      <email>martin@groveld.com</email>
     </author>
     <published>2015-01-16T00:00:00+01:00</published>
     <updated>2015-01-16T00:00:00+01:00</updated>
@@ -57,7 +57,7 @@
     <title>Give user permission to edit and add files in /var/www</title>
     <author>
       <name>groveld</name>
-      <email>groveld@pm.me</email>
+      <email>martin@groveld.com</email>
     </author>
     <published>2015-01-10T00:00:00+01:00</published>
     <updated>2015-01-10T00:00:00+01:00</updated>
@@ -70,7 +70,7 @@
     <title>Use Gitolite to Control Access to a Git Server</title>
     <author>
       <name>groveld</name>
-      <email>groveld@pm.me</email>
+      <email>martin@groveld.com</email>
     </author>
     <published>2015-01-09T00:00:00+01:00</published>
     <updated>2015-01-09T00:00:00+01:00</updated>
@@ -83,7 +83,7 @@
     <title>March 29th marks this years International open Hackerspaces day</title>
     <author>
       <name>groveld</name>
-      <email>groveld@pm.me</email>
+      <email>martin@groveld.com</email>
     </author>
     <published>2014-03-15T00:00:00+01:00</published>
     <updated>2014-03-15T00:00:00+01:00</updated>
@@ -96,7 +96,7 @@
     <title>How To Use GPG to Encrypt and Sign Messages</title>
     <author>
       <name>groveld</name>
-      <email>groveld@pm.me</email>
+      <email>martin@groveld.com</email>
     </author>
     <published>2014-02-15T00:00:00+01:00</published>
     <updated>2014-02-15T00:00:00+01:00</updated>
@@ -109,7 +109,7 @@
     <title>Postfix with MySQL backend and TLS</title>
     <author>
       <name>groveld</name>
-      <email>groveld@pm.me</email>
+      <email>martin@groveld.com</email>
     </author>
     <published>2014-02-08T00:00:00+01:00</published>
     <updated>2014-02-08T00:00:00+01:00</updated>
@@ -122,7 +122,7 @@
     <title>Clean URLs with Jekyll/Apache</title>
     <author>
       <name>groveld</name>
-      <email>groveld@pm.me</email>
+      <email>martin@groveld.com</email>
     </author>
     <published>2014-02-01T00:00:00+01:00</published>
     <updated>2014-02-01T00:00:00+01:00</updated>
@@ -135,7 +135,7 @@
     <title>What it really means to Hack</title>
     <author>
       <name>groveld</name>
-      <email>groveld@pm.me</email>
+      <email>martin@groveld.com</email>
     </author>
     <published>2014-01-18T00:00:00+01:00</published>
     <updated>2014-01-18T00:00:00+01:00</updated>
