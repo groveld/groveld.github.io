@@ -22,13 +22,6 @@ jobs:
     name: Build, Test & Publish
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Theme
-        uses: actions/checkout@v2
-        with:
-          repository: groveld/jekyll-theme
-          ref: main
-          path: theme
-
       - name: Checkout Content
         uses: actions/checkout@v2
         with:
@@ -41,10 +34,18 @@ jobs:
           ref: gh-pages
           path: pages
 
+      - name: Checkout Theme
+        uses: actions/checkout@v2
+        with:
+          repository: groveld/jekyll-theme
+          ref: main
+          path: theme
+
       - name: Merge Content into Theme
         run: |
           rm -rf ${GITHUB_WORKSPACE}/theme/_posts/
           rsync -av --exclude ".git*" --exclude "LICENSE" --exclude "README.md" ${GITHUB_WORKSPACE}/content/ ${GITHUB_WORKSPACE}/theme/
+          cd ${GITHUB_WORKSPACE}/theme/
 
       - name: Install Ruby
         uses: ruby/setup-ruby@v1
@@ -53,9 +54,7 @@ jobs:
           bundler-cache: true
 
       - name: Build Jekyll
-        run: |
-          cd ${GITHUB_WORKSPACE}/theme/
-          bundle exec jekyll build
+        run: bundle exec jekyll build
 
       - name: Prepare GitHub Pages
         run: |
