@@ -1,4 +1,4 @@
-name: Build and Deploy to GitHub Pages
+name: Build and Publish to GitHub Pages
 
 on:
   push:
@@ -19,7 +19,7 @@ env:
 
 jobs:
   build:
-    name: Build, Test & Deploy
+    name: Build, Test & Publish
     runs-on: ubuntu-latest
     steps:
       - name: Install Node.js
@@ -73,12 +73,6 @@ jobs:
         run: |
           cd ${GITHUB_WORKSPACE}/theme/
           bundle exec jekyll build
-
-      - name: Optimize Jekyll
-        run: |
-          cd ${GITHUB_WORKSPACE}/theme/_site/
-          npm i purgecss -g
-          purgecss --css "**/*.css" --content "**/*.html"
 
       - name: Prepare GitHub Pages
         run: |
