@@ -45,7 +45,7 @@ jobs:
           rm -rf ${GITHUB_WORKSPACE}/_posts/
           rsync -av --exclude ".git*" --exclude "LICENSE" --exclude "README.md" ${GITHUB_WORKSPACE}/.gh-content/ ${GITHUB_WORKSPACE}/
 
-      - name: Install Ruby
+      - name: Install Ruby + Bundler
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2'
