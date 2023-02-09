@@ -27,25 +27,24 @@ jobs:
         with:
           repository: groveld/jekyll-theme
           ref: main
-          path: theme
           
       - name: Checkout Content
         uses: actions/checkout@v2
         with:
           ref: main
-          path: content
+          path: .content
 
       - name: Checkout Pages
         uses: actions/checkout@v2
         with:
           ref: gh-pages
-          path: pages
+          path: .pages
 
-      - name: Merge Content into Theme
+      - name: Merge Content and Theme
         run: |
-          rm -rf ${GITHUB_WORKSPACE}/theme/_posts/
-          rsync -av --exclude ".git*" --exclude "LICENSE" --exclude "README.md" ${GITHUB_WORKSPACE}/content/ ${GITHUB_WORKSPACE}/theme/
-          cp ${GITHUB_WORKSPACE}/content/Gemfile ${GITHUB_WORKSPACE}/Gemfile
+          rm -rf ${GITHUB_WORKSPACE}/_posts/
+          rsync -av --exclude ".git*" --exclude "LICENSE" --exclude "README.md" ${GITHUB_WORKSPACE}/.content/ ${GITHUB_WORKSPACE}/
+          ls -lah ${GITHUB_WORKSPACE}/
 
       - name: Install Ruby
         uses: ruby/setup-ruby@v1
@@ -54,18 +53,16 @@ jobs:
           bundler-cache: true
 
       - name: Build Jekyll
-        run: |
-          cd ${GITHUB_WORKSPACE}/theme/
-          bundle exec jekyll build
+        run: bundle exec jekyll build
 
       - name: Prepare GitHub Pages
         run: |
-          echo "www.groveld.com" > ${GITHUB_WORKSPACE}/theme/_site/CNAME
-          rsync -av --delete --exclude ".git*" ${GITHUB_WORKSPACE}/theme/_site/ ${GITHUB_WORKSPACE}/pages/
+          echo "www.groveld.com" > ${GITHUB_WORKSPACE}/_site/CNAME
+          rsync -av --delete --exclude ".git*" ${GITHUB_WORKSPACE}/_site/ ${GITHUB_WORKSPACE}/.pages/
 
       - name: Publish GitHub Pages
         run: |
-          cd ${GITHUB_WORKSPACE}/pages/
+          cd ${GITHUB_WORKSPACE}/.pages/
           git config --global user.name "${GITHUB_ACTOR}"
           git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git add -A
