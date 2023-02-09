@@ -42,10 +42,8 @@ jobs:
 
       - name: Merge Content and Theme
         run: |
-          ls -lah ${GITHUB_WORKSPACE}/
           rm -rf ${GITHUB_WORKSPACE}/_posts/
           rsync -av --exclude ".git*" --exclude "LICENSE" --exclude "README.md" ${GITHUB_WORKSPACE}/.gh-content/ ${GITHUB_WORKSPACE}/
-          ls -lah ${GITHUB_WORKSPACE}/
 
       - name: Install Ruby
         uses: ruby/setup-ruby@v1
@@ -58,10 +56,8 @@ jobs:
 
       - name: Prepare GitHub Pages
         run: |
-          ls -lah ${GITHUB_WORKSPACE}/_site/
           echo "www.groveld.com" > ${GITHUB_WORKSPACE}/_site/CNAME
           rsync -av --delete --exclude ".git*" ${GITHUB_WORKSPACE}/_site/ ${GITHUB_WORKSPACE}/.gh-pages/
-          ls -lah ${GITHUB_WORKSPACE}/.gh-pages/
 
       - name: Publish GitHub Pages
         run: |
