@@ -42,6 +42,7 @@ exclude:
   - .gitattributes
   - .gitignore
   - .jekyll-cache
+  - .jekyll-metadata
   - _site
   - CNAME
   - Gemfile
