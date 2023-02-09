@@ -35,13 +35,17 @@ include:
   - _pages
 
 exclude:
-  - _site
+  - .editorconfig
+  - .gh-content
+  - .gh-pages
   - .github
   - .gitattributes
   - .gitignore
   - .jekyll-cache
+  - _site
+  - CNAME
   - Gemfile
   - Gemfile.lock
-  - README.md
   - LICENSE
-  - CNAME
+  - Rakefile
+  - README.md
