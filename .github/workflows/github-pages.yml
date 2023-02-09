@@ -57,8 +57,10 @@ jobs:
 
       - name: Prepare GitHub Pages
         run: |
+          ls -lah ${GITHUB_WORKSPACE}/_site/
           echo "www.groveld.com" > ${GITHUB_WORKSPACE}/_site/CNAME
           rsync -av --delete --exclude ".git*" ${GITHUB_WORKSPACE}/_site/ ${GITHUB_WORKSPACE}/.pages/
+          ls -lah ${GITHUB_WORKSPACE}/.pages/
 
       - name: Publish GitHub Pages
         run: |
