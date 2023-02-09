@@ -23,6 +23,13 @@
   </url>
   
   <url>
+    <loc>https://www.groveld.com/articles</loc>
+    <lastmod></lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.groveld.com/privacy</loc>
     <lastmod></lastmod>
     <changefreq>weekly</changefreq>

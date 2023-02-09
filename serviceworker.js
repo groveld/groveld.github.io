@@ -1,4 +1,4 @@
-const cacheVersion = '1675981382::';
+const cacheVersion = '1675982521::';
 
 const urlsToExclude = [
   '/atom.xml',
@@ -15,6 +15,7 @@ const urlsToCache = [
   '/',
   '/404',
   '/about',
+  '/articles',
   '/articles/clean-urls-with-jekyll-apache',
   '/articles/give-user-permission-to-edit-and-add-files-in-var-www',
   '/articles/group-policy-processing',
