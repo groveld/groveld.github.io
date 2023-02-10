@@ -65,10 +65,7 @@ jobs:
           purgecss --css ${GITHUB_WORKSPACE}/_site/**/*.css --content ${GITHUB_WORKSPACE}/_site/**/*.html
 
       - name: Validate Jekyll
-        run: bundle exec htmlproofer ${GITHUB_WORKSPACE}/_site/ --disable_external --assume_extension
-
-      - name: Validate Jekyll 2
-        run: bundle exec htmlproofer ${GITHUB_WORKSPACE}/_site/ --disable-external --assume-extension
+        run: bundle exec htmlproofer --disable-external --assume-extension ${GITHUB_WORKSPACE}/_site/
 
       - name: Prepare GitHub Pages
         run: |
