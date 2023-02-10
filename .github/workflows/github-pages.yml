@@ -54,6 +54,17 @@ jobs:
       - name: Build Jekyll
         run: bundle exec jekyll build
 
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install PurgeCSS and remove unused CSS
+        run: |
+          npm i -g purgecss
+          purgecss --css ${GITHUB_WORKSPACE}/_site/**/*.css" --content ${GITHUB_WORKSPACE}/_site/**/*.html
+
       - name: Prepare GitHub Pages
         run: |
           echo "www.groveld.com" > ${GITHUB_WORKSPACE}/_site/CNAME
