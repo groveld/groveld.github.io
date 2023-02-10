@@ -17,8 +17,6 @@
   
   <img alt="Pages" src="https://img.shields.io/github/deployments/groveld/groveld.github.io/github-pages?label=Pages&style=flat-square">
 
-  <img alt="License" src="https://img.shields.io/github/license/groveld/groveld.github.io?label=License&style=flat-square">
-
   <img alt="Discord" src="https://img.shields.io/discord/412919788168413194?label=Discord&style=flat-square">
 </p>
 
@@ -68,6 +66,7 @@ description : "A very descriptive description here"
 
 The following directories and their contents are Copyright Martin Groeneveld. You may not reuse anything therein without my permission:
 
+- jekyll/_data
 - jekyll/_drafts
 - jekyll/_pages
 - jekyll/_posts
