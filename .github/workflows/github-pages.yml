@@ -67,6 +67,9 @@ jobs:
       - name: Validate Jekyll
         run: bundle exec htmlproofer ${GITHUB_WORKSPACE}/_site/ --disable_external --assume_extension
 
+      - name: Validate Jekyll 2
+        run: bundle exec htmlproofer ${GITHUB_WORKSPACE}/_site/ --disable-external --assume-extension
+
       - name: Prepare GitHub Pages
         run: |
           echo "www.groveld.com" > ${GITHUB_WORKSPACE}/_site/CNAME
