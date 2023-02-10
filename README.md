@@ -1,5 +1,7 @@
 <p align="center">
-  <a><img alt="Logo" src="assets/img/logo.svg" width="100px"/></a>
+  <a href="https://www.groveld.com/">
+    <img alt="Logo" src="assets/img/logo.svg" width="100px"/>
+  </a>
 </p>
 
 <h1 align="center">
@@ -11,10 +13,10 @@
 </h4>
 
 <p align="center">
-  <a><img alt="Updated" src="https://img.shields.io/github/last-commit/groveld/groveld.github.io/main?label=Updated&style=flat-square"></a>
-  <a><img alt="Build" src="https://img.shields.io/github/actions/workflow/status/groveld/groveld.github.io/github-pages.yml?label=Build&style=flat-square"></a>
-  <a><img alt="Pages" src="https://img.shields.io/github/deployments/groveld/groveld.github.io/github-pages?label=Pages&style=flat-square"></a>
-  <a><img alt="Discord" src="https://img.shields.io/discord/412919788168413194?label=Discord&style=flat-square"></a>
+  <img alt="Updated" src="https://img.shields.io/github/last-commit/groveld/groveld.github.io/main?label=Updated&style=flat-square">
+  <img alt="Build" src="https://img.shields.io/github/actions/workflow/status/groveld/groveld.github.io/github-pages.yml?label=Build&style=flat-square">
+  <img alt="Pages" src="https://img.shields.io/github/deployments/groveld/groveld.github.io/github-pages?label=Pages&style=flat-square">
+  <img alt="Discord" src="https://img.shields.io/discord/412919788168413194?label=Discord&style=flat-square">
 </p>
 
 ## Getting Started
