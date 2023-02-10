@@ -13,7 +13,9 @@
 <p align="center">
   <img alt="Updated" src="https://img.shields.io/github/last-commit/groveld/groveld.github.io/main?label=Updated&style=flat-square">
 
-  <img alt="Build" src="https://img.shields.io/github/workflow/status/groveld/groveld.github.io/Build%20and%20Publish%20to%20GitHub%20Pages?label=Build&style=flat-square">
+  <img alt="Build" src="https://img.shields.io/github/actions/workflow/status/groveld/groveld.github.io/github-pages.yml?label=Build&style=flat-square">
+
+  <img alt="Build" src="https://img.shields.io/github/license/groveld/groveld.github.io?label=License&style=flat-square">
 
   <img alt="Discord" src="https://img.shields.io/discord/412919788168413194?label=Discord&style=flat-square">
 </p>
