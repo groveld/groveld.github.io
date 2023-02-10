@@ -11,13 +11,21 @@
 </h4>
 
 <p align="center">
-  <img alt="Updated" src="https://img.shields.io/github/last-commit/groveld/groveld.github.io/main?label=Updated&style=flat-square">
+  <picture>
+    <img alt="Updated" src="https://img.shields.io/github/last-commit/groveld/groveld.github.io/main?label=Updated&style=flat-square">
+  </picture>
 
-  <img alt="Build" src="https://img.shields.io/github/actions/workflow/status/groveld/groveld.github.io/github-pages.yml?label=Build&style=flat-square">
+  <picture>
+    <img alt="Build" src="https://img.shields.io/github/actions/workflow/status/groveld/groveld.github.io/github-pages.yml?label=Build&style=flat-square">
+  </picture>
   
-  <img alt="Pages" src="https://img.shields.io/github/deployments/groveld/groveld.github.io/github-pages?label=Pages&style=flat-square">
+  <picture>
+    <img alt="Pages" src="https://img.shields.io/github/deployments/groveld/groveld.github.io/github-pages?label=Pages&style=flat-square">
+  </picture>
 
-  <img alt="Discord" src="https://img.shields.io/discord/412919788168413194?label=Discord&style=flat-square">
+  <picture>
+    <img alt="Discord" src="https://img.shields.io/discord/412919788168413194?label=Discord&style=flat-square">
+  </picture>
 </p>
 
 ## Getting Started
