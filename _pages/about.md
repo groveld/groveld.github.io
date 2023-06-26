@@ -5,11 +5,15 @@ title       : About the author of this blog
 description : About the author of this blog
 ---
 
-Hi! My name is Martin Groeneveld. I'm a hacker, a maker, a tinkerer and a learner. I've been working in and around web technologies and electronics design since 2006, and love every day of it.
+Hello! My name is Martin Groeneveld. From being a passionate hacker, a creative maker, a relentless tinkerer, to an ardent learner, I've journeyed across the dynamic landscape of technology since 2006, and I'm not stopping anytime soon.
 
-Apart from programming and hacking for fun, I’m a professional DevOps, a mix of a Software Developer and a System Administrator, experienced in development of high performance and high availability platforms.
+Over the years, my passion has not only been confined to programming and hacking for fun, but I have also developed and honed professional skills. I started my career as a DevOps, where I skillfully navigated the path between software development and system administration, building high performance and high availability platforms.
 
-From time to time, when an interesting offer comes along, I do freelance jobs. If you have something I can help you with, please [contact me](/about).
+However, my thirst for knowledge and my inherent desire to grow led me towards a change in direction in 2016, when I decided to delve into the world of network engineering. Today, as an experienced HFC (Hybrid Fibre-Coaxial) Network Engineer, I work at the intersection of technology and innovation, bringing internet connectivity and cable television into homes and businesses. I design, monitor, and maintain the sophisticated HFC networks, ensuring optimal performance and efficient troubleshooting.
+
+Although I enjoy the complexities and challenges of my full-time job, I am always open to interesting freelance opportunities. If you think I can assist you with a project or if you want to learn more about my journey, feel free to contact me.
+
+Hope to hear from you soon!
 
 ## About This Website
 
