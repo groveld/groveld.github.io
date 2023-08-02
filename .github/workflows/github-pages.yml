@@ -6,11 +6,12 @@ on:
       - main
     paths-ignore:
       - '.github/**'
+      - '_drafts/**'
       - '.gitattributes'
       - '.gitignore'
+      - 'Gemfile'
       - 'LICENSE'
       - 'README.md'
-      - '_drafts/**'
   schedule:
     - cron:  '0 0 * * *'
 
