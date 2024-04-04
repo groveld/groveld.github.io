@@ -9,7 +9,7 @@
 </h1>
 
 <h4 align="center">
-  This is the personal website of Martin Groeneveld.
+  This is the personal website of Martin Groeneveld
 </h4>
 
 <p align="center">
@@ -65,10 +65,10 @@ description : "A very descriptive description here"
 
 The following directories and their contents are Copyright Martin Groeneveld. You may not reuse anything therein without my permission:
 
-- jekyll/_data
-- jekyll/_drafts
-- jekyll/_pages
-- jekyll/_posts
-- jekyll/img
+- _data
+- _drafts
+- _pages
+- _posts
+- assets
 
 All other directories and files are ISC Licensed. Feel free to use the HTML and CSS as you please. If you do use them, a link back to https://github.com/groveld/groveld.github.io/ would be appreciated.
