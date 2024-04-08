@@ -12,6 +12,18 @@
   },
   "items": [
     {
+      "id": "https://www.groveld.com/articles/pmr-frequencies",
+      "url": "https://www.groveld.com/articles/pmr-frequencies",
+      "title": "PMR 446MHz frequencies",
+      "content_html": "PMR446, Private Mobile Radio in de frequentiereeks 446,000 MHz is een vrij te gebruiken frequentieband die de klassieke walkie talkie aan boord heeft. Deze vergunningsvrije portofoon kan gebruikt worden in het frequentiebereik 446,000 MHz - 446,200 MHz. Het gebruik van deze toestellen zijn vooral in europa goedgekeurd. In amerika heeft men hiervoor de LPD (433 MHz) of FRS frequentieband ter beschikking die bij ons niet is toegelaten. Deze portofoons mag u vrij gebruiken zonder een...",
+      "date_published": "2024-04-08T00:00:00+02:00",
+      "date_modified": "2024-04-08T00:00:00+02:00",
+      "author": {
+        "name": "groveld",
+        "url": "mailto:martin@groveld.com"
+      }
+    },
+    {
       "id": "https://www.groveld.com/articles/group-policy-processing",
       "url": "https://www.groveld.com/articles/group-policy-processing",
       "title": "Understanding Group Policy Processing",
@@ -114,18 +126,6 @@
       "content_html": "Yesterday I decided to shorten and clear the urls of my posts once and for all. By clean, I mean short and simple urls without dates, categories or anything else in them, only the post slug. My definition of cleanness also includes not having a slash at the end of the urls. For example, groveld.com/about.",
       "date_published": "2014-02-01T00:00:00+01:00",
       "date_modified": "2014-02-01T00:00:00+01:00",
-      "author": {
-        "name": "groveld",
-        "url": "mailto:martin@groveld.com"
-      }
-    },
-    {
-      "id": "https://www.groveld.com/articles/what-it-really-means-to-hack",
-      "url": "https://www.groveld.com/articles/what-it-really-means-to-hack",
-      "title": "What it really means to Hack",
-      "content_html": "I once mentioned it to a classmate that I use GNU/Linux as the only Operating System at home, and he replied in shock, “That’s used by Hackers? Right?” That is true. Almost everyone who calls himself/herself a Hacker uses it, but the fear on his face suggested that he meant to say Crackers. Noooo! Linux users aren’t Crackers. That would be similar to saying that everyone who owns a slide hammer, is a car thief!...",
-      "date_published": "2014-01-18T00:00:00+01:00",
-      "date_modified": "2014-01-18T00:00:00+01:00",
       "author": {
         "name": "groveld",
         "url": "mailto:martin@groveld.com"

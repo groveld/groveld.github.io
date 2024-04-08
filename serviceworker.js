@@ -1,4 +1,4 @@
-const cacheVersion = '1712534541::';
+const cacheVersion = '1712578846::';
 
 const urlsToExclude = [
   '/atom.xml',
@@ -23,6 +23,7 @@ const urlsToCache = [
   '/articles/htaccess-snippets',
   '/articles/ohm2013-observe-hack-make',
   '/articles/open-hackerspaces-day-2014',
+  '/articles/pmr-frequencies',
   '/articles/postfix-with-mysql-backend-and-tls',
   '/articles/teamspeak-3-server-on-debian-ubuntu',
   '/articles/use-gitolite-to-control-access-to-a-git-server',

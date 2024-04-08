@@ -4,13 +4,26 @@
   <title type="text" xml:lang="en">Martin Groeneveld</title>
   <link rel="self" type="application/atom+xml" href="https://www.groveld.com/atom.xml"/>
   <link rel="alternate" href="https://www.groveld.com/"/>
-  <updated>2024-04-08T02:02:21+02:00</updated>
+  <updated>2024-04-08T14:20:46+02:00</updated>
   <id>https://www.groveld.com/</id>
   <author>
     <name>Martin Groeneveld</name>
     <email>martin@groveld.com</email>
   </author>
   <rights type="text">Copyright (c) 2024, Martin Groeneveld; all rights reserved.</rights>
+  
+  <entry>
+    <id>https://www.groveld.com/articles/pmr-frequencies</id>
+    <link rel="alternate" type="text/html" href="https://www.groveld.com/articles/pmr-frequencies"/>
+    <title>PMR 446MHz frequencies</title>
+    <author>
+      <name>groveld</name>
+      <email>martin@groveld.com</email>
+    </author>
+    <published>2024-04-08T00:00:00+02:00</published>
+    <updated>2024-04-08T00:00:00+02:00</updated>
+    <content type="html">PMR446, Private Mobile Radio in de frequentiereeks 446,000 MHz is een vrij te gebruiken frequentieband die de klassieke walkie talkie aan boord heeft. Deze vergunningsvrije portofoon kan gebruikt worden in het frequentiebereik 446,000 MHz - 446,200 MHz. Het gebruik van deze toestellen zijn vooral in europa goedgekeurd. In amerika heeft men hiervoor de LPD (433 MHz) of FRS frequentieband ter beschikking die bij ons niet is toegelaten. Deze portofoons mag u vrij gebruiken zonder een...</content>
+  </entry>
   
   <entry>
     <id>https://www.groveld.com/articles/group-policy-processing</id>
@@ -127,19 +140,6 @@
     <published>2014-02-01T00:00:00+01:00</published>
     <updated>2014-02-01T00:00:00+01:00</updated>
     <content type="html">Yesterday I decided to shorten and clear the urls of my posts once and for all. By clean, I mean short and simple urls without dates, categories or anything else in them, only the post slug. My definition of cleanness also includes not having a slash at the end of the urls. For example, groveld.com/about.</content>
-  </entry>
-  
-  <entry>
-    <id>https://www.groveld.com/articles/what-it-really-means-to-hack</id>
-    <link rel="alternate" type="text/html" href="https://www.groveld.com/articles/what-it-really-means-to-hack"/>
-    <title>What it really means to Hack</title>
-    <author>
-      <name>groveld</name>
-      <email>martin@groveld.com</email>
-    </author>
-    <published>2014-01-18T00:00:00+01:00</published>
-    <updated>2014-01-18T00:00:00+01:00</updated>
-    <content type="html">I once mentioned it to a classmate that I use GNU/Linux as the only Operating System at home, and he replied in shock, “That’s used by Hackers? Right?” That is true. Almost everyone who calls himself/herself a Hacker uses it, but the fear on his face suggested that he meant to say Crackers. Noooo! Linux users aren’t Crackers. That would be similar to saying that everyone who owns a slide hammer, is a car thief!...</content>
   </entry>
   
 </feed>
