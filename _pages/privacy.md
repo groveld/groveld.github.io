@@ -5,6 +5,8 @@ title       : Privacy Policy
 description : This Privacy Policy governs the manner in which we collect, use, maintain and disclose information collected from users.
 ---
 
+This privacy policy was last updated on oktober 10, 2020. It may change at any time, and if it does, the update will be provided on this web page.
+
 This Privacy Policy governs the manner in which Groveld Technologies collects, uses, maintains and discloses information collected from users (each, a "User") of the [https://www.groveld.com](https://www.groveld.com) website ("Site"). This privacy policy applies to the Site and all products and services offered by Groveld Technologies.
 
 ## Personal identification information
