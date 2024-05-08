@@ -1,4 +1,4 @@
-const cacheVersion = '1715040159::';
+const cacheVersion = '1715126539::';
 
 const urlsToExclude = [
   '/atom.xml',
