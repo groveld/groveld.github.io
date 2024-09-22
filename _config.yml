@@ -45,7 +45,6 @@ exclude:
   - .jekyll-cache
   - .jekyll-metadata
   - _site
-  - CNAME
   - Gemfile
   - Gemfile.lock
   - LICENSE
