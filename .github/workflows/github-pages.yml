@@ -1,5 +1,5 @@
 ---
-name: Build and Publish to Pages
+name: Build and Deploy to GitHub Pages
 
 on:
   workflow_dispatch:
@@ -44,7 +44,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: main
-          path: ${GITHUB_WORKSPACE}/.content
+          path: .content
 
       - name: Merge Content with Theme
         run: |
