@@ -53,7 +53,7 @@ jobs:
       - name: Install Ruby and Bundler
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.2' # Not needed with a .ruby-version file
+          ruby-version: '3.3' # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           cache-version: 0 # Increment this number if you need to re-download cached gems
 
@@ -65,7 +65,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: '20'
 
       - name: Install PurgeCSS and remove unused CSS
         run: |
@@ -77,7 +77,6 @@ jobs:
 
       - name: Prepare Pages
         run: |
-          # echo "www.groveld.com" > ${GITHUB_WORKSPACE}/_site/CNAME
           rsync -av --checksum --delete --exclude ".git*" ${GITHUB_WORKSPACE}/_site/ ${GITHUB_WORKSPACE}/.pages/
 
       - name: Publish Pages
