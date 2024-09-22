@@ -34,13 +34,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Theme
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: groveld/jekyll-theme
           ref: main
           
       - name: Checkout Content
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: main
           path: ${GITHUB_WORKSPACE}/.content
