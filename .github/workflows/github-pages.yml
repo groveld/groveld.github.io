@@ -31,42 +31,45 @@ concurrency:
 jobs:
   # Build job
   build:
-    name: Build, Test & Publish
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Theme
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: groveld/jekyll-theme
           ref: main
           
       - name: Checkout Content
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: main
-          path: .content
+          path: ${GITHUB_WORKSPACE}/.content
 
-      - name: Merge Content and Theme
+      - name: Merge Content with Theme
         run: |
           rm -rf ${GITHUB_WORKSPACE}/_posts/
           rsync -av --exclude ".git*" --exclude "LICENSE" --exclude "README.md" ${GITHUB_WORKSPACE}/.content/ ${GITHUB_WORKSPACE}/
 
-      - name: Install Ruby and Bundler
+      - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3' # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           cache-version: 0 # Increment this number if you need to re-download cached gems
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
       - name: Build Jekyll
         run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
-
-      - name: Install Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
 
       - name: Install PurgeCSS and remove unused CSS
         run: |
@@ -75,10 +78,6 @@ jobs:
 
       - name: Validate Jekyll
         run: bundle exec htmlproofer ${GITHUB_WORKSPACE}/_site/ --checks Images,Scripts,Favicon --disable-external
-
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
