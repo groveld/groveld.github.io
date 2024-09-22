@@ -75,12 +75,12 @@ jobs:
       - name: Validate Jekyll
         run: bundle exec htmlproofer ${GITHUB_WORKSPACE}/_site/ --checks Images,Scripts,Favicon --disable-external
 
-      - name: Prepare GitHub Pages
+      - name: Prepare Pages
         run: |
-          echo "www.groveld.com" > ${GITHUB_WORKSPACE}/_site/CNAME
+          # echo "www.groveld.com" > ${GITHUB_WORKSPACE}/_site/CNAME
           rsync -av --checksum --delete --exclude ".git*" ${GITHUB_WORKSPACE}/_site/ ${GITHUB_WORKSPACE}/.pages/
 
-      - name: Publish GitHub Pages
+      - name: Publish Pages
         run: |
           cd ${GITHUB_WORKSPACE}/.pages/
           git config --global user.name "${GITHUB_ACTOR}"
