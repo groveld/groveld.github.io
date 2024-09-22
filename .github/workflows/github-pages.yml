@@ -1,4 +1,4 @@
-name: Build and Publish to Pages
+name: Build and Publish to GitHub Pages
 
 on:
   workflow_dispatch:
@@ -64,8 +64,6 @@ jobs:
 
       - name: Install Node.js
         uses: actions/setup-node@v3
-        with:
-          node-version: '20'
 
       - name: Install PurgeCSS and remove unused CSS
         run: |
@@ -78,6 +76,14 @@ jobs:
       - name: Prepare Pages
         run: |
           rsync -av --checksum --delete --exclude ".git*" ${GITHUB_WORKSPACE}/_site/ ${GITHUB_WORKSPACE}/.pages/
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        # Automatically uploads an artifact from the './_site' directory by default
+        uses: actions/upload-pages-artifact@v3
 
       - name: Publish Pages
         run: |
