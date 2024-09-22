@@ -7,7 +7,8 @@ updates:
     schedule:
       interval: "weekly"
       day: "monday"
-      time: "04:00"
+      time: "06:00"
+      timezone: "Europe/Amsterdam"
     assignees:
       - groveld
 
@@ -16,6 +17,7 @@ updates:
     schedule:
       interval: "weekly"
       day: "monday"
-      time: "04:00"
+      time: "06:00"
+      timezone: "Europe/Amsterdam"
     assignees:
       - groveld
