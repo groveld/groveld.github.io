@@ -1,4 +1,4 @@
-name: Build and Publish to GitHub Pages
+name: Build and Publish to Pages
 
 on:
   workflow_dispatch:
@@ -19,7 +19,7 @@ on:
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
-  group: "jekyll"
+  group: "pages"
   cancel-in-progress: false
 
 jobs:
@@ -37,18 +37,18 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: main
-          path: .gh-content
+          path: .content
 
       - name: Checkout Pages
         uses: actions/checkout@v2
         with:
-          ref: gh-pages
-          path: .gh-pages
+          ref: pages
+          path: .pages
 
       - name: Merge Content and Theme
         run: |
           rm -rf ${GITHUB_WORKSPACE}/_posts/
-          rsync -av --exclude ".git*" --exclude "LICENSE" --exclude "README.md" ${GITHUB_WORKSPACE}/.gh-content/ ${GITHUB_WORKSPACE}/
+          rsync -av --exclude ".git*" --exclude "LICENSE" --exclude "README.md" ${GITHUB_WORKSPACE}/.content/ ${GITHUB_WORKSPACE}/
 
       - name: Install Ruby and Bundler
         uses: ruby/setup-ruby@v1
@@ -78,13 +78,13 @@ jobs:
       - name: Prepare GitHub Pages
         run: |
           echo "www.groveld.com" > ${GITHUB_WORKSPACE}/_site/CNAME
-          rsync -av --checksum --delete --exclude ".git*" ${GITHUB_WORKSPACE}/_site/ ${GITHUB_WORKSPACE}/.gh-pages/
+          rsync -av --checksum --delete --exclude ".git*" ${GITHUB_WORKSPACE}/_site/ ${GITHUB_WORKSPACE}/.pages/
 
       - name: Publish GitHub Pages
         run: |
-          cd ${GITHUB_WORKSPACE}/.gh-pages/
+          cd ${GITHUB_WORKSPACE}/.pages/
           git config --global user.name "${GITHUB_ACTOR}"
           git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git add -A
           git commit -am "Published by GitHub Actions (${GITHUB_SHA::7})"
-          git push -f origin gh-pages > /dev/null 2>&1
+          git push -f origin pages > /dev/null 2>&1
