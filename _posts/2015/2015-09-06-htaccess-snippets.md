@@ -49,7 +49,7 @@ RewriteRule ^(.*)$ http://example.com/$1 [L,R=301]
 
 ### Force non-www in a Generic Way
 
-```
+```apache
 RewriteEngine on
 RewriteCond %{HTTP_HOST} ^www\.
 RewriteCond %{HTTPS}s ^on(s)|off
