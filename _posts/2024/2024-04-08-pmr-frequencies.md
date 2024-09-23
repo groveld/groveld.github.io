@@ -12,7 +12,7 @@ PMR446, Private Mobile Radio in de frequentiereeks 446,000 MHz is een vrij te ge
 - Antenne verplicht vast op het toestel (ook externe antenneconnector is verboden)
 - Toestel moet batterij gevoed zijn (portabel)
 
-## PMR446 is voor iedereen, voor- en nadelen.
+## PMR446 is voor iedereen, voor- en nadelen
 
 Het gebruik van deze frequenties is gratis en compatibele toestellen voor privé gebruik vind je overal, een onmiskenbaar voordeel van PMR446. Maar de grote toegankelijkheid is meteen ook het grootste nadeel: iedereen kan het gebruiken. Dat betekent dus ook dat u een pak ongewenste boodschappen mee kan krijgen omdat iemand anders op datzelfde kanaal communiceert. Maar ook babyfoons bijvoorbeeld zitten op deze frequenties!
 

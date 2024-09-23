@@ -49,7 +49,7 @@ This will take you through a few questions that will configure your keys.
 - Key is valid for? _0_
 - Is this correct? _y_
 - Real name: _your real name here_
-- Email address: *your_email@address.com*
+- Email address: _your email address here_
 - Comment: _Optional comment that will be visible in your signature_
 - Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? _O_
 - Enter passphrase: _Enter a secure passphrase here_

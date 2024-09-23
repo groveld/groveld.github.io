@@ -69,4 +69,4 @@ The following directories and their contents are Copyright Martin Groeneveld. Yo
 - \_posts
 - assets
 
-All other directories and files are ISC Licensed. Feel free to use the HTML and CSS as you please. If you do use them, a link back to https://github.com/groveld/groveld.github.io would be appreciated.
+All other directories and files are ISC Licensed. Feel free to use the HTML and CSS as you please. If you do use them, a link back to <https://github.com/groveld/groveld.github.io> would be appreciated.
