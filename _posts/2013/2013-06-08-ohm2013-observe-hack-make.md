@@ -1,9 +1,9 @@
 ---
-layout      : post
-author      : groveld
-title       : OHM2013. Observe, Hack, Make
-description : A five day outdoor international camping festival for hackers and makers.
-tags        : [festival, OHM2013]
+layout: post
+author: groveld
+title: OHM2013. Observe, Hack, Make
+description: A five day outdoor international camping festival for hackers and makers.
+tags: [festival, OHM2013]
 ---
 
 OHM2013. Observe, Hack, Make. A five day outdoor international camping festival for hackers and makers, and those with an inquisitive mind. On 31st July 2013, 3000 of those minds will descend upon on an unassuming patch of land, at the Geestmerambacht festival grounds, 30km north of Amsterdam.

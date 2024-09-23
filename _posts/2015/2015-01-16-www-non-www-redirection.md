@@ -1,9 +1,9 @@
 ---
-layout      : post
-author      : groveld
-title       : Nginx config for www and non-www redirection
-description : Force users to use either the WWW version or non-WWW version of URLs for your site.
-tags        : [nginx]
+layout: post
+author: groveld
+title: Nginx config for www and non-www redirection
+description: Force users to use either the WWW version or non-WWW version of URLs for your site.
+tags: [nginx]
 ---
 
 There are many ways to force Nginx to use either WWW version or non-WWW version of URLs for your site.
@@ -11,7 +11,8 @@ There are many ways to force Nginx to use either WWW version or non-WWW version 
 ## Redirect non-www to WWW
 
 ### Single domain
-``` nginx
+
+```nginx
 server {
   server_name example.com;
   return 301 $scheme://www.example.com$request_uri;
@@ -19,7 +20,8 @@ server {
 ```
 
 ### All domains
-``` nginx
+
+```nginx
 server {
   server_name "~^(?!www\.).*" ;
   return 301 $scheme://www.$host$request_uri;
@@ -29,7 +31,8 @@ server {
 ## From WWW to non-WWW
 
 ### Single domain
-``` nginx
+
+```nginx
 server {
   server_name www.example.com;
   return 301 $scheme://example.com$request_uri;
@@ -37,7 +40,8 @@ server {
 ```
 
 ### All domains
-``` nginx
+
+```nginx
 server {
   server_name "~^www\.(.*)$" ;
   return 301 $scheme://$1$request_uri ;

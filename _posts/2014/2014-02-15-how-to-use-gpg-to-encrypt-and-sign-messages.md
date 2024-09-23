@@ -1,9 +1,9 @@
 ---
-layout      : post
-author      : groveld
-title       : How To Use GPG to Encrypt and Sign Messages
-description : How GPG works and how to implement it.
-tags        : [linux, GPG]
+layout: post
+author: groveld
+title: How To Use GPG to Encrypt and Sign Messages
+description: How GPG works and how to implement it.
+tags: [linux, GPG]
 ---
 
 GPG, or GNU Privacy Guard, is a public key cryptography implementation. This allows for the secure transmission of information between parties and can be used to verify that the origin of a message is genuine.
@@ -11,9 +11,11 @@ GPG, or GNU Privacy Guard, is a public key cryptography implementation. This all
 In this guide, we will discuss how GPG works and how to implement it. We will be using an Ubuntu 12.04 VPS for this demonstration, but the tools are available on any modern Linux distribution.
 
 ## How Public Key Encryption Works
+
 A problem that many users face is how to communicate securely and validate the identity of the party they are talking to. Many schemes that attempt to answer this question require, at least at some point, the transfer of a password or other identifying credentials, over an insecure medium.
 
 ### Ensure That Only the Intended Party Can Read
+
 To get around this issue, GPG relies on a security concept known as public key encryption. The idea is that you can split the encrypting and decrypting stages of the transmission into two separate pieces. That way, you can freely distribute the encrypting portion, as long as you secure the decrypting portion.
 
 This would allow for a one-way message transfer that can be created and encrypted by anyone, but only be decrypted by the designated user (the one with the private decrypting key). If both of the parties create public/private key pairs and give each other their public encrypting keys, they can both encrypt messages to each other.
@@ -21,47 +23,50 @@ This would allow for a one-way message transfer that can be created and encrypte
 So in this scenario, each party has their own private key and the other user's public key.
 
 ### Validate the Identity of the Sender
+
 Another benefit of this system is that the sender of a message can "sign" the message with their private key. The public key that the receiver has can be used to verify that the signature is actually being sent by the indicated user.
 
 This can prevent a third-party from "spoofing" the identity of someone. It also helps to ensure that the message was transmitted in-full, without damage or file corruption.
 
 ## Set Up GPG Keys
+
 GPG should be installed by default on Ubuntu 12.04. If it is not, you can install it with:
 
-``` shell
+```shell
 sudo apt-get install gnupg
 ```
 
 To begin using GPG to encrypt your communications, you need to create a key pair. You can do this by issuing the following command:
 
-``` shell
+```shell
 gpg --gen-key
 ```
 
 This will take you through a few questions that will configure your keys.
 
-* Please select what kind of key you want: *(1) RSA and RSA (default)*
-* What keysize do you want? *4096*
-* Key is valid for? *0*
-* Is this correct? *y*
-* Real name: *your real name here*
-* Email address: *your_email@address.com*
-* Comment: *Optional comment that will be visible in your signature*
-* Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? *O*
-* Enter passphrase: *Enter a secure passphrase here*
+- Please select what kind of key you want: _(1) RSA and RSA (default)_
+- What keysize do you want? _4096_
+- Key is valid for? _0_
+- Is this correct? _y_
+- Real name: _your real name here_
+- Email address: *your_email@address.com*
+- Comment: _Optional comment that will be visible in your signature_
+- Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? _O_
+- Enter passphrase: _Enter a secure passphrase here_
 
 At this point, it will need to generate the keys using entropy. This is basically a term to describe the amount of unpredictability that exists in a system. GPG uses this entropy to generate a random set of keys.
 
-It is best to open a new terminal and ssh into the VPS while this runs. Install some software, do some work, and just use the machine as much as possible to let it generate the needed entropy.
+It is best to open a new terminal and SSH into the VPS while this runs. Install some software, do some work, and just use the machine as much as possible to let it generate the needed entropy.
 
 This process may take a long time, depending on how active you can make your system.
 
 ### Create a Revocation Certificate
+
 You need to have a way of invalidating your key pair in case there is a security breach, or in case you lose your secret key. There is an easy way of doing this with the GPG software.
 
 This should be done as soon as you make the key pair, not when you need it. This revocation key must be generated ahead of time and kept in a secure, separate location in case your computer is compromised or inoperable. Type:
 
-``` shell
+```shell
 gpg --gen-revoke your_email@address.com
 ```
 
@@ -71,7 +76,7 @@ You will then be offered to supply a comment and finally, to confirm the selecti
 
 Afterwards, a revocation certificate will be generated to the screen. Copy and paste this to a secure location, or print it for later use:
 
-``` shell
+```shell
 Revocation certificate created.
 
 Please move it to a medium which you can hide away; if Mallory gets
@@ -100,11 +105,12 @@ tprTYmxyjzSvaIw5tjsgylMZ48+qp/Awe34UWL9AWk3DvmydAerAxLdiK/80KJp0
 ```
 
 ## How To Import Other Users' Public Keys
+
 GPG would be pretty useless if you could not accept other public keys from people you wished to communicate with.
 
 You can import someone's public key in a variety of ways. If you've obtained a public key from someone in a text file, GPG can import it with the following command:
 
-``` shell
+```shell
 gpg --import name_of_pub_key_file
 ```
 
@@ -118,14 +124,16 @@ http://pgp.mit.edu/
 
 You can also search the key server from within GPG by typing the following:
 
-``` shell
+```shell
 gpg --keyserver pgp.mit.edu  --search-keys search_parameters
 ```
 
 ## How To Verify and Sign Keys
+
 While you can freely distribute your generated public key file and people can use this to contact you in an encrypted way, there is still an issue of trust in the initial public key transmission.
 
 ### Verify the Other Person's Identity
+
 How do you know that the person giving you the public key is who they say they are? In some cases, this may be simple. You may be sitting right next to the person with your laptops both open and exchanging keys. This should be a pretty secure way of identifying that you are receiving the correct, legitimate key.
 
 But there are many other circumstances where such personal contact is not possible. You may not know the other party personally, or you may be separated by physical distance. If you never want to communicate over insecure channels, verification of the public key could be problematic.
@@ -134,11 +142,11 @@ Luckily, instead of verifying the entire public keys of both parties, you can si
 
 You can get the fingerprint of a public key by typing:
 
-``` shell
+```shell
 gpg --fingerprint your_email@address.com
 ```
 
-``` shell
+```shell
 pub   4096R/311B1F84 2013-10-04
       Key fingerprint = CB9E C70F 2421 AF06 7D72  F980 8287 6A15 311B 1F84
 uid                  Test User <test.user@address.com>
@@ -148,19 +156,20 @@ sub   4096R/8822A56A 2013-10-04
 This will produce a much more manageable string of numbers to compare. You can compare this string with the person themselves, or someone else who has access to that person.
 
 ### Sign Their Key
+
 Signing a key tells your software that you trust the key that you have been provided with and that you have verified that it is associated with the person in question.
 
 To sign a key that you've imported, simply type:
 
-``` shell
+```shell
 gpg --sign-key email@example.com
 ```
 
-After you've signed the key, it means you verify that you trust the person is who he/she claims to be. This can help other people decide whether to trust that person too. If someone trusts you, and they see that you've signed this person's key, they may be more likely to trust their identity too.
+After you've signed the key, it means you verify that you trust the person is who they claims to be. This can help other people decide whether to trust that person too. If someone trusts you, and they see that you've signed this person's key, they may be more likely to trust their identity too.
 
 You should allow the person whose key you are signing the advantages of your trusted relationship by sending them back the signed key. You can do this by typing:
 
-``` shell
+```shell
 gpg --export --armor email@example.com
 ```
 
@@ -168,22 +177,23 @@ You'll have to type in your passphrase again. Afterwards, their public key, sign
 
 When they receive this new, signed key, they can import it, adding on the signing information you've generated, into their GPG database. They can do this by typing:
 
-``` shell
+```shell
 gpg --import file_name
 ```
 
 ## How To Make Your Public Key Highly Available
+
 There is not really anything malicious that can happen if unknown people have your public key.
 
 Because of this, it may be beneficial to make your public key easily available. People can then easily find your information to send you secure messages, from the very first communication.
 
 You can send anyone your public key by requesting it from the GPG system:
 
-``` shell
+```shell
 gpg --armor --export your_email@address.com
 ```
 
-``` shell
+```shell
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: GnuPG v1.4.11 (GNU/Linux)
 
@@ -204,13 +214,13 @@ Another option is to do this through the GPG interface.
 
 Look up your key ID by typing:
 
-``` shell
+```shell
 gpg --list-keys your_email@address.com
 ```
 
 The highlighted portion is your key ID. It is a short way to reference the key to the internal software.
 
-``` shell
+```shell
 pub   4096R/311B1F84 2013-10-04
 uid                  Test User <test.user@address.com>
 sub   4096R/8822A56A 2013-10-04
@@ -218,17 +228,19 @@ sub   4096R/8822A56A 2013-10-04
 
 To upload your key to a certain key server, you can then use this syntax:
 
-``` shell
+```shell
 gpg --send-keys --keyserver pgp.mit.edu key_id
 ```
 
 ### Encrypt and Decrypt Messages with GPG
+
 You can easily encrypt and decrypt messages after you have configured your keys with the other party.
 
 ### Encrypt Messages
+
 You can encrypt messages using the "--encrypt" flag for GPG. The basic syntax would be:
 
-``` shell
+```shell
 gpg --encrypt --sign --armor -r person@email.com name_of_file
 ```
 
@@ -239,9 +251,10 @@ You should also include a second "-r" recipient with your own email address if y
 So if it was only encrypted with the other party's public key, you would not be able to view the message again, unless you somehow obtained their private key. Adding yourself as a second recipient encrypts the message two separate times, one for each recipient.
 
 ### Decrypt Messages
+
 When you receive a message, simply call GPG on the message file:
 
-``` shell
+```shell
 gpg file_name
 ```
 
@@ -250,11 +263,12 @@ The software will prompt you as necessary.
 If you have the message as a raw text stream, you can copy and paste it after you just typing `gpg` without any arguments. You can press "CTRL-D" to signify the end of the message and GPG will decrypt it for you.
 
 ## Key Maintenance
+
 There are a number of procedures that you may need to use on a regular basis to manage your key database.
 
 To list your available GPG keys that you have from other people, you can issue this command:
 
-``` shell
+```shell
 gpg --list-keys
 ```
 
@@ -262,7 +276,7 @@ Your key information can become outdated if you are relying on information pulle
 
 You can update the key information by issuing:
 
-``` shell
+```shell
 gpg --refresh-keys
 ```
 
@@ -270,11 +284,12 @@ This will fetch new information from the key servers.
 
 You can pull information from a specific key server by using:
 
-``` shell
+```shell
 gpg --keyserver key_server --refresh-keys
 ```
 
 ## Conclusion
+
 Using GPG correctly can help you secure your communications with different people. This is extremely helpful, especially when dealing with sensitive information, but also when dealing with regular, every day messaging.
 
 Because of the way that certain encrypted communications can be flagged by monitoring programs, it is recommended to use encryption for everything, not just "secret" data. That will make it more difficult for people to know when you are sending important data or just sending a friendly hello.

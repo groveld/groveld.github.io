@@ -1,9 +1,9 @@
 ---
-layout      : post
-author      : groveld
-title       : "PMR 446MHz frequencies"
-description : "PMR 446MHz frequencies"
-tags        : ["radio"]
+layout: post
+author: groveld
+title: "PMR 446MHz frequencies"
+description: "PMR 446MHz frequencies"
+tags: ["radio"]
 ---
 
 PMR446, Private Mobile Radio in de frequentiereeks 446,000 MHz is een vrij te gebruiken frequentieband die de klassieke walkie talkie aan boord heeft. Deze vergunningsvrije portofoon kan gebruikt worden in het frequentiebereik 446,000 MHz - 446,200 MHz. Het gebruik van deze toestellen zijn vooral in europa goedgekeurd. In amerika heeft men hiervoor de LPD (433 MHz) of FRS frequentieband ter beschikking die bij ons niet is toegelaten. Deze portofoons mag u vrij gebruiken zonder een vergunning. U kan toestellen met deze kanalen terugvinden op de speelgoed afdeling of electrozaak. Maar er bestaan ook stevigere varianten van deze toestellen met verbeterde audio en dito batterijen voor toepassingen in industrie en bouwsector. Er zijn echter beperkingen opgelegd aan deze toestellen:

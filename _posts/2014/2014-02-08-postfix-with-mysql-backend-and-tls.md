@@ -1,32 +1,34 @@
 ---
-layout      : post
-author      : groveld
-title       : Postfix with MySQL backend and TLS
-description : Install a ready to use Postfix mail server with MySql backend for virtual users.
-tags        : [linux, mailserver, postfix, mysql]
+layout: post
+author: groveld
+title: Postfix with MySQL backend and TLS
+description: Install a ready to use Postfix mail server with MySQL backend for virtual users.
+tags: [linux, mailserver, postfix, mysql]
 ---
 
-In this tutorial we'll install a ready to use Postfix mail server with MySql backend for virtual users. Notice that this tutorial only covers installing the SMTP server (not POP3 and IMAP). Click here for a tutorial on installing Courier POP3 and IMAP services.
+In this tutorial we'll install a ready to use Postfix mail server with MySQL backend for virtual users. Notice that this tutorial only covers installing the SMTP server (not POP3 and IMAP). Click here for a tutorial on installing Courier POP3 and IMAP services.
 
 Once installed and configured, you can easily create your own admin system to modifiy the domains and users because the table structure is very simple.
 
 This tutorial has been tested on Debian etch and lenny
 
-### Install the Postfix mail server, MySql server and other required packages
-``` shell
+### Install the Postfix mail server, MySQL server and other required packages
+
+```shell
 apt-get install postfix postfix-mysql sasl2-bin libsasl2-modules mysql-client mysql-server libpam-mysql
 ```
 
 In the configuration wizzard for Postfix select and input the following;
 
-General type of mail configuration **->** `Internet Site`
+General type of mail configuration **->** `internet Site`
 
-System mail name **->** `server.domain.com` *(your server host name)*
+System mail name **->** `server.domain.com` _(your server hostname)_
 
-### Create a MySql database that will contain domains and mappings and create a user that has read privileges on it
+### Create a MySQL database that will contain domains and mappings and create a user that has read privileges on it
+
 Execute the following SQL queries to create the table structure:
 
-``` sql
+```sql
 CREATE TABLE domains (
 domain varchar(63) NOT NULL,
 PRIMARY KEY (domain)
@@ -53,7 +55,8 @@ PRIMARY KEY (email)
 ```
 
 ### Populate tables with some test data
-``` sql
+
+```sql
 INSERT INTO domains (domain) VALUES (mydomain.com);
 INSERT INTO users (email, password) VALUES ('address@mydomain.com', ENCRYPT('mypassword'));
 INESRT INTO forwardings (email, desination) VALUES ('myforward@mydomain.com', 'address@mydomain.com, otheraddress@mydomain.com');
@@ -62,10 +65,11 @@ INSERT INTO transport (domain, transport) VALUES ('transport.com', 'smtp:mail.tr
 
 If you want to create a user or forwarding for a domain, you must add it to the domains table. Using the transport table you can forward all mail received to another mail server, when using the transport table you don't have to add the domain to the domains table.
 
-### Create MySql mappings for Postfix. Replace {mysql_*} with your MySql credentials
+### Create MySQL mappings for Postfix. Replace {mysql\_\*} with your MySQL credentials
+
 `nano /etc/postfix/mysql-virtual_domains.cf`
 
-``` conf
+```conf
 hosts = {mysql_host}
 user = {mysql_username}
 password = {mysql_password}
@@ -77,7 +81,7 @@ where_field = domain
 
 `nano /etc/postfix/mysql-virtual_forwardings.cf`
 
-``` conf
+```conf
 hosts = {mysql_host}
 user = {mysql_username}
 password = {mysql_password}
@@ -89,7 +93,7 @@ where_field = email
 
 `nano /etc/postfix/mysql-virtual_mailboxes.cf`
 
-``` conf
+```conf
 hosts = {mysql_host}
 user = {mysql_username}
 password = {mysql_password}
@@ -101,7 +105,7 @@ where_field = email
 
 `nano /etc/postfix/mysql-virtual_email2email.cf`
 
-``` conf
+```conf
 hosts = {mysql_host}
 user = {mysql_username}
 password = {mysql_password}
@@ -113,7 +117,7 @@ where_field = email
 
 `nano /etc/postfix/mysql-virtual_transports.cf`
 
-``` conf
+```conf
 hosts = {mysql_host}
 user = {mysql_username}
 password = {mysql_password}
@@ -125,7 +129,7 @@ where_field = domain
 
 `nano /etc/postfix/mysql-virtual_mailbox_limit_maps.cf`
 
-``` conf
+```conf
 hosts = {mysql_host}
 user = {mysql_username}
 password = {mysql_password}
@@ -136,19 +140,22 @@ where_field = email
 ```
 
 ### Set correct permissions on the newly created files and allow Postfix to read the files
-``` shell
+
+```shell
 chmod 640 /etc/postfix/mysql-virtual_*
 chgrp postfix /etc/postfix/mysql-virtual_*
 ```
 
 ### Create a new user and group named vmail. All incoming mail will be stored in this users home directory
-``` shell
+
+```shell
 groupadd -g 5000 vmail
 useradd -g vmail -u 5000 vmail -d /home/vmail -m
 ```
 
 ### Configure Postfix to use SASL for user authentication and TLS for encryption
-``` shell
+
+```shell
 postconf -e 'smtpd_sasl_auth_enable = yes'
 postconf -e 'broken_sasl_auth_clients = yes'
 postconf -e 'smtpd_recipient_restrictions = permit_mynetworks, permit_sasl_authenticated, reject_unauth_destination'
@@ -159,8 +166,9 @@ postconf -e 'smtpd_sasl_local_domain = $myhostname'
 postconf -e 'smtpd_sasl_security_options = noanonymous'
 ```
 
-### Configure Postfix to use the MySql database to find virtual users, where to store mail and what to do for users over quota
-``` shell
+### Configure Postfix to use the MySQL database to find virtual users, where to store mail and what to do for users over quota
+
+```shell
 postconf -e 'virtual_alias_domains ='
 postconf -e 'virtual_alias_maps = proxy:mysql:/etc/postfix/mysql-virtual_forwardings.cf, mysql:/etc/postfix/mysql-virtual_email2email.cf'
 postconf -e 'virtual_mailbox_domains = proxy:mysql:/etc/postfix/mysql-virtual_domains.cf'
@@ -179,15 +187,17 @@ postconf -e 'proxy_read_maps = $local_recipient_maps $mydestination $virtual_ali
 ```
 
 ### Create a self signed certificate to encrypt connections
-``` shell
+
+```shell
 openssl req -new -outform PEM -out /etc/postfix/smtpd.cert -newkey rsa:2048 -nodes -keyout /etc/postfix/smtpd.key -keyform PEM -days 3650 -x509
 chmod 640 /etc/postfix/smtpd.key
 ```
 
 ### Make Postfix listen on port 465 for secure smtp connections
+
 `nano /etc/postfix/master.cf`
 
-``` conf
+```conf
 smtps inet n - - - - smtpd
 -o smtpd_tls_wrappermode=yes
 -o smtpd_sasl_auth_enable=yes
@@ -195,33 +205,36 @@ smtps inet n - - - - smtpd
 ```
 
 ### Force SASL to store the PID files in a location where Postfix can read them
-``` shell
+
+```shell
 mkdir -p /var/spool/postfix/var/run/saslauthd
 ```
 
 Edit SASL config to enable the daemon and make it use the new PID file location (`nano /etc/default/saslauthd`)
 
-``` conf
+```conf
 START=yes
 OPTIONS="-c -m /var/spool/postfix/var/run/saslauthd -r"
 ```
 
 Edit the init file for SASL (`nano /etc/init.d/saslauthd`)
 
-``` conf
+```conf
 PIDFILE="/var/spool/postfix/var/run/${NAME}/saslauthd.pid"
 ```
 
-### Insert MySql credentials for PAM (nano /etc/pam.d/smtp)**
-``` conf
+### Insert MySQL credentials for PAM (nano /etc/pam.d/smtp)\*\*
+
+```conf
 auth required pam_mysql.so user={mysql_username} passwd={mysql_password} host={mysql_host} db={mysql_database} table=users usercolumn=email passwdcolumn=password crypt=1
 account sufficient pam_mysql.so user={mysql_username} passwd={mysql_password} host={mysql_host} db={mysql_database} table=users usercolumn=email passwdcolumn=password crypt=1
 ```
 
-### Config SASL for Postfix and specify MySql credentials
+### Config SASL for Postfix and specify MySQL credentials
+
 `nano /etc/postfix/sasl/smtpd.conf`
 
-``` conf
+```conf
 pwcheck_method: saslauthd
 mech_list: plain login
 allow_plaintext: true
@@ -234,14 +247,16 @@ sql_select: select password from users where email = '%u'
 ```
 
 ### Add the Postfix user to the SASL group allowing Postfix to communicate with SASL
-``` shell
+
+```shell
 adduser postfix sasl
 ```
 
 ### Restart Postfix and SASL
-``` shell
+
+```shell
 /etc/init.d/postfix restart
 /etc/init.d/saslauthd restart
 ```
 
-You're all done. Now you can connect to ports 25 and 465 to sent mails to your virtual users specified in the MySql database. When authenticating with your e-mail client, use the full e-mail address as the username.
+You're all done. Now you can connect to ports 25 and 465 to sent mails to your virtual users specified in the MySQL database. When authenticating with your email client, use the full email address as the username.

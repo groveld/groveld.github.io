@@ -1,8 +1,8 @@
 ---
-layout      : page
-permalink   : /about
-title       : About the author of this blog
-description : About the author of this blog
+layout: page
+permalink: /about
+title: About the author of this blog
+description: About the author of this blog
 ---
 
 Hello! My name is Martin Groeneveld. From being a passionate hacker, a creative maker, a relentless tinkerer, to an ardent learner, I've journeyed across the dynamic landscape of technology since 2006, and I'm not stopping anytime soon.
@@ -15,8 +15,8 @@ Although I enjoy the complexities and challenges of my full-time job, I am alway
 
 Hope to hear from you soon!
 
-## About This Website
+## About This Site
 
-Rather than relying on a complex content management system to serve content, this website is built with [Jekyll](https://jekyllrb.com/), a “simple, blog aware, static site generator” written in [Ruby](https://www.ruby-lang.org/en/). As a purely static site, no server-side processing is necessary after the site is initially built.
+Rather than relying on a complex content management system to serve content, this site is built with [Jekyll](https://jekyllrb.com/), a “simple, blog aware, static site generator” written in [Ruby](https://www.ruby-lang.org/en/). As a purely static site, no server-side processing is necessary after the site is initially built.
 
 Much of the content is formatted with [Markdown](https://en.wikipedia.org/wiki/Markdown), which gets converted into HTML when the site is built. This makes it easy to add content to the site without any HTML experience, while avoiding the complexity of using a CMS with a WYSIWYG page editor.
