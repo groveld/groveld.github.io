@@ -1,0 +1,39 @@
+---
+# File: .github/workflows/super-linter.yml
+# Docs: https://github.com/super-linter/super-linter
+
+name: Lint Code Base
+
+on:
+  push:
+  pull_request:
+    branches:
+      - master
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "linter"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Lint Code Base
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Lint Code Base
+        uses: super-linter/super-linter/slim@v7
+        env:
+          VALIDATE_ALL_CODEBASE: true
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
