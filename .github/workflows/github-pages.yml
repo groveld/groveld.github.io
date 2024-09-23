@@ -85,7 +85,6 @@ jobs:
 
   # Cleanup job
   cleanup:
-    needs: build
     permissions: write-all
     runs-on: ubuntu-latest
     steps:
@@ -98,7 +97,7 @@ jobs:
 
   # Deployment job
   deploy:
-    needs: cleanup
+    needs: build
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
