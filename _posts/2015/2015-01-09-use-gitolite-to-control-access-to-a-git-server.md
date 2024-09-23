@@ -44,7 +44,7 @@ The operating system user will be called `git` to make it easy for our collabora
 sudo adduser --system --group --shell /bin/bash --disabled-password git
 ```
 
-We now have a user called "git" that will handle gitolite configuration. We need to be able to access this user from a normal account. We will do this by configuring an SSH key associated with Git administration.
+We now have a user called `git` that will handle gitolite configuration. We need to be able to access this user from a normal account. We will do this by configuring an SSH key associated with Git administration.
 
 ## Configure SSH Keys for Git Administration
 
@@ -64,7 +64,7 @@ Copy the public key to the Git server by typing:
 scp ~/.ssh/id_rsa.pub regular_username@git_server_IP_address:/tmp/git-admin.pub
 ```
 
-If you followed the Initial Server Setup article, you will need to allow SSH access to the Git user. You can do that by editing `/etc/ssh/sshd_config` and adding git to the `AllowUsers` directive. Once you're done, restart the SSH server:
+If you followed the Initial Server Setup article, you will need to allow SSH access to the Git user. You can do that by editing `/etc/ssh/sshd_config` and adding Git to the `AllowUsers` directive. Once you're done, restart the SSH server:
 
 ```shell
 sudo service ssh restart
@@ -74,7 +74,7 @@ sudo service ssh restart
 
 The next steps will take place back on our Git server. Log back in with your normal user.
 
-We can log in with our "git" user to initialize gitolite with the public key we just transferred.
+We can log in with our `git` user to initialize gitolite with the public key we just transferred.
 
 ```shell
 sudo su - git
