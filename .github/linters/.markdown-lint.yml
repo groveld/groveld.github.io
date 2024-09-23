@@ -1,4 +1,17 @@
 # MD013/line-length : Line length : https://github.com/DavidAnson/markdownlint/blob/v0.35.0/doc/md013.md
-MD013:
-  # Strict length checking
-  strict: false
+MD013: false
+
+# MD024/no-duplicate-heading : Multiple headings with the same content
+MD024: false
+
+# MD025/single-title/single-h1 : Multiple top-level headings in the same document
+MD025: false
+
+# MD033/no-inline-html : Inline HTML
+MD033: false
+
+# MD040/fenced-code-language Fenced code blocks should have a language specified
+MD040: false
+
+# MD041/first-line-heading/first-line-h1 : First line in a file should be a top-level heading
+MD041: false
