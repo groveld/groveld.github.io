@@ -80,7 +80,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: cloudflare-pages
-          path: ${GITHUB_WORKSPACE}/_site/
+          path: ./_site/
           retention-days: "1"
 
   # Deployment job
@@ -102,6 +102,6 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: groveld
-          directory: .
+          directory: ./
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           wranglerVersion: "3"
