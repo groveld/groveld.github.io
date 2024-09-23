@@ -106,7 +106,7 @@ First, we need to clone the gitolite information from our Git server to our loca
 git clone git@git_server_IP_address:gitolite-admin
 ```
 
-This will create a new directory called `gitolite-admin` within your current directory. Here, we can make changes to our access policies and then push those changes to the git server.
+This will create a new directory called `gitolite-admin` within your current directory. Here, we can make changes to our access policies and then push those changes to the Git server.
 
 ## Add New Users to Gitolite
 
@@ -131,22 +131,22 @@ You would communicate with "john" and acquire the public key that he plans on us
 cp /path/to/johns/public/key.pub ~/gitolite-admin/keydir/john.pub
 ```
 
-After that, you need to add the new public key to the git repository.
+After that, you need to add the new public key to the Git repository.
 
-First, we want to configure the username and email that will be associated with administrative git actions. Type these commands to configure this:
+First, we want to configure the username and email that will be associated with administrative Git actions. Type these commands to configure this:
 
 ```shell
 git config --global user.name "your_name_here"
 git config --global user.email "your_email@address.com"
 ```
 
-You probably also want to configure git to use the editor of your choice. Type this command to specify your preferences:
+You probably also want to configure Git to use the editor of your choice. Type this command to specify your preferences:
 
 ```shell
 git config --global core.editor your_editor_choice
 ```
 
-Now, we can add the new file to git:
+Now, we can add the new file to Git:
 
 ```shell
 git add keydir/john.pub
@@ -158,7 +158,7 @@ Commit the changes with a message:
 git commit -a -m "New user John added"
 ```
 
-Push the changes up to the git server to save the results:
+Push the changes up to the Git server to save the results:
 
 ```shell
 git push
@@ -192,7 +192,7 @@ RW+     =   @all
 
 As you can see, the syntax is pretty simple.
 
-We specify a git repository with the `repo` keyword followed by its name. Under that, we write the privilege type, an equal sign (=), and the users who should get that access.
+We specify a Git repository with the `repo` keyword followed by its name. Under that, we write the privilege type, an equal sign (=), and the users who should get that access.
 
 Groups can be defined with a line like this:
 
@@ -212,7 +212,7 @@ A special group called `@all` references all users or all repositories, based on
 The permissions can be one of these values:
 
 R: Read only access
-RW: Can read or push new changes. Cannot delete refs that exist on the git server already.
+RW: Can read or push new changes. Cannot delete refs that exist on the Git server already.
 RW+: Can push destructively, or delete refs on the server.
 -: Has no access to the specified content.
 
@@ -231,7 +231,7 @@ Now, we can commit this change with a new message:
 git commit -a -m "Made John's repo"
 ```
 
-Finally, push the changes to the git server:
+Finally, push the changes to the Git server:
 
 ```shell
 git push
