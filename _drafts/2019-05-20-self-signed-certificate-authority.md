@@ -92,4 +92,4 @@ openssl x509 -in home.groveld.com.crt -text -noout
 ```
 
 [DO REFERENCE](https://www.digitalocean.com/community/tutorials/how-to-set-up-an-ikev2-vpn-server-with-strongswan-on-ubuntu-18-04-2)
-https://serverfault.com/questions/536092/strongswan-ikev2-windows-7-agile-vpn-what-is-causing-error-13801
+<https://serverfault.com/questions/536092/strongswan-ikev2-windows-7-agile-vpn-what-is-causing-error-13801>
