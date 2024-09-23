@@ -76,6 +76,11 @@ jobs:
       - name: Validate Jekyll
         run: bundle exec htmlproofer "${GITHUB_WORKSPACE}/_site/" --checks Images,Scripts,Favicon --disable-external
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cloudflare-pages
+
   # Deployment job
   deploy:
     needs: build
@@ -84,11 +89,17 @@ jobs:
       deployments: write
     runs-on: ubuntu-latest
     steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: cloudflare-pages
+
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: groveld
-          directory: ${GITHUB_WORKSPACE}/_site
+          directory: .
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          wranglerVersion: '3'
