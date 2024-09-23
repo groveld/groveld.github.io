@@ -13,7 +13,6 @@
 </h4>
 
 <p align="center">
-  <picture><img alt="Updated" src="https://img.shields.io/github/last-commit/groveld/groveld.github.io/pages?label=Updated&style=flat-square"></picture>
   <picture><img alt="Build" src="https://img.shields.io/github/actions/workflow/status/groveld/groveld.github.io/github-pages.yml?label=Build&style=flat-square"></picture>
 </p>
 
