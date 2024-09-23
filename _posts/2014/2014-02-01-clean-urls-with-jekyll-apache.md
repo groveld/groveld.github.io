@@ -16,7 +16,7 @@ If you have pagination, the permalink for the pagination could be as simple as `
 
 Now the tricky and more exciting part, which is telling apache to remove the trailing slashes! Here's how I did it, with this htaccess configuartion:
 
-```
+```apache
 Options -Multiviews +FollowSymLinks
 RewriteEngine On
 RewriteBase /
