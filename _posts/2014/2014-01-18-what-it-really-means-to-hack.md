@@ -1,18 +1,18 @@
 ---
-layout      : post
-author      : groveld
-title       : What it really means to Hack
-description : What it really means to Hack
-tags        : [hacking]
+layout: post
+author: groveld
+title: What it really means to Hack
+description: What it really means to Hack
+tags: [hacking]
 ---
 
-I once mentioned it to a classmate that I use GNU/Linux as the only Operating System at home, and he replied in shock, "That's used by *Hackers*? Right?"
-That is true. Almost everyone who calls himself/herself a Hacker uses it, but the fear on his face suggested that he meant to say *Crackers*.
-Noooo! Linux users aren't *Crackers*. That would be similar to saying that everyone who owns a slide hammer, is a car thief!
+I once mentioned it to a classmate that I use GNU/Linux as the only Operating System at home, and he replied in shock, "That's used by _Hackers_? Right?"
+That is true. Almost everyone who calls himself/herself a Hacker uses it, but the fear on his face suggested that he meant to say _Crackers_.
+Noooo! Linux users aren't _Crackers_. That would be similar to saying that everyone who owns a slide hammer, is a car thief!
 
 Thinking out-of-the-box or using some tool in a way it isn't meant to be used, just for fun and exploration can be called "hacking".
 But try telling someone that you are a hacker, and they would look at you with surprise and suspicion.
-Because for them, hackers are those who seek for vulnerabilites and exploits in a computer system or a computer network. (whom I call *Crackers*)
+Because for them, hackers are those who seek for vulnerabilites and exploits in a computer system or a computer network. (whom I call _Crackers_)
 
 Hacking means exhibiting playful cleverness, which can be using an optical mouse as a barcode scanner, or walking the wrong direction on an escalator.
 It isn't even nescessarily related to programming, leave alone breaking into computers.
@@ -31,7 +31,7 @@ See [Hacker ethics](https://en.wikipedia.org/wiki/Hacker_ethic).
 The hacker culture shares its roots with the [Free Software](https://www.fsf.org/), the [Open Source](https://opensource.org/) and the [Linux](https://www.linuxfoundation.org/) culture.
 These cultures overlap so much, that to much extent, they are the same. [[ref]](http://www.catb.org/~esr/faqs/hacker-howto.html#what_is)
 Hackers are the people who provided the backbone to the World Wide Web, as we know it today. They invented Unix.
-They resurrected the lost principle of sharing and collaborating code. They proved that *given enough eyeballs, all bugs are shallow*.
+They resurrected the lost principle of sharing and collaborating code. They proved that _given enough eyeballs, all bugs are shallow_.
 
 Here are a few sources from very influential people in the Hacker community, which inspired this post:
 Richard Stallman's post [On Hacking](https://stallman.org/articles/on-hacking.html)

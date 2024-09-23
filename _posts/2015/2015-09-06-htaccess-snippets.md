@@ -1,9 +1,9 @@
 ---
-layout      : post
-author      : groveld
-title       : A collection of useful .htaccess snippets
-description : A collection of useful .htaccess snippets from all over the interwebs into one place.
-tags        : [apache]
+layout: post
+author: groveld
+title: A collection of useful .htaccess snippets
+description: A collection of useful .htaccess snippets from all over the interwebs into one place.
+tags: [apache]
 ---
 
 <div class="alert alert-warning"><strong>Disclaimer:</strong> While dropping the snippet into an ".htaccess" file is most of the time sufficient, there are cases when certain modifications might be required. Use at your own risk.</div>
@@ -11,12 +11,15 @@ tags        : [apache]
 <div class="alert alert-info"><strong>Important:</strong> Apache 2.4 introduces a few breaking changes, most notably in access control configuration. For more information, check the <a href="https://httpd.apache.org/docs/2.4/upgrading.html">upgrading document</a> as well as <a href="https://github.com/phanan/htaccess/issues/2">this issue</a>.</div>
 
 ## Credits
+
 What we are doing here is mostly collecting useful snippets from all over the interwebs (for example, a good chunk is from [Apache Server Configs](https://github.com/h5bp/server-configs-apache)) into one place. While we've been trying to credit where due, things might be missing. If you believe anything here is your work and credits should be given, let us know, or just send a PR.
 
 ## Rewrite and Redirection
+
 Note: It is assumed that you have `mod_rewrite` installed and enabled.
 
 ### Force www
+
 ```
 RewriteEngine on
 RewriteCond %{HTTP_HOST} ^example\.com [NC]
@@ -24,6 +27,7 @@ RewriteRule ^(.*)$ http://www.example.com/$1 [L,R=301,NC]
 ```
 
 ### Force www in a Generic Way
+
 ```
 RewriteCond %{HTTP_HOST} !^$
 RewriteCond %{HTTP_HOST} !^www\. [NC]
@@ -34,6 +38,7 @@ RewriteRule ^ http%1://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 This works for _any_ domain. [Source](https://stackoverflow.com/questions/4916222/htaccess-how-to-force-www-in-a-generic-way)
 
 ### Force non-www
+
 It's [still](https://www.sitepoint.com/domain-www-or-no-www/) [open](https://devcenter.heroku.com/articles/apex-domains) [for](https://www.yes-www.org/) [debate](https://dropwww.com/) whether www or non-www is the way to go, so if you happen to be a fan of bare domains, here you go:
 
 ```
@@ -43,6 +48,7 @@ RewriteRule ^(.*)$ http://example.com/$1 [L,R=301]
 ```
 
 ### Force non-www in a Generic Way
+
 ```
 RewriteEngine on
 RewriteCond %{HTTP_HOST} ^www\.
@@ -52,13 +58,14 @@ RewriteRule ^ %1%3%{REQUEST_URI} [R=301,L]
 ```
 
 ### Force HTTPS
+
 ```
 RewriteEngine on
 RewriteCond %{HTTPS} !on
 RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 
 # Note: It's also recommended to enable HTTP Strict Transport Security (HSTS)
-# on your HTTPS website to help prevent man-in-the-middle attacks.
+# on your HTTPS site to help prevent man-in-the-middle attacks.
 # See https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security
 <IfModule mod_headers.c>
     Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
@@ -66,6 +73,7 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 ```
 
 ### Force HTTPS Behind a Proxy
+
 Useful if you have a proxy in front of your server performing TLS termination.
 
 ```
@@ -74,18 +82,21 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 ```
 
 ### Force Trailing Slash
+
 ```
 RewriteCond %{REQUEST_URI} /+[^\.]+$
 RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [R=301,L]
 ```
 
 ### Remove Trailing Slash
+
 ```
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)/$ /$1 [R=301,L]
 ```
 
 ### Redirect a Single Page
+
 ```
 Redirect 301 /oldpage.html http://www.example.com/newpage.html
 Redirect 301 /oldpage2.html http://www.example.com/folder/
@@ -94,12 +105,14 @@ Redirect 301 /oldpage2.html http://www.example.com/folder/
 [Source](https://css-tricks.com/snippets/htaccess/301-redirects/)
 
 ### Alias a Single Directory
+
 ```
 RewriteEngine On
 RewriteRule ^source-directory/(.*) target-directory/$1
 ```
 
 ### Alias Paths To Script
+
 This example has an `index.fcgi` file in some directory, and any requests within that directory that fail to resolve a filename/directory will be sent to the `index.fcgi` script. It's good if you want `baz.foo/some/cool/path` to be handled by `baz.foo/index.fcgi` (which also supports requests to `baz.foo`) while maintaining `baz.foo/css/style.css` and the like.
 Get access to the original path from the PATH_INFO environment variable, as exposed to your scripting environment.
 
@@ -114,6 +127,7 @@ RewriteRule ^(.*)$ index.fcgi/$1 [QSA,L]
 This is a less efficient version of the FallbackResource directive (because using `mod_rewrite` is more complex than just handling the `FallbackResource` directive), but it's also more flexible.
 
 ### Redirect an Entire Site
+
 ```
 Redirect 301 / http://newsite.com/
 ```
@@ -121,6 +135,7 @@ Redirect 301 / http://newsite.com/
 This way does it with links intact. That is `www.oldsite.com/some/crazy/link.html` will become `www.newsite.com/some/crazy/link.html`. This is extremely helpful when you are just "moving" a site to a new domain. [Source](https://css-tricks.com/snippets/htaccess/301-redirects/)
 
 ### Alias "Clean" URLs
+
 This snippet lets you use "clean URLs" -- those without a PHP extension, e.g. `example.com/users` instead of `example.com/users.php`.
 
 ```
@@ -134,6 +149,7 @@ RewriteRule ^([^.]+)$ $1.php [NC,L]
 ## Security
 
 ### Deny All Access
+
 ```
 ## Apache 2.2
 Deny from all
@@ -145,6 +161,7 @@ Deny from all
 But wait, this will lock you out from your content as well! Thus introducing...
 
 ### Deny All Access Except Yours
+
 ```
 ## Apache 2.2
 Order deny,allow
@@ -161,6 +178,7 @@ Allow from xxx.xxx.xxx.xxx
 Now of course there's a reversed version:
 
 ### Allow All Access Except Spammers'
+
 ```
 ## Apache 2.2
 Order deny,allow
@@ -175,6 +193,7 @@ Deny from xxx.xxx.xxx.xxy
 ```
 
 ### Deny Access to Hidden Files and Directories
+
 Hidden files and directories (those whose names start with a dot `.`) should most, if not all, of the time be secured. For example: `.htaccess`, `.htpasswd`, `.git`, `.hg`...
 
 ```
@@ -190,7 +209,8 @@ RedirectMatch 404 /\..*$
 ```
 
 ### Deny Access to Backup and Source Files
-These files may be left by some text/html editors (like Vi/Vim) and pose a great security danger, when anyone can access them.
+
+These files may be left by some text/HTML editors (like Vi/Vim) and pose a great security danger, when anyone can access them.
 
 ```
 <FilesMatch "(\.(bak|config|dist|fla|inc|ini|log|psd|sh|sql|swp)|~)$">
@@ -207,11 +227,13 @@ These files may be left by some text/html editors (like Vi/Vim) and pose a great
 [Source](https://github.com/h5bp/server-configs-apache)
 
 ### Disable Directory Browsing
+
 ```
 Options All -Indexes
 ```
 
 ### Disable Image Hotlinking
+
 ```
 RewriteEngine on
 # Remove the following line if you want to block blank referrer too
@@ -226,6 +248,7 @@ RewriteRule \.(jpg|jpeg|png|gif|bmp)$ - [NC,F,L]
 ```
 
 ### Disable Image Hotlinking for Specific Domains
+
 Sometimes you want to disable image hotlinking from some bad guys only.
 
 ```
@@ -240,9 +263,10 @@ RewriteRule \.(jpg|jpeg|png|gif)$ - [NC,F,L]
 ```
 
 ### Password Protect a Directory
+
 First you need to create a `.htpasswd` file somewhere in the system:
 
-``` shell
+```shell
 htpasswd -c /home/fellowship/.htpasswd boromir
 ```
 
@@ -256,6 +280,7 @@ Require valid-user
 ```
 
 ### Password Protect a File or Several Files
+
 ```
 AuthName "One still does not simply"
 AuthType Basic
@@ -271,6 +296,7 @@ Require valid-user
 ```
 
 ### Block Visitors by Referrer
+
 This denies access for all users who are coming from (referred by) a specific domain.
 
 ```
@@ -282,7 +308,8 @@ RewriteRule .* - [F]
 ```
 
 ### Prevent Framing the Site
-This prevents the website to be framed (i.e. put into an `iframe` tag), when still allows framing for a specific URI.
+
+This prevents the site to be framed (i.e. put into an `iframe` tag), when still allows framing for a specific URI.
 
 ```
 SetEnvIf Request_URI "/starry-night" allow_framing=true
@@ -292,6 +319,7 @@ Header set X-Frame-Options SAMEORIGIN env=!allow_framing
 ## Performance
 
 ### Compress Text Files
+
 ```
 <IfModule mod_deflate.c>
 
@@ -334,7 +362,8 @@ Header set X-Frame-Options SAMEORIGIN env=!allow_framing
 [Source](https://github.com/h5bp/server-configs-apache)
 
 ### Set Expires Headers
-*Expires headers* tell the browser whether they should request a specific file from the server or just grab it from the cache. It is advisable to set static content's expires headers to something far in the future.
+
+_Expires headers_ tell the browser whether they should request a specific file from the server or just grab it from the cache. It is advisable to set static content's expires headers to something far in the future.
 If you don't control versioning with filename-based cache busting, consider lowering the cache time for resources like CSS and JS to something like 1 week. [Source](https://github.com/h5bp/server-configs-apache)
 
 ```
@@ -390,6 +419,7 @@ If you don't control versioning with filename-based cache busting, consider lowe
 ```
 
 ### Turn eTags Off
+
 By removing the `ETag` header, you disable caches and browsers from being able to validate files, so they are forced to rely on your `Cache-Control` and `Expires` header. [Source](https://www.askapache.com/htaccess/apache-speed-etags/)
 
 ```
@@ -402,6 +432,7 @@ FileETag None
 ## Miscellaneous
 
 ### Set PHP Variables
+
 ```
 php_value <key> <val>
 
@@ -411,6 +442,7 @@ php_value max_execution_time 240
 ```
 
 ### Custom Error Pages
+
 ```
 ErrorDocument 500 "Houston, we have a problem."
 ErrorDocument 401 http://error.yourdomain.com/mordor.html
@@ -418,6 +450,7 @@ ErrorDocument 404 /errors/halflife3.html
 ```
 
 ### Force Downloading
+
 Sometimes you want to force the browser to download some content instead of displaying it.
 
 ```
@@ -430,6 +463,7 @@ Sometimes you want to force the browser to download some content instead of disp
 Now there is a yang to this yin:
 
 ### Prevent Downloading
+
 Sometimes you want to force the browser to display some content instead of downloading it.
 
 ```
@@ -439,6 +473,7 @@ Sometimes you want to force the browser to display some content instead of downl
 ```
 
 ### Allow Cross-Domain Fonts
+
 CDN-served webfonts might not work in Firefox or IE due to [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing). This snippet solves the problem.
 
 ```
@@ -452,6 +487,7 @@ CDN-served webfonts might not work in Firefox or IE due to [CORS](https://en.wik
 [Source](https://github.com/h5bp/server-configs-apache/issues/32)
 
 ### Auto UTF-8 Encode
+
 Your text content should always be UTF-8 encoded, no?
 
 ```
@@ -465,7 +501,8 @@ AddCharset utf-8 .atom .css .js .json .rss .vtt .xml
 [Source](https://github.com/h5bp/server-configs-apache)
 
 ### Switch to Another PHP Version
-If you're on a shared host, chances are there are more than one version of PHP installed, and sometimes you want a specific version for your website. For example, [Laravel](https://github.com/laravel/laravel) requires PHP >= 5.4. The following snippet should switch the PHP version for you.
+
+If you're on a shared host, chances are there are more than one version of PHP installed, and sometimes you want a specific version for your site. For example, [Laravel](https://github.com/laravel/laravel) requires PHP >= 5.4. The following snippet should switch the PHP version for you.
 
 ```
 AddHandler application/x-httpd-php55 .php
@@ -474,8 +511,9 @@ AddHandler application/x-httpd-php55 .php
 AddType application/x-httpd-php55 .php
 ```
 
-### Disable Internet Explorer Compatibility View
-Compatibility View in IE may affect how some websites are displayed. The following snippet should force IE to use the Edge Rendering Engine and disable the Compatibility View.
+### Disable internet Explorer Compatibility View
+
+Compatibility View in IE may affect how some sites are displayed. The following snippet should force IE to use the Edge Rendering Engine and disable the Compatibility View.
 
 ```
 <IfModule mod_headers.c>
@@ -485,7 +523,8 @@ Compatibility View in IE may affect how some websites are displayed. The followi
 ```
 
 ### Serve WebP Images
-If [WebP images](https://developers.google.com/speed/webp/?csw=1) are supported and an image with a .webp extension and the same name is found at the same place as the jpg/png image that is going to be served, then the WebP image is served instead.
+
+If [WebP images](https://developers.google.com/speed/webp/?csw=1) are supported and an image with a .webp extension and the same name is found at the same place as the JPG/PNG image that is going to be served, then the WebP image is served instead.
 
 ```
 RewriteEngine On

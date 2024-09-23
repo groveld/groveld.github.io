@@ -1,14 +1,14 @@
 ---
-layout      : post
-author      : groveld
-title       : "Understanding Group Policy Processing"
-description : "Understanding Group Policy Processing in Active Directory Domain Services"
-tags        : [Active Directory, Group Policy]
+layout: post
+author: groveld
+title: "Understanding Group Policy Processing"
+description: "Understanding Group Policy Processing in Active Directory Domain Services"
+tags: [Active Directory, Group Policy]
 ---
 
 **Group Policy Processing**: You can have local policies, site policies, domain policies, and OU policies within your domain structure. To learn how to best implement Group Policies to serve the organization, you need to understand the order in which the policies are applied.
 
-Nonlocal [GPOs][1] are created in Active Directory and linked to container objects. Nonlocal [GPOs][1] can be linked to Active Directory sites, domains, or OUs. They cannot be linked to built-in containers, such as the default Users, Builtin, or Computer containers. These containers can receive policies only through domain or site-linked policies that flow down to all objects within them.
+Nonlocal [GPOs][1] are created in Active Directory and linked to container objects. Nonlocal [GPOs][1] can be linked to Active Directory sites, domains, or OUs. They cannot be linked to built-in containers, such as the default Users, built-in, or Computer containers. These containers can receive policies only through domain or site-linked policies that flow down to all objects within them.
 
 ## Understating Group Policy Processing
 
@@ -38,7 +38,7 @@ The following steps describe the process of implementing the settings of the ass
 1. When a computer is initializing during startup, it establishes a secure link between the computer and a domain controller. Then, the computer objects a list of [GPOs][1] to be applied.
 2. Computer configuration settings are applied synchronously during computer startup before the logon dialog box is presented to the user. Synchronous processing of policies means that each policy must be read and applied completely before the next policy can be invoked. The default synchronous behavior can be modified by the system administrator if necessary, although such modification is discouraged. No user interface is displayed during this process with the exception of a startup dialog box indication that policies are being applied. The policies are read and applied in the LSDOU sequence described earlier.
 3. Any startup scripts set to run during computer startup are processed. These scripts also run synchronously and have a default timeout of 600 seconds to complete. This process is hidden from the user.
-4. When the computer configuration scripts and startup scripts are complete, the user is prompted to press *Ctrl + Alt + Del* to log on.
+4. When the computer configuration scripts and startup scripts are complete, the user is prompted to press _Ctrl + Alt + Del_ to log on.
 5. Upon successful authentication, the user profile is loaded, based on the Group Policy settings in effect.
 6. A list of [GPOs][1] specific for the user is obtained from the domain controller. User configuration settings also are processed in the LSDOU sequence. The GPO processing is again transparent to the user, and the policies are processed synchronously.
 7. After the user policies run, any logon scripts run. These scripts, unlike the startup scripts, run asynchronously by default. Asynchronously processing allows multiple scripts to be processed at the same time, without waiting for the outcome of a previously launched script to occur. However, the user object script runs last.

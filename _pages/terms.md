@@ -1,11 +1,11 @@
 ---
-layout      : page
-permalink   : /terms
-title       : Terms of Service "Agreement"
-description : This Terms of Service governs the legal terms of this website, sub-domains, and any associated web-based and mobile applications.
+layout: page
+permalink: /terms
+title: Terms of Service "Agreement"
+description: This Terms of Service governs the legal terms of this site, sub-domains, and any associated web-based and mobile applications.
 ---
 
-This web page represents a legal document that serves as our Terms of Service and it governs the legal terms of our website, [www.groveld.com](https://www.groveld.com), sub-domains, and any associated web-based and mobile applications (collectively, "Website"), as owned and operated by Groveld Technologies.
+This web page represents a legal document that serves as our Terms of Service and it governs the legal terms of our site, [www.groveld.com](https://www.groveld.com), sub-domains, and any associated web-based and mobile applications (collectively, "Website"), as owned and operated by Groveld Technologies.
 
 Capitalized terms, unless otherwise defined, have the meaning specified within the Definitions section below. This Terms of Service, along with our [Privacy Policy](/privacy), any mobile license agreement, and other posted guidelines within our Website, collectively "Legal Terms", constitute the entire and only agreement between you and Groveld Technologies, and supersede all other agreements, representations, warranties and understandings with respect to our Website and the subject matter contained herein. We may amend our Legal Terms at any time without specific notice to you. The latest copies of our Legal Terms will be posted on our Website, and you should review all Legal Terms prior to using our Website. After any revisions to our Legal Terms are posted, you agree to be bound to any such changes to them. Therefore, it is important for you to periodically review our Legal Terms to make sure you still agree to them.
 
@@ -34,7 +34,7 @@ Company reserves the right to require payment of fees for certain features of th
 
 ### Links to Other Websites
 
-Our Website may contain links to third party websites. These links are provided solely as a convenience to you. By linking to these websites, we do not create or have an affiliation with, or sponsor such third party websites. The inclusion of links within our Website does not constitute any endorsement, guarantee, warranty, or recommendation of such third party websites. Groveld Technologies has no control over the legal documents and privacy practices of third party websites; as such, you access any such third party websites at your own risk.
+Our Website may contain links to third party sites. These links are provided solely as a convenience to you. By linking to these sites, we do not create or have an affiliation with, or sponsor such third party sites. The inclusion of links within our Website does not constitute any endorsement, guarantee, warranty, or recommendation of such third party sites. Groveld Technologies has no control over the legal documents and privacy practices of third party sites; as such, you access any such third party sites at your own risk.
 
 ### General Terms
 

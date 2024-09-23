@@ -1,10 +1,10 @@
 ---
-layout      : post
-author      : Martin Groeneveld
-title       : "EdgeRouter 4 Setup Ziggo Dual WAN"
-description : "EdgeRouter 4 Setup Ziggo Dual WAN"
-tags        : [Ubiquiti, EdgeRouter, EdgeMAX, Ziggo, Setup]
-comments    : true
+layout: post
+author: Martin Groeneveld
+title: "EdgeRouter 4 Setup Ziggo Dual WAN"
+description: "EdgeRouter 4 Setup Ziggo Dual WAN"
+tags: [Ubiquiti, EdgeRouter, EdgeMAX, Ziggo, Setup]
+comments: true
 ---
 
 ```math
@@ -16,14 +16,14 @@ comments    : true
 ```
 
 ```katex
-\displaystyle 
+\displaystyle
     \frac{1}{
         \Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{
         \frac25 \pi}} = 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {
         1+\frac{e^{-6\pi}}
         {1+\frac{e^{-8\pi}}
          {1+\cdots} }
-        } 
+        }
     }
 ```
 

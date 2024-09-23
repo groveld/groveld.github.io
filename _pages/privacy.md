@@ -1,13 +1,13 @@
 ---
-layout      : page
-permalink   : /privacy
-title       : Privacy Policy
-description : This Privacy Policy governs the manner in which we collect, use, maintain and disclose information collected from users.
+layout: page
+permalink: /privacy
+title: Privacy Policy
+description: This Privacy Policy governs the manner in which we collect, use, maintain and disclose information collected from users.
 ---
 
 This privacy policy was last updated on oktober 10, 2020. It may change at any time, and if it does, the update will be provided on this web page.
 
-This Privacy Policy governs the manner in which Groveld Technologies collects, uses, maintains and discloses information collected from users (each, a "User") of the [https://www.groveld.com](https://www.groveld.com) website ("Site"). This privacy policy applies to the Site and all products and services offered by Groveld Technologies.
+This Privacy Policy governs the manner in which Groveld Technologies collects, uses, maintains and discloses information collected from users (each, a "User") of the [https://www.groveld.com](https://www.groveld.com) site ("Site"). This privacy policy applies to the Site and all products and services offered by Groveld Technologies.
 
 ## Personal identification information
 
@@ -15,7 +15,7 @@ We may collect personal identification information from Users in a variety of wa
 
 ## Non-personal identification information
 
-We may collect non-personal identification information about Users whenever they interact with our Site. Non-personal identification information may include the browser name, the type of computer and technical information about Users means of connection to our Site, such as the operating system and the Internet service providers utilized and other similar information.
+We may collect non-personal identification information about Users whenever they interact with our Site. Non-personal identification information may include the browser name, the type of computer and technical information about Users means of connection to our Site, such as the operating system and the internet service providers utilized and other similar information.
 
 ## Web browser cookies
 
@@ -41,13 +41,13 @@ Sensitive and private data exchange between the Site and its Users happens over 
 
 We do not sell, trade, or rent Users personal identification information to others. We may share generic aggregated demographic information not linked to any personal identification information regarding visitors and users with our business partners, trusted affiliates and advertisers for the purposes outlined above.We may use third party service providers to help us operate our business and the Site or administer activities on our behalf, such as sending out newsletters or surveys. We may share your information with these third parties for those limited purposes provided that you have given us your permission.
 
-## Third party websites
+## Third party sites
 
-Users may find advertising or other content on our Site that link to the sites and services of our partners, suppliers, advertisers, sponsors, licensors and other third parties. We do not control the content or links that appear on these sites and are not responsible for the practices employed by websites linked to or from our Site. In addition, these sites or services, including their content and links, may be constantly changing. These sites and services may have their own privacy policies and customer service policies. Browsing and interaction on any other website, including websites which have a link to our Site, is subject to that website's own terms and policies.
+Users may find advertising or other content on our Site that link to the sites and services of our partners, suppliers, advertisers, sponsors, licensors and other third parties. We do not control the content or links that appear on these sites and are not responsible for the practices employed by sites linked to or from our Site. In addition, these sites or services, including their content and links, may be constantly changing. These sites and services may have their own privacy policies and customer service policies. Browsing and interaction on any other site, including sites which have a link to our Site, is subject to that site's own terms and policies.
 
 ## Compliance with children's online privacy protection act
 
-Protecting the privacy of the very young is especially important. For that reason, we never collect or maintain information at our Site from those we actually know are under 13, and no part of our website is structured to attract anyone under 13.
+Protecting the privacy of the very young is especially important. For that reason, we never collect or maintain information at our Site from those we actually know are under 13, and no part of our site is structured to attract anyone under 13.
 
 ## Changes to this privacy policy
 

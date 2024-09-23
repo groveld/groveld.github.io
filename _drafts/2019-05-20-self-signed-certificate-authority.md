@@ -22,7 +22,7 @@ openssl req -x509 -new -nodes -sha256 -key groveldCA.key -subj "/C=NL/O=Groveld/
 
 #### Verify the certificate's content
 
-```
+```bash
 openssl x509 -in groveldCA.crt -text -noout
 ```
 
@@ -53,17 +53,17 @@ If you generate the csr in this way, openssl will ask you questions about the ce
 openssl req -new -sha256 -key home.groveld.com.key -out home.groveld.com.csr
 ```
 
-#### Method B (One Liner)
+#### Method B (one-liner)
 
 This method generates the same output as Method A but it's suitable for use in your automation :) .
 
-```
+```bash
 openssl req -new -sha256 -key home.groveld.com.key -subj "/C=NL/O=Groveld/CN=home.groveld.com" -out home.groveld.com.csr
 ```
 
 If you need to pass additional config you can use the `-config` parameter, here for example I want to add alternative names to my certificate.
 
-```
+```bash
 openssl req -new -sha256 \
     -key home.groveld.com.key \
     -subj "/C=NL/O=Groveld/CN=home.groveld.com" \
@@ -73,22 +73,21 @@ openssl req -new -sha256 \
     -out home.groveld.com.csr
 ```
 
-
 ### Verify the csr's content
 
-```
+```bash
 openssl req -in home.groveld.com.csr -noout -text
 ```
 
 ## Generate the certificate using the `home.groveld.com` csr and key along with the CA Root key
 
-```
+```bash
 openssl x509 -req -sha256 -in home.groveld.com.csr -CA groveldCA.crt -CAkey groveldCA.key -CAcreateserial -out home.groveld.com.crt -days 365
 ```
 
 ### Verify the certificate's content
 
-```
+```bash
 openssl x509 -in home.groveld.com.crt -text -noout
 ```
 
