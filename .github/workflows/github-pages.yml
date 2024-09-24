@@ -55,8 +55,8 @@ jobs:
 
       - name: Merge Content with Theme
         run: |
-          rm -rf "_posts/"
-          rsync -av --exclude ".git*" --exclude "LICENSE" --exclude "README.md" ".content/" "/"
+          rm -rf "./_posts/"
+          rsync -av --exclude ".git*" --exclude "LICENSE" --exclude "README.md" "./.content/" "./"
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -82,7 +82,7 @@ jobs:
       - name: Install PurgeCSS and remove unused CSS
         run: |
           npm i -g purgecss
-          purgecss --css "_site/**/*.css" --content "_site/**/*.html"
+          purgecss --css "./_site/**/*.css" --content "./_site/**/*.html"
 
       - name: Validate Jekyll
         run: bundle exec htmlproofer "_site/" --checks Images,Scripts,Favicon --disable-external
@@ -90,7 +90,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _site/
+          path: ./_site/
 
   # Deployment job
   deploy:
