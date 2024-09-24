@@ -2,7 +2,9 @@
 name: Build and Deploy to GitHub Pages
 
 on:
+  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+  # Runs on pushes targeting the default branch
   push:
     branches:
       - main
@@ -29,6 +31,11 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+# Default to bash
+defaults:
+  run:
+    shell: bash
+
 jobs:
   # Build job
   build:
@@ -48,20 +55,20 @@ jobs:
 
       - name: Merge Content with Theme
         run: |
-          rm -rf "${GITHUB_WORKSPACE}/_posts/"
-          rsync -av --exclude ".git*" --exclude "LICENSE" --exclude "README.md" "${GITHUB_WORKSPACE}/.content/" "${GITHUB_WORKSPACE}/"
+          rm -rf "_posts/"
+          rsync -av --exclude ".git*" --exclude "LICENSE" --exclude "README.md" ".content/" "/"
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.3" # Not needed with a .ruby-version file
+          ruby-version: 3.3 # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           cache-version: 0 # Increment this number if you need to re-download cached gems
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: 20
 
       - name: Setup Pages
         id: pages
@@ -75,25 +82,15 @@ jobs:
       - name: Install PurgeCSS and remove unused CSS
         run: |
           npm i -g purgecss
-          purgecss --css "${GITHUB_WORKSPACE}/_site/**/*.css" --content "${GITHUB_WORKSPACE}/_site/**/*.html"
+          purgecss --css "_site/**/*.css" --content "_site/**/*.html"
 
       - name: Validate Jekyll
-        run: bundle exec htmlproofer "${GITHUB_WORKSPACE}/_site/" --checks Images,Scripts,Favicon --disable-external
+        run: bundle exec htmlproofer "_site/" --checks Images,Scripts,Favicon --disable-external
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
-
-  # Cleanup job
-  cleanup:
-    permissions: write-all
-    runs-on: ubuntu-latest
-    steps:
-      - name: Delete deployment
-        uses: strumwolf/delete-deployment-environment@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          environment: github-pages
-          onlyRemoveDeployments: true
+          path: _site/
 
   # Deployment job
   deploy:
