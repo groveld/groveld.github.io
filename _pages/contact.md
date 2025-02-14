@@ -6,7 +6,7 @@ description: Contact
 ---
 
 <div id="contact">
-  <h2>Get in Touch</h2>
+  <h2>Get in Touch!</h2>
   <div id="contact-form">
     <form action="#" method="POST">
       <input type="hidden" name="_subject" value="Contact request from personal site" />
