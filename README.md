@@ -8,10 +8,6 @@
   groveld.github.io
 </h1>
 
-<h4 align="center">
-  This is the personal site of Martin Groeneveld
-</h4>
-
 <p align="center">
   <picture><img alt="Build" src="https://img.shields.io/github/actions/workflow/status/groveld/groveld.github.io/github-pages.yml?label=Build&style=flat-square"></picture>
 </p>
