@@ -9,7 +9,7 @@
 </h1>
 
 <p align="center">
-  <picture><img alt="Build" src="https://img.shields.io/github/actions/workflow/status/groveld/groveld.github.io/github-pages.yml?label=Build&style=flat-square"></picture>
+  <picture><img alt="Build" src="https://img.shields.io/github/actions/workflow/status/groveld/groveld.github.io/cloudflare-pages.yml?label=Build&style=flat-square"></picture>
 </p>
 
 ## Getting Started
