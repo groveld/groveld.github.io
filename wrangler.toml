@@ -1,0 +1,7 @@
+name = "groveld"
+type = "javascript"
+workers_dev = false
+
+[site]
+bucket = "./"
+entry-point = "."
