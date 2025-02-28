@@ -73,9 +73,6 @@ jobs:
           npm i -g purgecss
           purgecss --css "${GITHUB_WORKSPACE}/_site/**/*.css" --content "${GITHUB_WORKSPACE}/_site/**/*.html"
 
-      - name: Add wrangler file
-        run: echo "preview_urls = false" >> ./_site/wrangler.toml
-
       - name: Validate Jekyll
         run: bundle exec htmlproofer "${GITHUB_WORKSPACE}/_site/" --checks Images,Scripts,Favicon --disable-external
 
