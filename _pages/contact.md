@@ -6,7 +6,7 @@ description: Contact
 ---
 
 <div id="contact">
-  <h2>Get in Touch</h2>
+  <h2>Get in Touch!</h2>
     <div class="container py-4">
       <form id="contact-form">
         <div class="mb-3">
