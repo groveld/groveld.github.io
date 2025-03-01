@@ -13,28 +13,63 @@ jobs:
       CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       PROJECT_NAME: groveld
       PRODUCTION_BRANCH: main
+      RETENTION_SECONDS: 86400 # 1 day in seconds
 
     steps:
       - name: Cleanup old deployments
         run: |
           # Install jq if not present
-          sudo apt-get -qq install jq
+          sudo apt-get -qq update
+          sudo apt-get -qq install jq curl
 
           # Get deployments list
-          DEPLOYMENTS=$(curl -s -X GET \
+          echo "Fetching deployments list from Cloudflare..."
+          DEPLOYMENTS_RESPONSE=$(curl -s -X GET \
             "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/pages/projects/$PROJECT_NAME/deployments" \
             -H "Authorization: Bearer $CF_API_TOKEN")
 
-          # Delete deployments older than 1 day from non-production branches
-          echo "$DEPLOYMENTS" | jq -r --arg production_branch "$PRODUCTION_BRANCH" \
+          # Check for API errors on GET request
+          if [ "$(echo "$DEPLOYMENTS_RESPONSE" | jq -r '.success')" != "true" ]; then
+            echo "Error fetching deployments:"
+            echo "$DEPLOYMENTS_RESPONSE" | jq .
+            exit 1
+          fi
+
+          echo "Deployments response:"
+          echo "$DEPLOYMENTS_RESPONSE" | jq .
+
+          # Find deployments older than retention period from non-production branches
+          DEPLOYMENT_IDS_TO_DELETE=$(echo "$DEPLOYMENTS_RESPONSE" | jq -r --arg production_branch "$PRODUCTION_BRANCH" --argjson retention_seconds "$RETENTION_SECONDS" \
             '.result[] | select(
-              .deployment_trigger.metadata.branch != $production_branch and 
-              (.created_on | fromdate) < (now - 86400)
-            ) | .id' | while read -r id; do
-              echo "Deleting deployment $id"
-              curl -s -X DELETE \
-                "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/pages/projects/$PROJECT_NAME/deployments/$id" \
-                -H "Authorization: Bearer $CF_API_TOKEN"
-            done
+              .deployment_trigger.metadata.branch != $production_branch and
+              (.created_on | fromdate) < (now - $retention_seconds)
+            ) | .id')
+
+          if [ -z "$DEPLOYMENT_IDS_TO_DELETE" ]; then
+            echo "No deployments found matching the cleanup criteria."
+            exit 0
+          fi
+
+          echo "Deployments to be deleted: $DEPLOYMENT_IDS_TO_DELETE"
+
+          # Delete eligible deployments
+          echo "Starting deletion process..."
+          echo "$DEPLOYMENT_IDS_TO_DELETE" | while read -r id; do
+            echo "Deleting deployment $id..."
+            DELETE_RESPONSE=$(curl -s -X DELETE \
+              "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/pages/projects/$PROJECT_NAME/deployments/$id" \
+              -H "Authorization: Bearer $CF_API_TOKEN")
+
+            echo "Deletion response for $id:"
+            echo "$DELETE_RESPONSE" | jq .
+
+            # Check for API errors on DELETE request
+            if [ "$(echo "$DELETE_RESPONSE" | jq -r '.success')" != "true" ]; then
+              echo "Error deleting deployment $id:"
+              echo "$DELETE_RESPONSE" | jq .
+            else
+              echo "Deployment $id deleted successfully."
+            fi
+          done
 
           echo "Cleanup completed!"
