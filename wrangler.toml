@@ -4,4 +4,3 @@ workers_dev = false
 
 [site]
 bucket = "./"
-entry-point = "."
