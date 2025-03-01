@@ -1,0 +1,40 @@
+name: Cloudflare Pages Deployment Cleanup
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs every day at midnight UTC
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  cleanup-deployments:
+    runs-on: ubuntu-latest
+    env:
+      CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      PROJECT_NAME: groveld
+      PRODUCTION_BRANCH: main
+
+    steps:
+      - name: Cleanup old deployments
+        run: |
+          # Install jq if not present
+          sudo apt-get -qq install jq
+
+          # Get deployments list
+          DEPLOYMENTS=$(curl -s -X GET \
+            "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects/$PROJECT_NAME/deployments" \
+            -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN")
+
+          # Delete deployments older than 1 day from non-production branches
+          echo "$DEPLOYMENTS" | jq -r --arg production_branch "$PRODUCTION_BRANCH" \
+            '.result[] | select(
+              .deployment_trigger.metadata.branch != $production_branch and 
+              (.created_on | fromdate) < (now - 86400)
+            ) | .id' | while read -r id; do
+              echo "Deleting deployment $id"
+              curl -s -X DELETE \
+                "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects/$PROJECT_NAME/deployments/$id" \
+                -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN"
+            done
+
+          echo "Cleanup completed!"
