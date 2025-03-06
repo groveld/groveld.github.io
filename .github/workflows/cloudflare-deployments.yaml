@@ -5,6 +5,9 @@ on:
     - cron: "0 0 * * *" # Runs every day at midnight UTC
   workflow_dispatch: # Allows manual triggering
 
+permissions:
+  contents: read
+
 jobs:
   cleanup-deployments:
     runs-on: ubuntu-latest
