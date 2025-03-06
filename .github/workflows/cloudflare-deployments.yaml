@@ -1,4 +1,4 @@
-name: Cloudflare Pages Deployment Cleanup
+name: Cleanup Old Cloudflare Deployments
 
 on:
   schedule:
