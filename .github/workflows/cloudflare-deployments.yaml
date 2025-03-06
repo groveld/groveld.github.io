@@ -52,9 +52,25 @@ jobs:
 
           echo "Deployments to be deleted: $DEPLOYMENT_IDS_TO_DELETE"
 
-          # Delete eligible deployments
-          echo "Starting deletion process..."
+          # Print the current time for debugging
+          echo "Current time: $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+
+          # Iterate over the deployment IDs and print more debugging information
           echo "$DEPLOYMENT_IDS_TO_DELETE" | while read -r id; do
+            # Find the details of the deployment to be deleted
+            DEPLOYMENT_DETAILS=$(echo "$DEPLOYMENTS_RESPONSE" | jq -r --arg id "$id" '.result[] | select(.id == $id)')
+            echo "Details of deployment $id:"
+            echo "$DEPLOYMENT_DETAILS" | jq .
+            CREATED_ON=$(echo "$DEPLOYMENT_DETAILS" | jq -r '.created_on')
+            echo "Created on: $CREATED_ON"
+            CREATED_ON_EPOCH=$(echo "$CREATED_ON" | jq -r 'fromdate')
+            echo "Created on (epoch): $CREATED_ON_EPOCH"
+            CURRENT_TIME_EPOCH=$(date +%s)
+            echo "Current time (epoch): $CURRENT_TIME_EPOCH"
+            TIME_DIFFERENCE=$((CURRENT_TIME_EPOCH - CREATED_ON_EPOCH))
+            echo "Time difference (seconds): $TIME_DIFFERENCE"
+            echo "Retention seconds: $RETENTION_SECONDS"
+
             echo "Deleting deployment $id..."
             DELETE_RESPONSE=$(curl -s -X DELETE \
               "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/pages/projects/$PROJECT_NAME/deployments/$id" \
