@@ -1,4 +1,4 @@
-name: Cleanup Cloudflare Deployments
+name: Cleanup old Cloudflare deployments
 
 on:
   schedule:
@@ -15,7 +15,7 @@ jobs:
       RETENTION_SECONDS: 86400 # 1 day in seconds
     
     steps:
-      - name: Cleanup Cloudflare Deployments
+      - name: Cleanup old deployments
         run: |
           set -euo pipefail
     
