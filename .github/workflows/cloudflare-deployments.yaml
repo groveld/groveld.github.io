@@ -1,4 +1,4 @@
-name: Cleanup Old Cloudflare Deployments
+name: Cleanup Cloudflare Deployments
 
 on:
   schedule:
