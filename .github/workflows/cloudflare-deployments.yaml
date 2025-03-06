@@ -12,80 +12,81 @@ jobs:
       CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       PROJECT_NAME: groveld
-      PRODUCTION_BRANCH: main
       RETENTION_SECONDS: 86400 # 1 day in seconds
 
     steps:
-      - name: Cleanup old deployments
+      - name: Get current time
+        id: time
+        run: echo "::set-output name=now::$(( $(date +%s) ))"
+
+      - name: List Cloudflare Pages Deployments
+        id: list-deployments
         run: |
-          # Install jq if not present
-          sudo apt-get -qq update
-          sudo apt-get -qq install jq curl
+          # Retrieve all deployments for the specified project.
+          # jq is used to parse the JSON response and extract the deployment IDs and created_on timestamps.
+          # We handle pagination using the 'result_info.total_pages' field.
+          PAGE=1
+          ALL_DEPLOYMENTS=""
+          TOTAL_PAGES=1  # Initialize total_pages to 1 to enter the loop
 
-          # Get deployments list
-          echo "Fetching deployments list from Cloudflare..."
-          DEPLOYMENTS_RESPONSE=$(curl -s -X GET \
-            "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/pages/projects/$PROJECT_NAME/deployments" \
-            -H "Authorization: Bearer $CF_API_TOKEN")
+          while [ $PAGE -le $TOTAL_PAGES ]; do
+            DEPLOYMENTS=$(curl -s -X GET "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/pages/projects/${PROJECT_NAME}/deployments?page=$PAGE&per_page=100" \
+              -H "Authorization: Bearer ${CF_API_TOKEN}" \
+              -H "Content-Type: application/json")
 
-          # Check for API errors on GET request
-          if [ "$(echo "$DEPLOYMENTS_RESPONSE" | jq -r '.success')" != "true" ]; then
-            echo "Error fetching deployments:"
-            echo "$DEPLOYMENTS_RESPONSE" | jq .
-            exit 1
-          fi
+            # Extract total_pages from the result_info field.  If the first page wasn't processed yet, this will update it.
+            TOTAL_PAGES=$(echo "$DEPLOYMENTS" | jq '.result_info.total_pages')
 
-          echo "Deployments response:"
-          echo "$DEPLOYMENTS_RESPONSE" | jq .
+            # Append deployments to the ALL_DEPLOYMENTS variable
+            ALL_DEPLOYMENTS="$ALL_DEPLOYMENTS $(echo "$DEPLOYMENTS" | jq -c '.result[]')"
 
-          # Find deployments older than retention period from non-production branches
-          DEPLOYMENT_IDS_TO_DELETE=$(echo "$DEPLOYMENTS_RESPONSE" | jq -r --arg production_branch "$PRODUCTION_BRANCH" --argjson retention_seconds "$RETENTION_SECONDS" \
-            '.result[] | select(
-              .deployment_trigger.metadata.branch != $production_branch and
-              (.created_on | fromdate) < (now - $retention_seconds)
-            ) | .id')
+            PAGE=$((PAGE + 1))
+          done
 
-          if [ -z "$DEPLOYMENT_IDS_TO_DELETE" ]; then
-            echo "No deployments found matching the cleanup criteria."
-            exit 0
-          fi
+          echo "::set-output name=deployments::$ALL_DEPLOYMENTS"
 
-          echo "Deployments to be deleted: $DEPLOYMENT_IDS_TO_DELETE"
+      - name: Filter and Delete Old Deployments
+        id: delete-old-deployments
+        run: |
+          DEPLOYMENTS="${{ fromJson(steps.list-deployments.outputs.deployments) }}"
+          RETENTION_TIMESTAMP=$(( ${{ steps.time.outputs.now }} - ${{ env.RETENTION_SECONDS }} ))
+          DELETED_COUNT=0
+          echo "Retention timestamp: $RETENTION_TIMESTAMP"
 
-          # Print the current time for debugging
-          echo "Current time: $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+          # Iterate through each deployment
+          for DEPLOYMENT in $(echo "$DEPLOYMENTS"); do
+            DEPLOYMENT_ID=$(echo "$DEPLOYMENT" | jq -r '.id')
+            CREATED_ON=$(echo "$DEPLOYMENT" | jq -r '.created_on')
+            DEPLOYMENT_URL=$(echo "$DEPLOYMENT" | jq -r '.url') # Added for logging
+            ACTIVE=$(echo "$DEPLOYMENT" | jq -r '.active_deployment')
 
-          # Iterate over the deployment IDs and print more debugging information
-          echo "$DEPLOYMENT_IDS_TO_DELETE" | while read -r id; do
-            # Find the details of the deployment to be deleted
-            DEPLOYMENT_DETAILS=$(echo "$DEPLOYMENTS_RESPONSE" | jq -r --arg id "$id" '.result[] | select(.id == $id)')
-            echo "Details of deployment $id:"
-            echo "$DEPLOYMENT_DETAILS" | jq .
-            CREATED_ON=$(echo "$DEPLOYMENT_DETAILS" | jq -r '.created_on')
-            echo "Created on: $CREATED_ON"
-            CREATED_ON_EPOCH=$(echo "$CREATED_ON" | jq -r 'fromdate')
-            echo "Created on (epoch): $CREATED_ON_EPOCH"
-            CURRENT_TIME_EPOCH=$(date +%s)
-            echo "Current time (epoch): $CURRENT_TIME_EPOCH"
-            TIME_DIFFERENCE=$((CURRENT_TIME_EPOCH - CREATED_ON_EPOCH))
-            echo "Time difference (seconds): $TIME_DIFFERENCE"
-            echo "Retention seconds: $RETENTION_SECONDS"
 
-            echo "Deleting deployment $id..."
-            DELETE_RESPONSE=$(curl -s -X DELETE \
-              "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/pages/projects/$PROJECT_NAME/deployments/$id" \
-              -H "Authorization: Bearer $CF_API_TOKEN")
+            CREATED_TIMESTAMP=$(date -d "$CREATED_ON" +%s)
 
-            echo "Deletion response for $id:"
-            echo "$DELETE_RESPONSE" | jq .
+            echo "Deployment ID: $DEPLOYMENT_ID, Created On: $CREATED_ON, Timestamp: $CREATED_TIMESTAMP, Active: $ACTIVE, URL: $DEPLOYMENT_URL" # Enhanced logging
 
-            # Check for API errors on DELETE request
-            if [ "$(echo "$DELETE_RESPONSE" | jq -r '.success')" != "true" ]; then
-              echo "Error deleting deployment $id:"
-              echo "$DELETE_RESPONSE" | jq .
+            # Check if the deployment is older than the retention period and is not active.
+            if [[ "$CREATED_TIMESTAMP" -lt "$RETENTION_TIMESTAMP" && "$ACTIVE" == "false" ]]; then
+              echo "Deleting deployment: $DEPLOYMENT_ID (Created: $CREATED_ON)"
+              curl -s -X DELETE "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/pages/projects/${PROJECT_NAME}/deployments/$DEPLOYMENT_ID" \
+                -H "Authorization: Bearer ${CF_API_TOKEN}" \
+                -H "Content-Type: application/json"
+              if [ $? -eq 0 ]; then
+                echo "Successfully deleted deployment: $DEPLOYMENT_ID"
+                DELETED_COUNT=$((DELETED_COUNT + 1))
+              else
+                echo "Failed to delete deployment: $DEPLOYMENT_ID"
+              fi
             else
-              echo "Deployment $id deleted successfully."
+              echo "Skipping deployment: $DEPLOYMENT_ID (Created: $CREATED_ON, Active: $ACTIVE)"
             fi
           done
 
-          echo "Cleanup completed!"
+          echo "::set-output name=deleted_count::$DELETED_COUNT"
+          echo "Total deployments deleted: $DELETED_COUNT"
+
+      - name: Output Summary
+        if: always()
+        run: |
+          echo "Cleanup process completed."
+          echo "Total deployments deleted: ${{ steps.delete-old-deployments.outputs.deleted_count }}"
