@@ -12,7 +12,7 @@ jobs:
       CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       PROJECT_NAME: groveld
-      PRODUCTION_BRANCH: production
+      PRODUCTION_BRANCH: main
       RETENTION_SECONDS: 86400 # 1 day in seconds
 
     steps:
