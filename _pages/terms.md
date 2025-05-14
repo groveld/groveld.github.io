@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /terms
-title: Terms of Service "Agreement"
+title: Terms of Service
 description: This Terms of Service governs the legal terms of this site, sub-domains, and any associated web-based and mobile applications.
 ---
 
