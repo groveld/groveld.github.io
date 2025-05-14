@@ -80,7 +80,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: cloudflare-pages
-          path: ./
+          path: _site
           retention-days: "1"
 
   # Deployment job
@@ -101,4 +101,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy _site --project-name=groveld
+          command: pages deploy . --project-name=groveld
