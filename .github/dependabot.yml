@@ -1,27 +1,53 @@
 ---
 version: 2
 
-defaults:
-  schedule:
-    interval: "weekly"
-    day: "monday"
-    time: "06:00"
-    timezone: "Europe/Amsterdam"
-  assignees:
-    - groveld
-
 updates:
   - package-ecosystem: "github-actions"
     directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "06:00"
+      timezone: "Europe/Amsterdam"
+    assignees:
+      - groveld
 
   - package-ecosystem: "bundler"
     directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "06:00"
+      timezone: "Europe/Amsterdam"
+    assignees:
+      - groveld
 
   - package-ecosystem: "npm"
     directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "06:00"
+      timezone: "Europe/Amsterdam"
+    assignees:
+      - groveld
 
   - package-ecosystem: "pip"
     directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "06:00"
+      timezone: "Europe/Amsterdam"
+    assignees:
+      - groveld
 
   - package-ecosystem: "gomod"
     directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "06:00"
+      timezone: "Europe/Amsterdam"
+    assignees:
+      - groveld
