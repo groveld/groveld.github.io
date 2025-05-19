@@ -46,6 +46,12 @@ const handleRequest = async ({ request, env }) => {
     sanitizedData.append(key, sanitizeInput(value));
   }
 
+  // Check if phone (honeypot) field is filled
+  let phone = sanitizedData.get("phone");
+  if (phone && phone.trim() !== "") {
+    return jsonResponse("Spam gedetecteerd", 400);
+  }
+
   let name = sanitizedData.get("name");
   let email = sanitizedData.get("email");
   let subject = sanitizedData.get("subject");

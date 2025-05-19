@@ -33,6 +33,18 @@ description: Contact
             required
           />
         </div>
+        <div class="mb-3" style="display:none;"></div>
+          <label class="form-label" for="contact-form-phone">Telefoon</label>
+          <input
+            class="form-control"
+            id="contact-form-phone"
+            type="number"
+            name="phone"
+            placeholder="Uw telefoonnummer"
+            tabindex="-1"
+            autocomplete="off"
+          />
+        </div>
         <div class="mb-3">
           <label class="form-label" for="contact-form-subject">Onderwerp</label>
           <input
