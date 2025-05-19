@@ -33,7 +33,7 @@ description: Contact
             required
           />
         </div>
-        <div class="mb-3" style="display:none;"></div>
+        <div class="mb-3" style="display:none;">
           <label class="form-label" for="contact-form-phone">Telefoon</label>
           <input
             class="form-control"
