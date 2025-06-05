@@ -86,14 +86,62 @@ Professionele PMR446 portofoons zijn tegenwoordig ook verkrijgbaar met digitale 
 
 Deze frequenties worden onder andere door Kenwood gebruikt.
 
+Kanaal 1	446,003125 MHz
+Kanaal 2  446,009375 MHz
+Kanaal 3	446,015625 MHz
+Kanaal 4	446,021875 MHz
+Kanaal 5	446,028125 MHz
+Kanaal 6	446,034375 MHz
+Kanaal 7	446,040625 MHz
+Kanaal 8	446,046875 MHz
+Kanaal 9	446,053125 MHz
+Kanaal 10	446,059375 MHz
+Kanaal 11	446,065625 MHz
+Kanaal 12	446,071875 MHz
+Kanaal 13	446,078125 MHz
+Kanaal 14	446,084375 MHz
+Kanaal 15	446,090625 MHz
+Kanaal 16	446,096875 MHz
+Kanaal 17	446,103125 MHz
+Kanaal 18	446,109375 MHz
+Kanaal 19	446,115625 MHz
+Kanaal 20	446,121875 MHz
+Kanaal 21	446,128125 MHz
+Kanaal 22	446,134375 MHz
+Kanaal 23	446,140625 MHz
+Kanaal 24	446,146875 MHz
+Kanaal 25	446,153125 MHz
+Kanaal 26	446,159375 MHz
+Kanaal 27	446,165625 MHz
+Kanaal 28	446,171875 MHz
+Kanaal 29	446,178125 MHz
+Kanaal 30	446,184375 MHz
+Kanaal 31	446,190625 MHz
+Kanaal 32	446,196875 MHz
+
 ### TDMA frequenties 446
 
 De TDMA pmr446 frequenties worden onderandere door Hytera gebruikt.
+
+| Name        | Channel | Frequency | Name        | Channel | Frequency |
+| ----------- | ------- | --------- | ----------- | ------- | --------- |
+| **TDMA01**  | 01      | 446.00625 | **TDMA09**  | 09      | 446.10625 |
+| **TDMA02**  | 02      | 446.01875 | **TDMA10**  | 10      | 446.11875 |
+| **TDMA03**  | 03      | 446.03125 | **TDMA11**  | 11      | 446.13125 |
+| **TDMA04**  | 04      | 446.04375 | **TDMA12**  | 12      | 446.14375 |
+| **TDMA05**  | 05      | 446.05625 | **TDMA13**  | 13      | 446.15625 |
+| **TDMA06**  | 06      | 446.06875 | **TDMA14**  | 14      | 446.16875 |
+| **TDMA07**  | 07      | 446.08125 | **TDMA15**  | 15      | 446.18125 |
+| **TDMA08**  | 08      | 446.09375 | **TDMA16**  | 16      | 446.19375 |
 
 ## LPD KANALEN
 
 De LPD kanalen zijn vrij te gebruiken zonder licentie en zijn in de 433 MHz band.
 Deze kanalen zijn ook te gebruiken met Kenwood portofoons.
+
+Hier is echter het maximale vermogen 0.10 MWatt. Wat erg weinig is.
+Het is echter zo dat je met LPD kanalen veel meer keuze heb, en dat zeker niet alle portofoons op de markt
+deze kanalen aan kunnen. Dat geeft standaard al meer rust op deze kanalen.
 
 | Channel | Freqency    | Channel | Freqency    | Channel | Freqency    |
 | ------- | ----------- | ------- | ----------- | ------- | ----------- |
