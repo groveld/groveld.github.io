@@ -266,3 +266,193 @@ _Note: CTCSS tone 150.0 is the standard tone used by military radios in the 30-8
 | 33  | D174N | 68  | D423N | 103 | D734N |
 | 34  | D205N | 69  | D431N | 104 | D743N |
 | 35  | D212N | 70  | D432N | 105 | D754N |
+
+## Analoog PMR446 Frequenties
+
+### PMR
+
+| Naam     | Frequentie (MHz) |
+| -------- | ---------------- |
+| PMR CH01 | 446.00625        |
+| PMR CH02 | 446.01875        |
+| PMR CH03 | 446.03125        |
+| PMR CH04 | 446.04375        |
+| PMR CH05 | 446.05625        |
+| PMR CH06 | 446.06875        |
+| PMR CH07 | 446.08125        |
+| PMR CH08 | 446.09375        |
+
+### Motorola
+
+| Naam          | Frequentie (MHz) | CTCSS/DCS | PMR |
+| ------------- | ---------------- | --------- | --- |
+| Motorola CH01 | 446.00625        | 67.0 Hz   | 01  |
+| Motorola CH02 | 446.01875        | DCS 754   | 02  |
+| Motorola CH03 | 446.03125        | 67.0 Hz   | 03  |
+| Motorola CH04 | 446.04375        | DCS 754   | 04  |
+| Motorola CH05 | 446.05625        | 67.0 Hz   | 05  |
+| Motorola CH06 | 446.06875        | DCS 754   | 06  |
+| Motorola CH07 | 446.08125        | 67.0 Hz   | 07  |
+| Motorola CH08 | 446.09375        | DCS 754   | 08  |
+| Motorola CH09 | 446.00625        | 67.0 Hz   | 01  |
+| Motorola CH10 | 446.01875        | DCS 754   | 02  |
+| Motorola CH11 | 446.03125        | 67.0 Hz   | 03  |
+| Motorola CH12 | 446.04375        | DCS 754   | 04  |
+| Motorola CH13 | 446.05625        | 67.0 Hz   | 05  |
+| Motorola CH14 | 446.06875        | DCS 754   | 06  |
+| Motorola CH15 | 446.08125        | 67.0 Hz   | 07  |
+| Motorola CH16 | 446.09375        | DCS 754   | 08  |
+
+### Kenwood
+
+| Naam         | Frequentie (MHz) | CTCSS/DCS | PMR |
+| ------------ | ---------------- | --------- | --- |
+| Kenwood CH01 | 446.00625        | 94.8 Hz   | 01  |
+| Kenwood CH02 | 446.09375        | 88.5 Hz   | 08  |
+| Kenwood CH03 | 446.03125        | 103.5 Hz  | 03  |
+| Kenwood CH04 | 446.06875        | 79.7 Hz   | 06  |
+| Kenwood CH05 | 446.04375        | 118.8 Hz  | 04  |
+| Kenwood CH06 | 446.01875        | 123.0 Hz  | 02  |
+| Kenwood CH07 | 446.08125        | 127.3 Hz  | 07  |
+| Kenwood CH08 | 446.05625        | 85.4 Hz   | 05  |
+| Kenwood CH09 | 446.00625        | 107.2 Hz  | 01  |
+| Kenwood CH10 | 446.09375        | 110.9 Hz  | 08  |
+| Kenwood CH11 | 446.03125        | 114.8 Hz  | 03  |
+| Kenwood CH12 | 446.06875        | 82.5 Hz   | 06  |
+| Kenwood CH13 | 446.04375        | DCS 132   | 04  |
+| Kenwood CH14 | 446.01875        | DCS 155   | 02  |
+| Kenwood CH15 | 446.05625        | DCS 134   | 05  |
+| Kenwood CH16 | 446.08125        | DCS 243   | 07  |
+
+### Yaesu
+
+| Naam       | Frequentie (MHz) | CTCSS/DCS | PMR |
+| ---------- | ---------------- | --------- | --- |
+| Yaesu CH01 | 446.00625        | DCS 114   | 01  |
+| Yaesu CH02 | 446.01875        | DCS 115   | 02  |
+| Yaesu CH03 | 446.03125        | DCS 23    | 03  |
+| Yaesu CH04 | 446.04375        | DCS 25    | 04  |
+| Yaesu CH05 | 446.05625        | DCS 26    | 05  |
+| Yaesu CH06 | 446.06875        | DCS 71    | 06  |
+| Yaesu CH07 | 446.08125        | DCS 72    | 07  |
+| Yaesu CH08 | 446.09375        | DCS 73    | 08  |
+| Yaesu CH09 | 446.00625        | DCS 152   | 01  |
+| Yaesu CH10 | 446.01875        | DCS 155   | 02  |
+| Yaesu CH11 | 446.03125        | DCS 156   | 03  |
+| Yaesu CH12 | 446.04375        | DCS 152   | 04  |
+| Yaesu CH13 | 446.05625        | DCS 156   | 05  |
+| Yaesu CH14 | 446.06875        | DCS 205   | 06  |
+| Yaesu CH15 | 446.08125        | DCS 212   | 07  |
+| Yaesu CH16 | 446.09375        | DCS 223   | 08  |
+
+### Icom
+
+| Naam      | Frequentie (MHz) | CTCSS/DCS | PMR |
+| --------- | ---------------- | --------- | --- |
+| Icom CH01 | 446.00625        |           | 01  |
+| Icom CH02 | 446.01875        |           | 02  |
+| Icom CH03 | 446.03125        |           | 03  |
+| Icom CH04 | 446.04375        | 107.2 Hz  | 04  |
+| Icom CH05 | 446.05625        | 110.9 Hz  | 05  |
+| Icom CH06 | 446.06875        | 114.8 Hz  | 06  |
+| Icom CH07 | 446.08125        | 118.8 Hz  | 07  |
+| Icom CH08 | 446.09375        | 123.0 Hz  | 08  |
+| Icom CH09 | 446.00625        | 127.3 Hz  | 01  |
+| Icom CH10 | 446.01875        | 131.8 Hz  | 02  |
+| Icom CH11 | 446.03125        | 136.5 Hz  | 03  |
+| Icom CH12 | 446.04375        | 141.3 Hz  | 04  |
+| Icom CH13 | 446.05625        | 146.2 Hz  | 05  |
+| Icom CH14 | 446.06875        | 151.4 Hz  | 06  |
+| Icom CH15 | 446.08125        | 156.7 Hz  | 07  |
+
+| Naam           | Frequentie (MHz) | CTCSS/DCS | PMR |
+| -------------- | ---------------- | --------- | --- |
+| Icom Z1 A CH01 | 446.00625        |           | 01  |
+| Icom Z1 A CH02 | 446.01875        |           | 02  |
+| Icom Z1 A CH03 | 446.03125        |           | 03  |
+| Icom Z1 A CH04 | 446.04375        | 107.2 Hz  | 04  |
+| Icom Z1 A CH05 | 446.05625        | 110.9 Hz  | 05  |
+| Icom Z1 A CH06 | 446.06875        | 114.8 Hz  | 06  |
+| Icom Z1 A CH07 | 446.08125        | 118.8 Hz  | 07  |
+| Icom Z1 A CH08 | 446.09375        | 123.0 Hz  | 08  |
+| Icom Z1 A CH09 | 446.00625        | 127.3 Hz  | 01  |
+| Icom Z1 A CH10 | 446.01875        | 131.8 Hz  | 02  |
+| Icom Z1 A CH11 | 446.03125        | 136.5 Hz  | 03  |
+| Icom Z1 A CH12 | 446.04375        | 141.3 Hz  | 04  |
+| Icom Z1 A CH13 | 446.05625        | 146.2 Hz  | 05  |
+| Icom Z1 A CH14 | 446.06875        | 151.4 Hz  | 06  |
+| Icom Z1 A CH15 | 446.08125        | 156.7 Hz  | 07  |
+
+| Naam           | Frequentie (MHz) | CTCSS/DCS | PMR |
+| -------------- | ---------------- | --------- | --- |
+| Icom Z2 A CH01 | 446.00625        | 94.8 Hz   | 01  |
+| Icom Z2 A CH02 | 446.09375        | 88.5 Hz   | 08  |
+| Icom Z2 A CH03 | 446.03125        | 103.5 Hz  | 03  |
+| Icom Z2 A CH04 | 446.06875        | 79.7 Hz   | 06  |
+| Icom Z2 A CH05 | 446.04375        | 118.8 Hz  | 04  |
+| Icom Z2 A CH06 | 446.01875        | 123.0 Hz  | 02  |
+| Icom Z2 A CH07 | 446.08125        | 127.3 Hz  | 07  |
+| Icom Z2 A CH08 | 446.05625        | 85.4 Hz   | 05  |
+| Icom Z2 A CH09 | 446.00625        | 107.2 Hz  | 01  |
+| Icom Z2 A CH10 | 446.09375        | 110.9 Hz  | 08  |
+| Icom Z2 A CH11 | 446.03125        | 114.8 Hz  | 03  |
+| Icom Z2 A CH12 | 446.06875        | 82.5 Hz   | 06  |
+| Icom Z2 A CH13 | 446.04375        | DCS 132   | 04  |
+| Icom Z2 A CH14 | 446.01875        | DCS 155   | 02  |
+| Icom Z2 A CH15 | 446.05625        | DCS 134   | 05  |
+| Icom Z2 A CH16 | 446.08125        | DCS 243   | 07  |
+
+| Naam           | Frequentie (MHz) | CTCSS/DCS | PMR |
+| -------------- | ---------------- | --------- | --- |
+| Icom Z3 A CH01 | 446.00625        | 67.0 Hz   | 01  |
+| Icom Z3 A CH02 | 446.01875        | 71.9 Hz   | 02  |
+| Icom Z3 A CH03 | 446.03125        | 74.4 Hz   | 03  |
+| Icom Z3 A CH04 | 446.04375        | 77.0 Hz   | 04  |
+| Icom Z3 A CH05 | 446.05625        | 79.7 Hz   | 05  |
+| Icom Z3 A CH06 | 446.06875        | 82.5 Hz   | 06  |
+| Icom Z3 A CH07 | 446.08125        | 85.4 Hz   | 07  |
+| Icom Z3 A CH08 | 446.09375        | 88.5 Hz   | 08  |
+
+## Digitaal PMR446 Frequenties
+
+### dPMR446 (4FSK/FDMA)
+
+| Naam      | Frequentie (MHz) |
+| --------- | ---------------- |
+| dPMR CH01 | 446.10313        |
+| dPMR CH02 | 446.10938        |
+| dPMR CH03 | 446.11563        |
+| dPMR CH04 | 446.12188        |
+| dPMR CH05 | 446.12813        |
+| dPMR CH06 | 446.13438        |
+| dPMR CH07 | 446.14063        |
+| dPMR CH08 | 446.14688        |
+| dPMR CH09 | 446.15313        |
+| dPMR CH10 | 446.15938        |
+| dPMR CH11 | 446.16563        |
+| dPMR CH12 | 446.17188        |
+| dPMR CH13 | 446.17813        |
+| dPMR CH14 | 446.18438        |
+| dPMR CH15 | 446.19063        |
+| dPMR CH16 | 446.19688        |
+
+### Icom Zone 4 Digital
+
+| Naam           | Frequentie (MHz) | CTCSS/DCS | dPMR |
+| -------------- | ---------------- | --------- | ---- |
+| Icom Z4 D CH01 | 446.10313        | CID 085   | 01   |
+| Icom Z4 D CH02 | 446.10938        | CID 087   | 02   |
+| Icom Z4 D CH03 | 446.11563        | CID 093   | 03   |
+| Icom Z4 D CH04 | 446.12188        | CID 095   | 04   |
+| Icom Z4 D CH05 | 446.12813        | CID 117   | 05   |
+| Icom Z4 D CH06 | 446.13438        | CID 119   | 06   |
+| Icom Z4 D CH07 | 446.14063        | CID 125   | 07   |
+| Icom Z4 D CH08 | 446.14688        | CID 127   | 08   |
+| Icom Z4 D CH09 | 446.15313        | CID 213   | 09   |
+| Icom Z4 D CH10 | 446.15938        | CID 215   | 10   |
+| Icom Z4 D CH11 | 446.16563        | CID 221   | 11   |
+| Icom Z4 D CH12 | 446.17188        | CID 223   | 12   |
+| Icom Z4 D CH13 | 446.17813        | CID 245   | 13   |
+| Icom Z4 D CH14 | 446.18438        | CID 247   | 14   |
+| Icom Z4 D CH15 | 446.19063        | CID 253   | 15   |
+| Icom Z4 D CH16 | 446.19688        | CID 254   | 16   |
