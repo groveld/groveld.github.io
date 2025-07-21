@@ -1,6 +1,6 @@
 const formatEmailBody = (name, email, subject, message, domain) => {
   return `
-    <b>${name}&nbsp;-&nbsp;${email}</b><br><br>
+    <b>${name}</b>&nbsp;-&nbsp;${email}<br><br>
     <b>${subject}</b><br><br>
     ${message}<br><br>
     --&nbsp;<br>
