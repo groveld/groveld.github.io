@@ -145,41 +145,41 @@ const sendEmailWithMailgun = async (
   return response;
 };
 
-const sendEmailWithSendGrid = async (
-  env,
-  name,
-  email,
-  subject,
-  message,
-  domain
-) => {
-  const url = env.SENDGRID_API_URI;
-  const body = JSON.stringify({
-    personalizations: [
-      {
-        to: [{ email: env.SENDGRID_TO_EMAIL, name: env.SENDGRID_TO_NAME }],
-        subject: `${name} - ${subject}`,
-      },
-    ],
-    from: { email: env.SENDGRID_FROM_EMAIL, name: env.SENDGRID_FROM_NAME },
-    reply_to: { email: email, name: name },
-    content: [
-      {
-        type: "text/html",
-        value: formatEmailBody(name, email, subject, message, domain),
-      },
-    ],
-  });
+// const sendEmailWithSendGrid = async (
+//   env,
+//   name,
+//   email,
+//   subject,
+//   message,
+//   domain
+// ) => {
+//   const url = env.SENDGRID_API_URI;
+//   const body = JSON.stringify({
+//     personalizations: [
+//       {
+//         to: [{ email: env.SENDGRID_TO_EMAIL, name: env.SENDGRID_TO_NAME }],
+//         subject: `${name} - ${subject}`,
+//       },
+//     ],
+//     from: { email: env.SENDGRID_FROM_EMAIL, name: env.SENDGRID_FROM_NAME },
+//     reply_to: { email: email, name: name },
+//     content: [
+//       {
+//         type: "text/html",
+//         value: formatEmailBody(name, email, subject, message, domain),
+//       },
+//     ],
+//   });
 
-  const options = {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${env.SENDGRID_API_KEY}`,
-      "Content-Type": "application/json",
-    },
-    body: body,
-  };
+//   const options = {
+//     method: "POST",
+//     headers: {
+//       Authorization: `Bearer ${env.SENDGRID_API_KEY}`,
+//       "Content-Type": "application/json",
+//     },
+//     body: body,
+//   };
 
-  const response = await sendRequest(url, options);
-  return response;
-};
+//   const response = await sendRequest(url, options);
+//   return response;
+// };
