@@ -183,24 +183,16 @@ Dit zorgt er dus voor dat je alleen met andere Kenwood portofoons dezelfde kanal
 
 ## Digitale Private Mobile Radio Frequenties - dPMR446
 
-| Channel   | Frequency (MHz) |
-| --------- | --------------- |
-| dPMR CH01 | 446.103125      |
-| dPMR CH02 | 446.109375      |
-| dPMR CH03 | 446.115625      |
-| dPMR CH04 | 446.121875      |
-| dPMR CH05 | 446.128125      |
-| dPMR CH06 | 446.134375      |
-| dPMR CH07 | 446.140625      |
-| dPMR CH08 | 446.146875      |
-| dPMR CH09 | 446.153125      |
-| dPMR CH10 | 446.159375      |
-| dPMR CH11 | 446.165625      |
-| dPMR CH12 | 446.171875      |
-| dPMR CH13 | 446.178125      |
-| dPMR CH14 | 446.184375      |
-| dPMR CH15 | 446.190625      |
-| dPMR CH16 | 446.196875      |
+| Channel   | Frequency (MHz) | Channel   | Frequency (MHz) |
+| --------- | --------------- | --------- | --------------- |
+| dPMR CH01 | 446.103125      | dPMR CH09 | 446.153125      |
+| dPMR CH02 | 446.109375      | dPMR CH10 | 446.159375      |
+| dPMR CH03 | 446.115625      | dPMR CH11 | 446.165625      |
+| dPMR CH04 | 446.121875      | dPMR CH12 | 446.171875      |
+| dPMR CH05 | 446.128125      | dPMR CH13 | 446.178125      |
+| dPMR CH06 | 446.134375      | dPMR CH14 | 446.184375      |
+| dPMR CH07 | 446.140625      | dPMR CH15 | 446.190625      |
+| dPMR CH08 | 446.146875      | dPMR CH16 | 446.196875      |
 
 ### Icom Zone 4 Digital (dPMR446)
 
@@ -334,7 +326,7 @@ _Note: CTCSS tone 150.0 is the standard tone used by military radios in the 30-8
 | 34  | D205N | 69  | D431N | 104 | D743N |
 | 35  | D212N | 70  | D432N | 105 | D754N |
 
-## LPD KANALEN
+## LPD KANALEN - LPD433
 
 De LPD kanalen zijn vrij te gebruiken zonder licentie en zijn in de 433 MHz band.
 Deze kanalen zijn ook te gebruiken met Kenwood portofoons.
@@ -344,26 +336,26 @@ Dat geeft standaard al meer rust op deze kanalen.
 
 | Channel  | Frequency (MHz) | Channel  | Frequency (MHz) | Channel  | Frequency (MHz) |
 | -------- | --------------- | -------- | --------------- | -------- | --------------- |
-| LPD CH01 | 433.075.000     | LPD CH24 | 433.650.000     | LPD CH47 | 434.225.000     |
-| LPD CH02 | 433.100.000     | LPD CH25 | 433.675.000     | LPD CH48 | 434.250.000     |
-| LPD CH03 | 433.125.000     | LPD CH26 | 433.700.000     | LPD CH49 | 434.275.000     |
-| LPD CH04 | 433.150.000     | LPD CH27 | 433.725.000     | LPD CH50 | 434.300.000     |
-| LPD CH05 | 433.175.000     | LPD CH28 | 433.750.000     | LPD CH51 | 434.325.000     |
-| LPD CH06 | 433.200.000     | LPD CH29 | 433.775.000     | LPD CH52 | 434.350.000     |
-| LPD CH07 | 433.225.000     | LPD CH30 | 433.800.000     | LPD CH53 | 434.375.000     |
-| LPD CH08 | 433.250.000     | LPD CH31 | 433.825.000     | LPD CH54 | 434.400.000     |
-| LPD CH09 | 433.275.000     | LPD CH32 | 433.850.000     | LPD CH55 | 434.425.000     |
-| LPD CH10 | 433.300.000     | LPD CH33 | 433.875.000     | LPD CH56 | 434.450.000     |
-| LPD CH11 | 433.325.000     | LPD CH34 | 433.900.000     | LPD CH57 | 434.475.000     |
-| LPD CH12 | 433.350.000     | LPD CH35 | 433.925.000     | LPD CH58 | 434.500.000     |
-| LPD CH13 | 433.375.000     | LPD CH36 | 433.950.000     | LPD CH59 | 434.525.000     |
-| LPD CH14 | 433.400.000     | LPD CH37 | 433.975.000     | LPD CH60 | 434.550.000     |
-| LPD CH15 | 433.425.000     | LPD CH38 | 434.000.000     | LPD CH61 | 434.575.000     |
-| LPD CH16 | 433.450.000     | LPD CH39 | 434.025.000     | LPD CH62 | 434.600.000     |
-| LPD CH17 | 433.475.000     | LPD CH40 | 434.050.000     | LPD CH63 | 434.625.000     |
-| LPD CH18 | 433.500.000     | LPD CH41 | 434.075.000     | LPD CH64 | 434.650.000     |
-| LPD CH19 | 433.525.000     | LPD CH42 | 434.100.000     | LPD CH65 | 434.675.000     |
-| LPD CH20 | 433.550.000     | LPD CH43 | 434.125.000     | LPD CH66 | 434.700.000     |
-| LPD CH21 | 433.575.000     | LPD CH44 | 434.150.000     | LPD CH67 | 434.725.000     |
-| LPD CH22 | 433.600.000     | LPD CH45 | 434.175.000     | LPD CH68 | 434.750.000     |
-| LPD CH23 | 433.625.000     | LPD CH46 | 434.200.000     | LPD CH69 | 434.775.000     |
+| LPD CH01 | 433.075         | LPD CH24 | 433.650         | LPD CH47 | 434.225         |
+| LPD CH02 | 433.100         | LPD CH25 | 433.675         | LPD CH48 | 434.250         |
+| LPD CH03 | 433.125         | LPD CH26 | 433.700         | LPD CH49 | 434.275         |
+| LPD CH04 | 433.150         | LPD CH27 | 433.725         | LPD CH50 | 434.300         |
+| LPD CH05 | 433.175         | LPD CH28 | 433.750         | LPD CH51 | 434.325         |
+| LPD CH06 | 433.200         | LPD CH29 | 433.775         | LPD CH52 | 434.350         |
+| LPD CH07 | 433.225         | LPD CH30 | 433.800         | LPD CH53 | 434.375         |
+| LPD CH08 | 433.250         | LPD CH31 | 433.825         | LPD CH54 | 434.400         |
+| LPD CH09 | 433.275         | LPD CH32 | 433.850         | LPD CH55 | 434.425         |
+| LPD CH10 | 433.300         | LPD CH33 | 433.875         | LPD CH56 | 434.450         |
+| LPD CH11 | 433.325         | LPD CH34 | 433.900         | LPD CH57 | 434.475         |
+| LPD CH12 | 433.350         | LPD CH35 | 433.925         | LPD CH58 | 434.500         |
+| LPD CH13 | 433.375         | LPD CH36 | 433.950         | LPD CH59 | 434.525         |
+| LPD CH14 | 433.400         | LPD CH37 | 433.975         | LPD CH60 | 434.550         |
+| LPD CH15 | 433.425         | LPD CH38 | 434.000         | LPD CH61 | 434.575         |
+| LPD CH16 | 433.450         | LPD CH39 | 434.025         | LPD CH62 | 434.600         |
+| LPD CH17 | 433.475         | LPD CH40 | 434.050         | LPD CH63 | 434.625         |
+| LPD CH18 | 433.500         | LPD CH41 | 434.075         | LPD CH64 | 434.650         |
+| LPD CH19 | 433.525         | LPD CH42 | 434.100         | LPD CH65 | 434.675         |
+| LPD CH20 | 433.550         | LPD CH43 | 434.125         | LPD CH66 | 434.700         |
+| LPD CH21 | 433.575         | LPD CH44 | 434.150         | LPD CH67 | 434.725         |
+| LPD CH22 | 433.600         | LPD CH45 | 434.175         | LPD CH68 | 434.750         |
+| LPD CH23 | 433.625         | LPD CH46 | 434.200         | LPD CH69 | 434.775         |
