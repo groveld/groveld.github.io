@@ -217,16 +217,16 @@ Dit zorgt er dus voor dat je alleen met andere Kenwood portofoons dezelfde kanal
 
 ## Digital Mobile Radio - DMR Tier I - DMR446
 
-| Channel  | Frequency (MHz) |
-| -------- | --------------- |
-| DMR CH01 | 446.10625       |
-| DMR CH02 | 446.11875       |
-| DMR CH03 | 446.13125       |
-| DMR CH04 | 446.14375       |
-| DMR CH05 | 446.15625       |
-| DMR CH06 | 446.16875       |
-| DMR CH07 | 446.18125       |
-| DMR CH08 | 446.19375       |
+| Channel  | Frequency (MHz) | Color Code (CC) | Time Slot (TS) | Talkgroup (TG) |
+| -------- | --------------- | --------------- | -------------- | -------------- |
+| DMR CH01 | 446.10625       | 1               | 1              | 99             |
+| DMR CH02 | 446.11875       | 1               | 1              | 99             |
+| DMR CH03 | 446.13125       | 1               | 1              | 99             |
+| DMR CH04 | 446.14375       | 1               | 1              | 99             |
+| DMR CH05 | 446.15625       | 1               | 1              | 99             |
+| DMR CH06 | 446.16875       | 1               | 1              | 99             |
+| DMR CH07 | 446.18125       | 1               | 1              | 99             |
+| DMR CH08 | 446.19375       | 1               | 1              | 99             |
 
 ## Tooncodes
 
