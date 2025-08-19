@@ -217,6 +217,8 @@ Dit zorgt er dus voor dat je alleen met andere Kenwood portofoons dezelfde kanal
 
 ## Digital Mobile Radio - DMR Tier I - DMR446
 
+Social settings `TX Admit: Color Code Free` `In Call TX Admit: Follow TX Admit`
+
 | Channel  | Frequency (MHz) | Color Code (CC) | Time Slot (TS) | Talkgroup (TG) |
 | -------- | --------------- | --------------- | -------------- | -------------- |
 | DMR CH01 | 446.10625       | 1               | 1              | 99             |
