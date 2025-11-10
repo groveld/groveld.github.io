@@ -1,5 +1,5 @@
 const formatEmailBody = (name, email, subject, message, domain) => {
-  return `
+	return `
 		<b>${name}</b>&nbsp;-&nbsp;${email}<br><br>
 		<b>${subject}</b><br><br>
 		${message}<br><br>
@@ -24,7 +24,7 @@ const sanitizeInput = (input) => {
 		'"': "&quot;",
 		"'": "&#039;",
 		"\n": "<br>",
-};
+	};
 
 	return String(input).replace(/[&<>"'\n]/g, (m) => map[m]);
 };
@@ -74,7 +74,7 @@ const handleRequest = async ({ request, env }) => {
 		email,
 		subject,
 		message,
-		domain
+		domain,
 	);
 	if (!emailResponse.success) {
 		return jsonResponse("Fout bij verzenden", 500);
@@ -110,15 +110,24 @@ const sendEmailWithMailgun = async (
 	email,
 	subject,
 	message,
-	domain
+	domain,
 ) => {
 	const formData = new FormData();
-	formData.append("from", `${env.MAILGUN_FROM_NAME} <${env.MAILGUN_FROM_EMAIL}>`);
-	formData.append("h:Sender", `${env.MAILGUN_FROM_NAME} <${env.MAILGUN_FROM_EMAIL}>`);
+	formData.append(
+		"from",
+		`${env.MAILGUN_FROM_NAME} <${env.MAILGUN_FROM_EMAIL}>`,
+	);
+	formData.append(
+		"h:Sender",
+		`${env.MAILGUN_FROM_NAME} <${env.MAILGUN_FROM_EMAIL}>`,
+	);
 	formData.append("to", `${env.MAILGUN_TO_NAME} <${env.MAILGUN_TO_EMAIL}>`);
 	formData.append("h:Reply-To", `${name} <${email}>`);
 	formData.append("subject", `${name} - ${subject}`);
-	formData.append("html", formatEmailBody(name, email, subject, message, domain));
+	formData.append(
+		"html",
+		formatEmailBody(name, email, subject, message, domain),
+	);
 
 	const url = env.MAILGUN_API_URI;
 	const options = {
