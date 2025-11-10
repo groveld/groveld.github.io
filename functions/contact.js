@@ -1,6 +1,6 @@
 const formatEmailBody = (name, email, subject, message, domain) => {
-  return `
-    <b>${name}</b>&nbsp;-&nbsp;${email}<br><br>
+	return `
+		<b>${name}</b>&nbsp;-&nbsp;${email}<br><br>
     <b>${subject}</b><br><br>
     ${message}<br><br>
     --&nbsp;<br>
@@ -11,7 +11,7 @@ const formatEmailBody = (name, email, subject, message, domain) => {
 export const onRequestPost = async (context) => {
   try {
     return await handleRequest(context);
-  } catch (err) {
+  } catch (_err) {
     return jsonResponse("Er is iets misgegaan", 500);
   }
 };
@@ -38,26 +38,26 @@ const jsonResponse = (message, status = 200) => {
 };
 
 const handleRequest = async ({ request, env }) => {
-  let formData = await request.formData();
-  let sanitizedData = new FormData();
+  const formData = await request.formData();
+  const sanitizedData = new FormData();
 
-  for (let [key, value] of formData.entries()) {
+  for (const [key, value] of formData.entries()) {
     sanitizedData.append(key, sanitizeInput(value));
   }
 
   // Check if phone (honeypot) field is filled
-  let phone = sanitizedData.get("phone");
+  const phone = sanitizedData.get("phone");
   if (phone && phone.trim() !== "") {
     return jsonResponse("Spam gedetecteerd", 400);
   }
 
-  let name = sanitizedData.get("name");
-  let email = sanitizedData.get("email");
-  let subject = sanitizedData.get("subject");
-  let message = sanitizedData.get("message");
-  let domain = request.headers.get("Host");
-  let token = sanitizedData.get("cf-turnstile-response");
-  let ip = request.headers.get("CF-Connecting-IP");
+  const name = sanitizedData.get("name");
+  const email = sanitizedData.get("email");
+  const subject = sanitizedData.get("subject");
+  const message = sanitizedData.get("message");
+  const domain = request.headers.get("Host");
+  const token = sanitizedData.get("cf-turnstile-response");
+  const ip = request.headers.get("CF-Connecting-IP");
 
   if (!name || !email || !subject || !message) {
     return jsonResponse("Ontbrekende verplichte velden", 400);
@@ -115,18 +115,18 @@ const sendEmailWithMailgun = async (
   const formData = new FormData();
   formData.append(
     "from",
-    env.MAILGUN_FROM_NAME + " <" + env.MAILGUN_FROM_EMAIL + ">"
+    `${env.MAILGUN_FROM_NAME} <${env.MAILGUN_FROM_EMAIL}>`
   );
   formData.append(
     "h:Sender",
-    env.MAILGUN_FROM_NAME + " <" + env.MAILGUN_FROM_EMAIL + ">"
+    `${env.MAILGUN_FROM_NAME} <${env.MAILGUN_FROM_EMAIL}>`
   );
   formData.append(
     "to",
-    env.MAILGUN_TO_NAME + " <" + env.MAILGUN_TO_EMAIL + ">"
+    `${env.MAILGUN_TO_NAME} <${env.MAILGUN_TO_EMAIL}>`
   );
-  formData.append("h:Reply-To", name + " <" + email + ">");
-  formData.append("subject", name + " - " + subject);
+  formData.append("h:Reply-To", `${name} <${email}>`);
+  formData.append("subject", `${name} - ${subject}`);
   formData.append(
     "html",
     formatEmailBody(name, email, subject, message, domain)
