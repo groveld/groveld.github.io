@@ -77,7 +77,7 @@ jobs:
         run: bundle exec htmlproofer "${GITHUB_WORKSPACE}/_site/" --checks Images,Scripts,Favicon --disable-external
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: cloudflare-pages
           path: _site
